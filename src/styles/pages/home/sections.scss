@@ -1,0 +1,340 @@
+.holographic-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  // background: $bg-gradient-main;
+}
+.holo-layer {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0.3;
+  &.holo-layer-1 {
+    background: radial-gradient(
+      circle at 20% 40%,
+      $color-holo-primary 0%,
+      transparent 60%
+    );
+    filter: blur(60px);
+  }
+  &.holo-layer-2 {
+    background: radial-gradient(
+      circle at 80% 60%,
+      $color-holo-secondary 0%,
+      transparent 70%
+    );
+    filter: blur(80px);
+  }
+  &.holo-layer-3 {
+    background: linear-gradient(
+      120deg,
+      transparent 60%,
+      $color-holo-primary 100%
+    );
+    filter: blur(100px);
+  }
+}
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.hero {
+  min-height: 100vh;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $color-white;
+  position: relative;
+  svg {
+    width: 60px;
+  }
+  .hero-badge {
+    background: rgba($color-holo-primary, 0.15);
+    color: $color-holo-secondary;
+    font-weight: $font-weight-bold;
+    display: inline-block;
+    padding: $spacing-2 $spacing-6;
+    border-radius: $border-radius-full;
+    margin-bottom: $spacing-6;
+    box-shadow: 0 0 16px $color-holo-secondary;
+    font-size: $font-size-lg;
+    letter-spacing: 1px;
+  }
+  .hero-title {
+    font-size: $font-size-7xl;
+    font-family: "Orbitron", $font-family-primary;
+    font-weight: $font-weight-black;
+    color: $color-white-80;
+    position: relative;
+    .title-glow {
+      position: absolute;
+      left: 50%;
+      top: 80%;
+      width: 80%;
+      height: 40px;
+      background: radial-gradient(
+        circle,
+        $color-holo-secondary 0%,
+        transparent 80%
+      );
+      filter: blur(16px);
+      z-index: -1;
+      transform: translateX(-50%);
+    }
+  }
+  .hero-subtitle {
+    font-size: $font-size-5xl;
+    color: $color-white-80;
+    margin-bottom: $spacing-4;
+    font-weight: $font-weight-bold;
+  }
+  .hero-description {
+    color: $color-white-80;
+    margin-bottom: $spacing-6;
+    max-width: 1000px;
+    width: 100%;
+
+    .hero-special {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-special-row {
+      background: #000;
+      border: red solid;
+    }
+  }
+  .hero-actions {
+    display: flex;
+    gap: $spacing-6;
+    justify-content: center;
+    margin-bottom: $spacing-6;
+  }
+  .scroll-indicator {
+    margin-top: $spacing-6;
+    color: $color-white-60;
+    .scroll-line {
+      width: 2px;
+      height: 32px;
+      background: $color-holo-secondary;
+      margin: 0 auto 8px auto;
+      border-radius: 2px;
+      box-shadow: 0 0 8px $color-holo-secondary;
+    }
+    span {
+      font-size: $font-size-base;
+      letter-spacing: 1px;
+    }
+  }
+}
+.services-section {
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-12;
+    margin-top: $spacing-12;
+    @media (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+  .service-block {
+    @extend .card;
+    .service-icon {
+      font-size: $font-size-5xl;
+      margin-bottom: $spacing-4;
+      color: $color-holo-secondary;
+      text-shadow: 0 0 12px $color-holo-secondary;
+    }
+    h3 {
+      font-size: $font-size-2xl;
+      color: $color-holo-primary;
+      margin-bottom: $spacing-4;
+    }
+    .service-items {
+      margin-top: $spacing-4;
+      .service-item {
+        background: rgba($color-black-light, 0.7);
+        border-radius: $border-radius-lg;
+        padding: $spacing-3;
+        margin-bottom: $spacing-3;
+        box-shadow: 0 0 8px $color-holo-secondary;
+        h4 {
+          color: $color-holo-secondary;
+          font-size: $font-size-lg;
+          margin-bottom: 4px;
+        }
+        p {
+          color: $color-white-80;
+          font-size: $font-size-base;
+        }
+      }
+    }
+  }
+}
+.clients-section {
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: $spacing-6;
+    margin-top: $spacing-12;
+  }
+  .client-card {
+    @extend .card;
+    text-align: center;
+    .client-logo {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-black;
+      color: $color-holo-secondary;
+      margin-bottom: 8px;
+      text-shadow: 0 0 8px $color-holo-secondary;
+    }
+    h4 {
+      color: $color-holo-primary;
+      font-size: $font-size-xl;
+      margin-bottom: 4px;
+    }
+    p {
+      color: $color-white-80;
+      font-size: $font-size-base;
+      margin-bottom: 4px;
+    }
+    .client-stats {
+      color: $color-holo-secondary;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-base;
+      margin-top: 4px;
+    }
+  }
+}
+.testimonials-section {
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: $spacing-6;
+    margin-top: $spacing-12;
+  }
+  .testimonial-card {
+    @extend .card;
+    .testimonial-quote {
+      font-size: $font-size-lg;
+      color: $color-white-90;
+      margin-bottom: $spacing-4;
+      font-style: italic;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: $spacing-4;
+      .author-avatar {
+        width: 40px;
+        height: 40px;
+        background: $color-holo-secondary;
+        color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-lg;
+        box-shadow: 0 0 8px $color-holo-secondary;
+      }
+      .author-info {
+        h5 {
+          color: $color-holo-primary;
+          font-size: $font-size-base;
+          margin-bottom: 2px;
+        }
+        span {
+          color: $color-white-80;
+          font-size: $font-size-sm;
+        }
+      }
+    }
+    .testimonial-rating {
+      color: $color-holo-secondary;
+      font-size: $font-size-xl;
+      margin-top: $spacing-4;
+    }
+  }
+}
+.why-section {
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: $spacing-6;
+    margin-top: $spacing-12;
+  }
+  .why-item {
+    @extend .card;
+    text-align: center;
+    .why-icon {
+      font-size: $font-size-3xl;
+      color: $color-holo-secondary;
+      margin-bottom: 8px;
+      text-shadow: 0 0 8px $color-holo-secondary;
+    }
+    h4 {
+      color: $color-holo-primary;
+      font-size: $font-size-lg;
+      margin-bottom: 4px;
+    }
+    p {
+      color: $color-white-80;
+      font-size: $font-size-base;
+    }
+  }
+}
+.cta-section {
+  .cta-content {
+    @extend .card;
+    text-align: center;
+    h2 {
+      color: $color-holo-secondary;
+      font-size: $font-size-2xl;
+      margin-bottom: $spacing-4;
+    }
+    p {
+      color: $color-white-80;
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-6;
+    }
+    .cta-actions {
+      display: flex;
+      gap: $spacing-6;
+      justify-content: center;
+      margin-bottom: $spacing-6;
+    }
+    .contact-info {
+      display: flex;
+      gap: $spacing-6;
+      justify-content: center;
+      margin-top: $spacing-6;
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $color-holo-secondary;
+        font-weight: $font-weight-bold;
+        a {
+          color: $color-holo-primary;
+          font-weight: $font-weight-bold;
+          font-size: $font-size-base;
+        }
+      }
+    }
+  }
+}

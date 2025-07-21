@@ -1,0 +1,61 @@
+.btn {
+  display: inline-block;
+  font-family: inherit;
+  font-weight: $font-weight-extrabold;
+  border-radius: $border-radius-xl;
+  padding: $spacing-3 $spacing-8;
+  font-size: $font-size-lg;
+  cursor: pointer;
+  border: none;
+  position: relative;
+  transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
+  box-shadow: $shadow-holo-md;
+  &.btn-primary {
+    background: $color-holo-secondary;
+    color: $color-white;
+    &:hover {
+      background: $color-holo-primary;
+      color: $color-holo-secondary;
+    }
+  }
+  &.btn-secondary {
+    background: transparent;
+    color: $color-holo-secondary;
+    border: 2px solid $color-holo-secondary;
+    &:hover {
+      background: $color-holo-secondary;
+      color: $color-white;
+    }
+  }
+  &.btn-outline {
+    background: transparent;
+    color: $color-holo-primary;
+    border: 2px solid $color-holo-primary;
+    &:hover {
+      background: $color-holo-primary;
+      color: $color-holo-secondary;
+    }
+  }
+  .btn-glow {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    border-radius: inherit;
+    box-shadow: 0 0 24px 0 $color-holo-primary, 0 0 8px 0 $color-holo-secondary;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+.card {
+  background: $glass-bg;
+  border-radius: $border-radius-xl;
+  box-shadow: $shadow-holo-lg;
+  padding: $spacing-6;
+  margin-bottom: $spacing-6;
+  backdrop-filter: $glass-backdrop;
+  border: 1px solid $glass-border;
+  transition: transform $transition-fast, box-shadow $transition-fast;
+  &:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: $shadow-holo-xl;
+  }
+}

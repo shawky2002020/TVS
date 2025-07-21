@@ -1,0 +1,13 @@
+// Layout styles
+.container {
+  max-width: $container-xl;
+  margin: 0 auto;
+  padding: 0 $spacing-4;
+}
+.grid {
+  display: grid;
+  gap: $spacing-6;
+}
+.section {
+  padding: $spacing-16 0;
+}

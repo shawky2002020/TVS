@@ -1,0 +1,21 @@
+// Entry point for all styles
+@import 'abstracts/base';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
+@import 'pages/home/sections.scss';
+@import 'reset';
+@import 'layout';
+@import 'header';
+@import 'footer';
+@import 'components';
+@import 'responsive';
+// @import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background: #000;
+}

@@ -1,0 +1,52 @@
+// Responsive styles
+@media (max-width: $breakpoint-lg) {
+  .container {
+    max-width: 98vw;
+  }
+  .nav-content {
+    flex-direction: column;
+    gap: $spacing-4;
+  }
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    li {
+      margin: $spacing-3 0;
+    }
+  }
+  .hero-title {
+    font-size: $font-size-4xl;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: $breakpoint-sm) {
+  .nav-content {
+    flex-direction: column;
+    gap: $spacing-3;
+  }
+  .hero {
+    min-height: 60vh;
+    .hero-title {
+      font-size: $font-size-2xl;
+    }
+    .hero-description {
+      font-size: $font-size-base;
+    }
+    .hero-actions {
+      flex-direction: column;
+      gap: $spacing-3;
+    }
+  }
+  .section-title {
+    font-size: $font-size-xl;
+  }
+  .clients-grid, .testimonials-grid, .why-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-actions, .contact-info {
+    flex-direction: column;
+    gap: $spacing-3;
+  }
+}

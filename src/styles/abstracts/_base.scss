@@ -1,0 +1,38 @@
+// Base styles and typography
+@import 'variables';
+body {
+  font-family: $font-family-primary;
+  color: $color-white-90;
+  background: $bg-gradient-main;
+  min-height: 100vh;
+  line-height: $line-height-relaxed;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', $font-family-primary;
+  font-weight: $font-weight-black;
+  letter-spacing: 2px;
+  color: $color-holo-primary;
+  text-shadow: 0 0 8px $color-holo-secondary, 0 0 24px $color-holo-primary;
+}
+a {
+  color: $color-holo-secondary;
+  text-decoration: none;
+  font-weight: $font-weight-bold;
+  transition: color $transition-fast;
+  &:hover {
+    color: $color-holo-primary;
+    text-decoration: underline;
+  }
+}
+.section-title {
+  font-size: $font-size-4xl;
+  margin-bottom: $spacing-4;
+  color: $color-holo-primary;
+  text-align: center;
+}
+.section-subtitle {
+  color: $color-white-60;
+  text-align: center;
+  margin-bottom: $spacing-6;
+}
