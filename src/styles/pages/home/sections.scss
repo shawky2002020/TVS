@@ -6,14 +6,36 @@
   height: 100vh;
   z-index: -2;
   overflow: hidden;
-  // background: $bg-gradient-main;
+  // Enhanced background with more dramatic gradient
+  background: radial-gradient(
+    circle at 20% 30%,
+    rgba(0, 128, 255, 0.15) 0%,
+    transparent 60%
+  ),
+  radial-gradient(
+    circle at 80% 20%,
+    rgba(255, 0, 170, 0.2) 0%,
+    transparent 60%
+  ),
+  radial-gradient(
+    circle at 10% 90%,
+    rgba(27, 179, 179, 0.15) 0%,
+    transparent 70%
+  ),
+  linear-gradient(
+    135deg,
+    $color-black-base 0%,
+    $color-black-light 40%,
+    $color-black-medium 100%
+  );
 }
+
 .holo-layer {
   position: absolute;
   width: 100vw;
   height: 100vh;
   pointer-events: none;
-  opacity: 0.3;
+  opacity: 0.4; // Increased from 0.3 for more boldness
   &.holo-layer-1 {
     background: radial-gradient(
       circle at 20% 40%,
@@ -26,19 +48,33 @@
     background: radial-gradient(
       circle at 80% 60%,
       $color-holo-secondary 0%,
-      transparent 70%
+      transparent 60%
     );
-    filter: blur(80px);
+    filter: blur(70px);
+    animation: pulse 8s infinite alternate;
   }
   &.holo-layer-3 {
     background: linear-gradient(
       120deg,
-      transparent 60%,
+      transparent 50%,
       $color-holo-primary 100%
     );
-    filter: blur(100px);
+    filter: blur(80px);
+    animation: drift 15s infinite alternate;
   }
 }
+
+// Add animations for the holographic layers
+@keyframes pulse {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.6; }
+}
+
+@keyframes drift {
+  0% { transform: translateX(-5%) translateY(-2%); }
+  100% { transform: translateX(5%) translateY(2%); }
+}
+
 #particle-canvas {
   position: absolute;
   top: 0;
@@ -47,6 +83,21 @@
   height: 100vh;
   z-index: -1;
 }
+
+// Add a grid overlay for a more professional tech look
+.grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .hero {
   min-height: 100vh;
   margin-top: 100px;
@@ -61,26 +112,28 @@
     width: 60px;
   }
   .hero-badge {
-    background: rgba($color-holo-primary, 0.15);
-    color: $color-holo-secondary;
-    font-weight: $font-weight-bold;
+    background: rgba($color-holo-primary, 0.25); // Increased from 0.15
+    color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+    font-weight: $font-weight-extrabold; // Changed from bold to extrabold
     display: inline-block;
-    padding: $spacing-2 $spacing-6;
+    padding: $spacing-2 $spacing-8; // Increased horizontal padding
     border-radius: $border-radius-full;
     margin-bottom: $spacing-6;
-    box-shadow: 0 0 16px $color-holo-secondary;
+    box-shadow: 0 0 20px $color-holo-secondary, 0 0 40px rgba($color-holo-secondary, 0.4); // Enhanced glow
     font-size: $font-size-lg;
-    letter-spacing: 1px;
+    letter-spacing: 2px; // Increased from 1px
+    text-transform: uppercase; // Added text transform
   }
 
   .hero-subtitle {
     font-size: $font-size-5xl;
-    color: $color-white-80;
+    color: $color-white;
     margin-bottom: $spacing-4;
-    font-weight: $font-weight-bold;
+    font-weight: $font-weight-black; // Changed from bold to black
+    letter-spacing: 1px; // Added letter spacing
   }
   .hero-description {
-    color: $color-white-80;
+    color: $color-white-90; // Changed from white-80 to white-90
     margin-bottom: $spacing-6;
     max-width: 1000px;
     width: 100%;
@@ -97,30 +150,49 @@
       font-family: lazy;
       font-weight: 700;
       font-size: $font-size-7xl;
-      letter-spacing: 10px;
+      letter-spacing: 12px; // Increased from 10px
       display: flex;
       gap: 34px;
       justify-content: center;
       align-items: center;
       width: 100%;
       text-transform: uppercase;
+      text-shadow: 0 0 15px rgba($color-holo-secondary, 0.7); // Added text shadow
     }
     .hero-special-1 {
       border-radius: 100px;
-      border: solid;
+      border: 2px solid $color-holo-secondary; // Changed from solid to specific width and color
       padding: 0 50px;
       @include flex-center;
       gap: 12px;
+      position: relative;
+      overflow: hidden;
+      
+      // Add a subtle animated gradient border effect
+      &::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: $gradient-holo-primary;
+        z-index: -1;
+        border-radius: inherit;
+        opacity: 0.5;
+        animation: rotate 4s linear infinite;
+      }
     }
     .hero-special-row:nth-child(3) {
       svg {
         width: 100px;
+        filter: drop-shadow(0 0 10px $color-holo-secondary); // Added drop shadow
       }
     }
     .title-line {
       font-size: $font-size-5xl;
       font-weight: $font-weight-black;
-      text-shadow: 0 0 8px $color-holo-secondary, 0 0 24px $color-holo-primary;
+      text-shadow: 0 0 10px $color-holo-secondary, 0 0 30px $color-holo-primary; // Enhanced text shadow
       position: relative;
       display: inline-block;
       margin-bottom: $spacing-4;
@@ -131,30 +203,89 @@
     gap: $spacing-6;
     justify-content: center;
     margin-bottom: $spacing-6;
+    
+    // Add a scale effect to buttons on hover
+    .btn {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
+      }
+    }
   }
   .scroll-indicator {
     margin-top: $spacing-6;
     color: $color-white-60;
     .scroll-line {
       width: 2px;
-      height: 32px;
+      height: 40px; // Increased from 32px
       background: $color-holo-secondary;
       margin: 0 auto 8px auto;
       border-radius: 2px;
-      box-shadow: 0 0 8px $color-white-80;
+      box-shadow: 0 0 12px $color-white-80, 0 0 20px rgba($color-holo-secondary, 0.6); // Enhanced glow
+      animation: scrollPulse 2s infinite; // Added animation
     }
     span {
       font-size: $font-size-base;
-      letter-spacing: 1px;
+      letter-spacing: 2px; // Increased from 1px
+      text-transform: uppercase; // Added text transform
     }
   }
 }
-.marketing h3{
-      color: $color-holo-primary-light;
-    }
-    .call h3{
-      color: $color-holo-secondary-light;
-    }
+
+// Add scroll pulse animation
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.6; height: 32px; }
+  50% { opacity: 1; height: 40px; }
+}
+
+// Add rotation animation for gradient borders
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.marketing h3 {
+  color: $color-holo-primary-light;
+  font-weight: $font-weight-extrabold; // Added font weight
+  letter-spacing: 1px; // Added letter spacing
+  position: relative;
+  display: inline-block;
+  
+  // Add underline effect
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: $color-holo-primary-light;
+    border-radius: 3px;
+  }
+}
+
+.call h3 {
+  color: $color-holo-secondary-light;
+  font-weight: $font-weight-extrabold; // Added font weight
+  letter-spacing: 1px; // Added letter spacing
+  position: relative;
+  display: inline-block;
+  
+  // Add underline effect
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: $color-holo-secondary-light;
+    border-radius: 3px;
+  }
+}
+
 .services-section {
   .services-grid {
     display: grid;
@@ -167,38 +298,57 @@
   }
   .service-block {
     @extend .card;
+    border: 1px solid rgba($color-holo-primary, 0.3); // Added border
+    background: linear-gradient(
+      135deg,
+      rgba($color-black-base, 0.9) 0%,
+      rgba($color-black-light, 0.8) 100%
+    ); // Enhanced background
+    
     .service-icon {
       font-size: $font-size-5xl;
       margin-bottom: $spacing-4;
-      color: $color-white-80;
-      text-shadow: 0 0 12px $color-holo-secondary;
+      color: $color-white;
+      text-shadow: 0 0 15px $color-holo-secondary, 0 0 30px rgba($color-holo-secondary, 0.5); // Enhanced glow
     }
     h3 {
       margin-bottom: $spacing-4;
+      font-weight: $font-weight-extrabold; // Added font weight
+      color: $color-holo-primary-light; // Added color
+      letter-spacing: 1px; // Added letter spacing
     }
     
-   
     .service-items {
       margin-top: $spacing-4;
       .service-item {
-        background: rgba($color-black-light, 0.7);
+        background: rgba($color-black-light, 0.8); // Darkened from 0.7
         border-radius: $border-radius-lg;
-        padding: $spacing-3;
+        padding: $spacing-4; // Increased from spacing-3
         margin-bottom: $spacing-3;
-        box-shadow: 0 0 8px $color-white-80;
+        box-shadow: 0 0 12px rgba($color-white-80, 0.3), 0 0 20px rgba($color-holo-secondary, 0.2); // Enhanced glow
+        border-left: 3px solid $color-holo-secondary; // Added border accent
+        transition: transform 0.3s ease, box-shadow 0.3s ease; // Added transition
+        
+        &:hover {
+          transform: translateX(5px);
+          box-shadow: 0 0 15px rgba($color-white-80, 0.4), 0 0 25px rgba($color-holo-secondary, 0.3);
+        }
+        
         h4 {
-          color: $color-white-90;
+          color: $color-white;
           font-size: $font-size-lg;
           margin-bottom: 4px;
+          font-weight: $font-weight-bold; // Added font weight
         }
         p {
-          color: $color-white-40;
+          color: $color-white-60; // Changed from white-40 to white-60
           font-size: $font-size-base;
         }
       }
     }
   }
 }
+
 .clients-section {
   .clients-grid {
     display: grid;
@@ -209,31 +359,45 @@
   .client-card {
     @extend .card;
     text-align: center;
+    border: 1px solid rgba($color-holo-secondary, 0.3); // Added border
+    background: linear-gradient(
+      135deg,
+      rgba($color-black-base, 0.9) 0%,
+      rgba($color-black-light, 0.8) 100%
+    ); // Enhanced background
+    
     .client-logo {
       font-size: $font-size-3xl;
       font-weight: $font-weight-black;
-      color: $color-holo-secondary;
-      margin-bottom: 8px;
-      text-shadow: 0 0 8px $color-holo-secondary;
+      color: $color-holo-secondary-light; // Changed to secondary-light
+      margin-bottom: 12px; // Increased from 8px
+      text-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.5); // Enhanced glow
     }
     h4 {
-      color: $color-holo-primary;
+      color: $color-holo-primary-light; // Changed to primary-light
       font-size: $font-size-xl;
-      margin-bottom: 4px;
+      margin-bottom: 8px; // Increased from 4px
+      font-weight: $font-weight-extrabold; // Added font weight
+      letter-spacing: 0.5px; // Added letter spacing
     }
     p {
-      color: $color-white-80;
+      color: $color-white-90; // Changed from white-80 to white-90
       font-size: $font-size-base;
-      margin-bottom: 4px;
+      margin-bottom: 8px; // Increased from 4px
     }
     .client-stats {
-      color: $color-holo-secondary;
-      font-weight: $font-weight-bold;
-      font-size: $font-size-base;
-      margin-top: 4px;
+      color: $color-holo-secondary-light; // Changed to secondary-light
+      font-weight: $font-weight-extrabold; // Changed from bold to extrabold
+      font-size: $font-size-lg; // Increased from base
+      margin-top: 8px; // Increased from 4px
+      padding: 6px 12px; // Added padding
+      background: rgba($color-holo-secondary, 0.1); // Added background
+      border-radius: $border-radius-full; // Added border radius
+      display: inline-block; // Added display
     }
   }
 }
+
 .testimonials-section {
   .testimonials-grid {
     display: grid;
@@ -243,20 +407,42 @@
   }
   .testimonial-card {
     @extend .card;
+    border: 1px solid rgba($color-holo-primary, 0.3); // Added border
+    background: linear-gradient(
+      135deg,
+      rgba($color-black-base, 0.9) 0%,
+      rgba($color-black-light, 0.8) 100%
+    ); // Enhanced background
+    position: relative;
+    
+    // Add quote marks
+    &::before {
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      font-size: 80px;
+      color: rgba($color-holo-primary, 0.2);
+      font-family: serif;
+      line-height: 1;
+    }
+    
     .testimonial-quote {
-      font-size: $font-size-lg;
-      color: $color-white-90;
+      font-size: $font-size-xl; // Increased from lg
+      color: $color-white;
       margin-bottom: $spacing-4;
       font-style: italic;
+      padding-left: $spacing-4; // Added padding
+      border-left: 3px solid rgba($color-holo-primary, 0.3); // Added border
     }
     .testimonial-author {
       display: flex;
       align-items: center;
       gap: $spacing-4;
       .author-avatar {
-        width: 40px;
-        height: 40px;
-        background: $color-holo-secondary;
+        width: 50px; // Increased from 40px
+        height: 50px; // Increased from 40px
+        background: $color-holo-secondary-light; // Changed from secondary to secondary-light
         color: $color-white;
         border-radius: 50%;
         display: flex;
@@ -264,27 +450,29 @@
         justify-content: center;
         font-weight: $font-weight-bold;
         font-size: $font-size-lg;
-        box-shadow: 0 0 8px $color-holo-secondary;
+        box-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.4); // Enhanced glow
       }
       .author-info {
         h5 {
-          color: $color-holo-primary;
-          font-size: $font-size-base;
-          margin-bottom: 2px;
+          color: $color-holo-primary-light; // Changed from primary to primary-light
+          font-size: $font-size-lg; // Increased from base
+          margin-bottom: 4px; // Increased from 2px
+          font-weight: $font-weight-bold; // Added font weight
         }
         span {
-          color: $color-white-80;
+          color: $color-white-90; // Changed from white-80 to white-90
           font-size: $font-size-sm;
         }
       }
     }
     .testimonial-rating {
-      color: $color-holo-secondary;
+      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
       font-size: $font-size-xl;
       margin-top: $spacing-4;
     }
   }
 }
+
 .why-section {
   .why-grid {
     display: grid;
@@ -295,58 +483,130 @@
   .why-item {
     @extend .card;
     text-align: center;
+    border: 1px solid rgba($color-holo-secondary, 0.3); // Added border
+    background: linear-gradient(
+      135deg,
+      rgba($color-black-base, 0.9) 0%,
+      rgba($color-black-light, 0.8) 100%
+    ); // Enhanced background
+    
     .why-icon {
-      font-size: $font-size-3xl;
-      color: $color-holo-secondary;
-      margin-bottom: 8px;
-      text-shadow: 0 0 8px $color-holo-secondary;
+      font-size: $font-size-4xl; // Increased from 3xl
+      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+      margin-bottom: 12px; // Increased from 8px
+      text-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.5); // Enhanced glow
+      
+      // Add icon hover effect
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.2) rotate(5deg);
+      }
     }
     h4 {
-      color: $color-holo-primary;
-      font-size: $font-size-lg;
-      margin-bottom: 4px;
+      color: $color-holo-primary-light; // Changed from primary to primary-light
+      font-size: $font-size-xl; // Increased from lg
+      margin-bottom: 8px; // Increased from 4px
+      font-weight: $font-weight-extrabold; // Added font weight
+      letter-spacing: 0.5px; // Added letter spacing
     }
     p {
-      color: $color-white-80;
+      color: $color-white-90; // Changed from white-80 to white-90
       font-size: $font-size-base;
     }
   }
 }
+
 .cta-section {
   .cta-content {
     @extend .card;
     text-align: center;
+    border: 1px solid rgba($color-holo-primary, 0.3); // Added border
+    background: linear-gradient(
+      135deg,
+      rgba($color-black-base, 0.9) 0%,
+      rgba($color-black-light, 0.8) 100%
+    ); // Enhanced background
+    position: relative;
+    overflow: hidden;
+    
+    // Add animated gradient border
+    &::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: $gradient-holo-primary;
+      z-index: -1;
+      opacity: 0.5;
+      animation: rotate 8s linear infinite;
+    }
+    
     h2 {
-      color: $color-holo-secondary;
-      font-size: $font-size-2xl;
+      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+      font-size: $font-size-3xl; // Increased from 2xl
       margin-bottom: $spacing-4;
+      font-weight: $font-weight-black; // Added font weight
+      letter-spacing: 1px; // Added letter spacing
+      text-shadow: 0 0 10px rgba($color-holo-secondary, 0.7); // Added text shadow
     }
     p {
-      color: $color-white-80;
-      font-size: $font-size-lg;
+      color: $color-white;
+      font-size: $font-size-xl; // Increased from lg
       margin-bottom: $spacing-6;
+      max-width: 800px; // Added max width
+      margin-left: auto; // Center the paragraph
+      margin-right: auto; // Center the paragraph
     }
     .cta-actions {
       display: flex;
       gap: $spacing-6;
       justify-content: center;
       margin-bottom: $spacing-6;
+      
+      // Add a scale effect to buttons on hover
+      .btn {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
+        }
+      }
     }
     .contact-info {
       display: flex;
       gap: $spacing-6;
       justify-content: center;
       margin-top: $spacing-6;
+      flex-wrap: wrap; // Added flex wrap for responsiveness
+      
       .contact-item {
         display: flex;
         align-items: center;
         gap: 8px;
-        color: $color-holo-secondary;
+        color: $color-holo-secondary-light; // Changed from secondary to secondary-light
         font-weight: $font-weight-bold;
+        padding: $spacing-2 $spacing-4; // Added padding
+        background: rgba($color-holo-secondary, 0.1); // Added background
+        border-radius: $border-radius-full; // Added border radius
+        transition: transform 0.3s ease, background 0.3s ease; // Added transition
+        
+        &:hover {
+          transform: translateY(-3px);
+          background: rgba($color-holo-secondary, 0.2);
+        }
+        
         a {
-          color: $color-holo-primary;
-          font-weight: $font-weight-bold;
+          color: $color-holo-primary-light; // Changed from primary to primary-light
+          font-weight: $font-weight-extrabold; // Changed from bold to extrabold
           font-size: $font-size-base;
+          text-decoration: none; // Added text decoration
+          
+          &:hover {
+            text-decoration: underline; // Added hover effect
+          }
         }
       }
     }
