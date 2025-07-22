@@ -9,11 +9,18 @@ body {
   overflow-x: hidden;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Orbitron', $font-family-primary;
   font-weight: $font-weight-black;
   letter-spacing: 2px;
   color: $color-holo-primary;
-  text-shadow: 0 0 8px $color-holo-secondary, 0 0 24px $color-holo-primary;
+}
+h1 {
+  font-size: $font-size-5xl;
+}
+h2 {
+  font-size: $font-size-4xl;
+}
+h3 {
+  font-size: $font-size-3xl ;
 }
 a {
   color: $color-holo-secondary;
@@ -26,13 +33,18 @@ a {
   }
 }
 .section-title {
-  font-size: $font-size-4xl;
+    font-size: $font-size-5xl;
   margin-bottom: $spacing-4;
-  color: $color-holo-primary;
   text-align: center;
+  background: $gradient-holo-primary;
+  --webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .section-subtitle {
   color: $color-white-60;
   text-align: center;
   margin-bottom: $spacing-6;
+    font-family: frost;
+
 }

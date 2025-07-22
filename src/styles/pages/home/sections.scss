@@ -17,7 +17,7 @@
   &.holo-layer-1 {
     background: radial-gradient(
       circle at 20% 40%,
-      $color-holo-primary 0%,
+      $color-black-base 0%,
       transparent 60%
     );
     filter: blur(60px);
@@ -72,28 +72,7 @@
     font-size: $font-size-lg;
     letter-spacing: 1px;
   }
-  .hero-title {
-    font-size: $font-size-7xl;
-    font-family: "Orbitron", $font-family-primary;
-    font-weight: $font-weight-black;
-    color: $color-white-80;
-    position: relative;
-    .title-glow {
-      position: absolute;
-      left: 50%;
-      top: 80%;
-      width: 80%;
-      height: 40px;
-      background: radial-gradient(
-        circle,
-        $color-holo-secondary 0%,
-        transparent 80%
-      );
-      filter: blur(16px);
-      z-index: -1;
-      transform: translateX(-50%);
-    }
-  }
+
   .hero-subtitle {
     font-size: $font-size-5xl;
     color: $color-white-80;
@@ -105,17 +84,46 @@
     margin-bottom: $spacing-6;
     max-width: 1000px;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
 
     .hero-special {
       width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      height: 100%;
       gap: 12px;
     }
     .hero-special-row {
-      background: #000;
-      border: red solid;
+      font-family: lazy;
+      font-weight: 700;
+      font-size: $font-size-7xl;
+      letter-spacing: 10px;
+      display: flex;
+      gap: 34px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-transform: uppercase;
+    }
+    .hero-special-1 {
+      border-radius: 100px;
+      border: solid;
+      padding: 0 50px;
+      @include flex-center;
+      gap: 12px;
+    }
+    .hero-special-row:nth-child(3) {
+      svg {
+        width: 100px;
+      }
+    }
+    .title-line {
+      font-size: $font-size-5xl;
+      font-weight: $font-weight-black;
+      text-shadow: 0 0 8px $color-holo-secondary, 0 0 24px $color-holo-primary;
+      position: relative;
+      display: inline-block;
+      margin-bottom: $spacing-4;
     }
   }
   .hero-actions {
@@ -133,7 +141,7 @@
       background: $color-holo-secondary;
       margin: 0 auto 8px auto;
       border-radius: 2px;
-      box-shadow: 0 0 8px $color-holo-secondary;
+      box-shadow: 0 0 8px $color-white-80;
     }
     span {
       font-size: $font-size-base;
@@ -141,6 +149,12 @@
     }
   }
 }
+.marketing h3{
+      color: $color-holo-primary-light;
+    }
+    .call h3{
+      color: $color-holo-secondary-light;
+    }
 .services-section {
   .services-grid {
     display: grid;
@@ -156,14 +170,14 @@
     .service-icon {
       font-size: $font-size-5xl;
       margin-bottom: $spacing-4;
-      color: $color-holo-secondary;
+      color: $color-white-80;
       text-shadow: 0 0 12px $color-holo-secondary;
     }
     h3 {
-      font-size: $font-size-2xl;
-      color: $color-holo-primary;
       margin-bottom: $spacing-4;
     }
+    
+   
     .service-items {
       margin-top: $spacing-4;
       .service-item {
@@ -171,14 +185,14 @@
         border-radius: $border-radius-lg;
         padding: $spacing-3;
         margin-bottom: $spacing-3;
-        box-shadow: 0 0 8px $color-holo-secondary;
+        box-shadow: 0 0 8px $color-white-80;
         h4 {
-          color: $color-holo-secondary;
+          color: $color-white-90;
           font-size: $font-size-lg;
           margin-bottom: 4px;
         }
         p {
-          color: $color-white-80;
+          color: $color-white-40;
           font-size: $font-size-base;
         }
       }

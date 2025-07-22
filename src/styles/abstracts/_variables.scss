@@ -18,24 +18,30 @@ $color-white-10: rgba(255, 255, 255, 0.1);
 $color-white-05: rgba(255, 255, 255, 0.05);
 
 // Holographic Colors
-$color-holo-primary: #046262; // Deep Cyan
-$color-holo-secondary: #3f033f; // Deep Magenta
+$color-holo-primary: #046262; // 196deg - Deep Cyan
+$color-holo-primary-light: #1bb3b3; // Lighter Cyan
+$color-holo-primary-dark: #023636; // Darker Cyan
+
 $color-holo-tertiary: #009900; // Dark Lime
 $color-holo-quaternary: #b3b300; // Deep Yellow
-$color-holo-pink: #b3005c; // Bold Hot Pink
-$color-holo-blue: #005cb3; // Bold Electric Blue
+$color-holo-blue:           #00cfff; // Cyan-Blue (start of gradient)
+
+$color-holo-secondary:      #0080ff; // Electric Blue
+$color-holo-secondary-light:#7a00ff; // Violet
+$color-holo-secondary-dark: #1a001a; // Darker Magenta
+
+$color-holo-pink:           #ff00aa; // Hot Pink (end of gradient)
 
 // Gradients
 $gradient-holo-primary: linear-gradient(
-  45deg,
-  $color-holo-primary,
-  $color-holo-secondary
+  to right,
+  $color-holo-blue,
+  $color-holo-secondary,
+  $color-holo-secondary-light,
+  $color-holo-pink
 );
-$gradient-holo-secondary: linear-gradient(
-  135deg,
-  $color-holo-pink,
-  $color-holo-blue
-);
+$gradient-holo-secondary: linear-gradient(to right, #00bcd4, #2196f3, #9c27b0, #e91e63);
+
 $gradient-holo-animated: linear-gradient(
   45deg,
   $color-holo-primary,
@@ -69,7 +75,7 @@ $bg-gradient-main: radial-gradient(
   );
 
 // Typography
-$font-family-primary: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+$font-family-primary: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, sans-serif;
 
 $font-size-xs: 12px;

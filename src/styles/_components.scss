@@ -1,30 +1,34 @@
 .btn {
   display: inline-block;
+  @include flex-center;
+  gap: 12px;
   font-family: inherit;
+  font-size: $font-size-2xl;
   font-weight: $font-weight-extrabold;
   border-radius: $border-radius-xl;
-  padding: $spacing-3 $spacing-8;
-  font-size: $font-size-lg;
+  width: 100%;
+  padding: $spacing-3 0;
   cursor: pointer;
   border: none;
   position: relative;
+ 
   transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
-  box-shadow: $shadow-holo-md;
+  // box-shadow: $shadow-holo-md;
   &.btn-primary {
-    background: $color-holo-secondary;
-    color: $color-white;
+    background: $color-white-80;
+    color: $color-holo-primary;
     &:hover {
       background: $color-holo-primary;
-      color: $color-holo-secondary;
+      color: $color-white-80;
     }
   }
   &.btn-secondary {
-    background: transparent;
-    color: $color-holo-secondary;
-    border: 2px solid $color-holo-secondary;
+    background: $color-holo-secondary-dark;
+    color: $color-white-80;
+    border: 2px solid $color-white-80;
     &:hover {
-      background: $color-holo-secondary;
-      color: $color-white;
+      background: $color-white-80;
+      color: $color-holo-secondary-dark;
     }
   }
   &.btn-outline {
@@ -40,15 +44,15 @@
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     border-radius: inherit;
-    box-shadow: 0 0 24px 0 $color-holo-primary, 0 0 8px 0 $color-holo-secondary;
+    box-shadow: 0 0 24px 0 $color-holo-primary-dark, 0 0 8px 0 $color-holo-secondary-dark;
     z-index: -1;
     pointer-events: none;
   }
 }
 .card {
-  background: $glass-bg;
+  background: rgba(0, 0, 0, 0.211);
   border-radius: $border-radius-xl;
-  box-shadow: $shadow-holo-lg;
+  // box-shadow: $shadow-holo-lg;
   padding: $spacing-6;
   margin-bottom: $spacing-6;
   backdrop-filter: $glass-backdrop;
@@ -56,6 +60,12 @@
   transition: transform $transition-fast, box-shadow $transition-fast;
   &:hover {
     transform: translateY(-4px) scale(1.03);
-    box-shadow: $shadow-holo-xl;
+    box-shadow: $shadow-holo-md;
   }
+}
+.btn > * {
+  transition: transform $transition-slow;
+}
+.btn:hover > * {
+  transform: translateY(-2px);
 }
