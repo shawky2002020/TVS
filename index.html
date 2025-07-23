@@ -14,6 +14,9 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Font Awesome (local build) -->
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
     <link rel="stylesheet" href="src/styles/main.scss" />
 
 
@@ -150,7 +153,15 @@
             </a>
           </div>
         </div>
-        <section class="stats">
+       
+
+        <div class="scroll-indicator">
+          <div class="scroll-mouse">
+            <div class="scroll-wheel"></div>
+          </div>
+        </div>
+      </section>
+ <section class="stats">
           <div class="hero-stats">
             <div class="stat-item">
               <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
@@ -169,50 +180,7 @@
             </div>
           </div>
         </section>
-
-        <div class="scroll-indicator">
-          <div class="scroll-mouse">
-            <div class="scroll-wheel"></div>
-          </div>
-          <span>Scroll to Discover</span>
-        </div>
-      </section>
-
-      <!-- Expanding Across Continents Marquee Section -->
-      <section class="marquee-section">
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Expanding across continents</h2>
-          </div>
-          <div class="marquee-container">
-            <div class="marquee">
-              <div class="marquee-item"><img src="assets/work/99 campus logo.png" alt="Company 1" /></div>
-              <div class="marquee-item"><img src="assets/work/Artboard 2.png" alt="Company 2" /></div>
-              <div class="marquee-item"><img src="assets/work/Black re.png" alt="Company 3" /></div>
-              <div class="marquee-item"><img src="assets/work/Black.png" alt="Company 4" /></div>
-              <div class="marquee-item"><img src="assets/work/California_Logo-removebg-preview.png" alt="Company 5" /></div>
-              <div class="marquee-item"><img src="assets/work/Freedom Ray Solar.png" alt="Company 6" /></div>
-              <div class="marquee-item"><img src="assets/work/gamal.png" alt="Company 7" /></div>
-              <div class="marquee-item"><img src="assets/work/Hawk Migration.png" alt="Company 1" /></div>
-              <div class="marquee-item"><img src="assets/work/luxnests.png" alt="Company 2" /></div>
-              <div class="marquee-item"><img src="assets/work/naut_cal.png" alt="Company 3" /></div>
-              <div class="marquee-item"><img src="assets/work/shirt.png" alt="Company 4" /></div>
-              
-              <div class="marquee-item"><img src="assets/work/99 campus logo.png" alt="Company 1" /></div>
-              <div class="marquee-item"><img src="assets/work/Artboard 2.png" alt="Company 2" /></div>
-              <div class="marquee-item"><img src="assets/work/Black re.png" alt="Company 3" /></div>
-              <div class="marquee-item"><img src="assets/work/Black.png" alt="Company 4" /></div>
-              <div class="marquee-item"><img src="assets/work/California_Logo-removebg-preview.png" alt="Company 5" /></div>
-              <div class="marquee-item"><img src="assets/work/Freedom Ray Solar.png" alt="Company 6" /></div>
-              <div class="marquee-item"><img src="assets/work/gamal.png" alt="Company 7" /></div>
-              <div class="marquee-item"><img src="assets/work/Hawk Migration.png" alt="Company 1" /></div>
-              <div class="marquee-item"><img src="assets/work/luxnests.png" alt="Company 2" /></div>
-              <div class="marquee-item"><img src="assets/work/naut_cal.png" alt="Company 3" /></div>
-              <div class="marquee-item"><img src="assets/work/shirt.png" alt="Company 4" /></div>
-            </div>
-          </div>
-        </div>
-      </section>
+   
       <!-- Services Section -->
       <section class="section services-section" id="services">
         <div class="container">
@@ -377,6 +345,7 @@
             </div>
           </div>
         </div>
+        
       </section>
 
       <!-- Testimonials Section -->
@@ -449,14 +418,14 @@
       <section class="section why-section">
         <div class="container">
           <div class="section-header">
-            <h2 class="section-title">Why Televirgins?</h2>
-            <p class="section-subtitle">
-              The competitive advantages that matter
-            </p>
+        <h2 class="section-title">Why Televirgins?</h2>
+        <p class="section-subtitle">
+          The competitive advantages that matter
+        </p>
           </div>
 
           <div class="why-grid">
-            <div class="why-item">
+        <div class="why-item">
               <div class="why-icon"><i class="fas fa-bolt"></i></div>
               <h4>Lightning Fast Results</h4>
               <p>
@@ -507,7 +476,43 @@
           </div>
         </div>
       </section>
-
+   <!-- Expanding Across Continents Marquee Section -->
+      <section class="marquee-section">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Expanding across continents</h2>
+          </div>
+          <div class="marquee-container">
+            <div class="marquee">
+              <div class="marquee-track">
+                <div class="marquee-item"><img src="assets/work/99 campus logo.png" alt="99 Campus" /></div>
+                <div class="marquee-item"><img src="assets/work/Artboard 2.png" alt="Artboard 2" /></div>
+                <div class="marquee-item"><img src="assets/work/Black re.png" alt="Black re" /></div>
+                <div class="marquee-item"><img src="assets/work/Black.png" alt="Black" /></div>
+                <div class="marquee-item"><img src="assets/work/California_Logo-removebg-preview.png" alt="California Logo" /></div>
+                <div class="marquee-item"><img src="assets/work/Freedom Ray Solar.png" alt="Freedom Ray Solar" /></div>
+                <div class="marquee-item"><img src="assets/work/gamal.png" alt="Gamal" /></div>
+                <div class="marquee-item"><img src="assets/work/Hawk Migration.png" alt="Hawk Migration" /></div>
+                <div class="marquee-item"><img src="assets/work/luxnests.png" alt="Luxnests" /></div>
+                <div class="marquee-item"><img src="assets/work/naut_cal.png" alt="Naut Cal" /></div>
+                <div class="marquee-item"><img src="assets/work/shirt.png" alt="Shirt" /></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/99 campus logo.png" alt="99 Campus" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/Artboard 2.png" alt="Artboard 2" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/Black re.png" alt="Black re" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/Black.png" alt="Black" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/California_Logo-removebg-preview.png" alt="California Logo" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/Freedom Ray Solar.png" alt="Freedom Ray Solar" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/gamal.png" alt="Gamal" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/Hawk Migration.png" alt="Hawk Migration" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/luxnests.png" alt="Luxnests" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/naut_cal.png" alt="Naut Cal" /></div>
+                <div class="marquee-item" aria-hidden="true"><img src="assets/work/shirt.png" alt="Shirt" /></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- CTA Section -->
       <section class="section cta-section" id="contact">
         <div class="container">
@@ -550,6 +555,7 @@
             </div>
           </div>
         </div>
+        
       </section>
     </main>
   </body>

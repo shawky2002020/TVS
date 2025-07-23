@@ -1,4 +1,7 @@
 // Hero Stats Section Styles
+.stats{
+    min-height: auto !important;
+}
 .hero-stats {
   display: flex;
   justify-content: center;
@@ -43,7 +46,7 @@
   font-family: 'Orbitron', $font-family-primary;
   font-size: $font-size-5xl;
   font-weight: $font-weight-black;
-  color: $color-holo-primary;
+  color: $color-white-80;
   text-shadow: 0 0 16px $color-holo-primary, 0 0 32px $color-holo-secondary;
   margin-bottom: $spacing-2;
   transition: color $transition-fast;

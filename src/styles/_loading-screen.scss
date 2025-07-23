@@ -3,7 +3,7 @@
   position: fixed;
   inset: 0;
   z-index: 9999;
-  background: linear-gradient(135deg, rgba(20,22,40,0.98) 60%, rgba(40,0,80,0.98) 100%);
+  background: linear-gradient(135deg, rgba(4, 4, 7, 0.98) 60%, rgba(15, 0, 30, 0.98) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,11 +29,10 @@
   .loading-logo {
     margin-bottom: 0.5rem;
     .logo-img {
-      width: 90px;
+      width: 300px;
       filter: drop-shadow(0 0 24px #1bb3b3) drop-shadow(0 0 32px #fff2);
       border-radius: 1.2rem;
       background: rgba(255,255,255,0.03);
-      padding: 0.5rem;
     }
   }
   .loading-progress {

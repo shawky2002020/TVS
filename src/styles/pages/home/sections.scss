@@ -108,8 +108,7 @@
 
 
 .hero {
-  min-height: 100vh;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -539,24 +538,24 @@
     overflow: hidden;
     z-index: 0;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -5px;
-      left: -5px;
-      right: -5px;
-      bottom: -5px;
-      background: linear-gradient(
-        135deg,
-        rgba($color-holo-primary, 0.2) 0%,
-        rgba($color-holo-secondary, 0.6) 100%
-      );
-      z-index: -1;
-      filter: blur(4px); // Optional: adds glow effect
-      animation: rotateGradient 8s linear infinite;
-      background-size: 300% 300%;
-      background-position: 0% 50%;
-    }
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   top: -5px;
+    //   left: -5px;
+    //   right: -5px;
+    //   bottom: -5px;
+    //   background: linear-gradient(
+    //     135deg,
+    //     rgba($color-holo-primary, 0.2) 0%,
+    //     rgba($color-holo-secondary, 0.6) 100%
+    //   );
+    //   z-index: -1;
+    //   filter: blur(4px); // Optional: adds glow effect
+    //   animation: rotateGradient 8s linear infinite;
+    //   background-size: 300% 300%;
+    //   background-position: 0% 50%;
+    // }
 
     // You must define this keyframes block
     @keyframes rotateGradient {
@@ -572,7 +571,7 @@
     }
     
     h2 {
-      color: $color-black-base; // Changed from secondary to secondary-light
+      color: $color-white-80; // Changed from secondary to secondary-light
       font-size: $font-size-3xl; // Increased from 2xl
       margin-bottom: $spacing-4;
       font-weight: $font-weight-black; // Added font weight
@@ -589,9 +588,9 @@
     }
     .cta-actions {
       display: flex;
-      gap: $spacing-6;
+      gap: $spacing-12;
       justify-content: center;
-      margin-bottom: $spacing-6;
+      margin-bottom: 50px;
       
       // Add a scale effect to buttons on hover
       .btn {

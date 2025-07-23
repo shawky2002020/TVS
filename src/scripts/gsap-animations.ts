@@ -28,10 +28,10 @@ export function animateLoadingScreen() {
       ".loading-progress .progress-bar",
       {
         width: "100%",
-        duration: 2,
+        duration: 1,
         ease: "power2.inOut",
       },
-      "-=0.2"
+      "1"
     )
     .to(
       ".loading-text",
@@ -51,7 +51,7 @@ export function animateLoadingScreen() {
         duration: 0.6,
         ease: "power2.in",
       },
-      "+=0.5"
+      "+=1.5"
     )
     .to(
       ".loading-screen",
@@ -74,10 +74,6 @@ export function animateHero() {
 
   // Hero badge animation
   tl
-
-  
-
-    
 
     // Animate special words with stagger
     .from(
@@ -307,14 +303,25 @@ export function animateServices() {
           toggleActions: "play none none reverse",
         },
       })
-      .from(block, {
-        y: 80,
-        opacity: 0,
-        scale: 0.9,
-        rotation: i % 2 === 0 ? 5 : -5,
-        duration: 1,
-        ease: "back.out(1.7)",
-      })
+      .fromTo(
+        block,
+        {
+          y: 80,
+          opacity: 0,
+          scale: 0.9,
+          rotation: i % 2 === 0 ? 5 : -5,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          rotation: 0,
+          duration: 1.2,
+          ease: "power3.out",
+        }
+      )
       .from(
         block.querySelector(".service-icon"),
         {
@@ -325,12 +332,19 @@ export function animateServices() {
         },
         "-=0.6"
       )
-      .from(
+      .fromTo(
         block.querySelectorAll(".service-item"),
         {
           x: -30,
           opacity: 0,
-          stagger: 0.1,
+          duration: 0.6,
+          ease: "power2.out",
+        },
+        {
+          x: 0,
+          opacity: 1,
+          stagger: { amount: 0.5, from: "start" },
+
           duration: 0.6,
           ease: "power2.out",
         },
@@ -476,18 +490,28 @@ export function animateWhy() {
       },
     });
 
-    tl.from(item, {
+    tl.fromTo(item, {
       y: 50,
       opacity: 0,
       scale: 0.9,
       duration: 0.9,
       ease: "back.out(1.7)",
       delay: i * 0.1,
-    }).from(
+    },{
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+    }).fromTo(
       item.querySelector(".why-icon"),
       {
-        scale: 0,
+        opacity: 0,
         rotation: 180,
+        duration: 0.6,
+        ease: "back.out(1.7)",
+      },{
+        opacity: 1,
+        rotation: 0,
         duration: 0.6,
         ease: "back.out(1.7)",
       },
@@ -624,7 +648,7 @@ export function initParticleSystem() {
 // INITIALIZATION
 export function initGsapAnimations() {
   // Start with loading screen
-   animateLoadingScreen();
+  animateLoadingScreen();
   // animateHero();
 
   // Initialize other animations
