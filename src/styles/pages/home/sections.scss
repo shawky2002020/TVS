@@ -91,12 +91,21 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: -1;
   pointer-events: none;
 }
+
+.dark-overlay{
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background: #00000075;
+}
+
+
 
 .hero {
   min-height: 100vh;
@@ -520,31 +529,50 @@
   .cta-content {
     @extend .card;
     text-align: center;
-    border: 1px solid rgba($color-holo-primary, 0.3); // Added border
+    border: 1px solid rgba($color-holo-primary, 0.3);
     background: linear-gradient(
       135deg,
       rgba($color-black-base, 0.9) 0%,
       rgba($color-black-light, 0.8) 100%
-    ); // Enhanced background
+    );
     position: relative;
     overflow: hidden;
-    
-    // Add animated gradient border
+    z-index: 0;
+
     &::before {
       content: '';
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
-      background: $gradient-holo-primary;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: linear-gradient(
+        135deg,
+        rgba($color-holo-primary, 0.2) 0%,
+        rgba($color-holo-secondary, 0.6) 100%
+      );
       z-index: -1;
-      opacity: 0.5;
-      animation: rotate 8s linear infinite;
+      filter: blur(4px); // Optional: adds glow effect
+      animation: rotateGradient 8s linear infinite;
+      background-size: 300% 300%;
+      background-position: 0% 50%;
+    }
+
+    // You must define this keyframes block
+    @keyframes rotateGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
     
     h2 {
-      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+      color: $color-black-base; // Changed from secondary to secondary-light
       font-size: $font-size-3xl; // Increased from 2xl
       margin-bottom: $spacing-4;
       font-weight: $font-weight-black; // Added font weight

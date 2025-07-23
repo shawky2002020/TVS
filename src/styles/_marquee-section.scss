@@ -1,0 +1,83 @@
+// Marquee Section Styles
+.marquee-section {
+  margin: 6rem 0 4rem 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    .section-title {
+      font-family: 'Orbitron', 'Inter', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg, #1bb3b3 0%, #7f5cff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      letter-spacing: 2px;
+      text-shadow: 0 0 24px #1bb3b344, 0 0 32px #7f5cff33;
+    }
+  }
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    background: rgba(30,30,60,0.7);
+    border-radius: 2rem;
+    box-shadow: 0 8px 48px 0 rgba(0,255,255,0.10), 0 1.5px 0 0 #1bb3b3;
+    padding: 1.5rem 0;
+    position: relative;
+    border: 1px solid #1bb3b355;
+    .marquee {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      animation: marquee-scroll 30s linear infinite;
+      will-change: transform;
+      &:hover {
+        animation-play-state: paused;
+      }
+    }
+    .marquee-item {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 120px;
+      min-height: 60px;
+      padding: 0.5rem 1.5rem;
+      background: rgba(255,255,255,0.03);
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px #1bb3b322;
+      transition: transform 0.3s, box-shadow 0.3s;
+      img {
+        max-height: 48px;
+        max-width: 120px;
+        object-fit: contain;
+        filter: drop-shadow(0 0 8px #1bb3b3) drop-shadow(0 0 12px #7f5cff44);
+        transition: filter 0.3s;
+      }
+      &:hover {
+        transform: scale(1.08) translateY(-6px);
+        box-shadow: 0 4px 32px #7f5cff44, 0 0 24px #1bb3b3;
+        img {
+          filter: drop-shadow(0 0 16px #7f5cff) drop-shadow(0 0 24px #1bb3b3);
+        }
+      }
+    }
+  }
+}
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 700px) {
+  .marquee-section .marquee-container .marquee {
+    gap: 1.5rem;
+  }
+  .marquee-section .marquee-container .marquee-item {
+    min-width: 80px;
+    padding: 0.5rem 0.7rem;
+  }
+}
