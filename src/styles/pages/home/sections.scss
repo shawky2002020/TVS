@@ -167,6 +167,12 @@
       text-transform: uppercase;
       text-shadow: 0 0 15px rgba($color-holo-secondary, 0.7); // Added text shadow
     }
+    .hero-special-word {
+      @include flex-center;
+      border: solid 2px #1bb3b3; // Changed from solid to specific width and color
+      padding: 0 50px; // Increased padding for better spacing
+      border-radius: $border-radius-full; // Added border radius
+    }
     .hero-special-1 {
       border-radius: 100px;
       border: 2px solid $color-holo-secondary; // Changed from solid to specific width and color
@@ -597,7 +603,6 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         
         &:hover {
-          transform: scale(1.05);
           box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
         }
       }

@@ -104,7 +104,6 @@ export function animateHero() {
     .from(
       ".hero-actions .btn",
       {
-        y: 50,
         opacity: 0,
         scale: 0.8,
         stagger: 0.2,
@@ -230,8 +229,8 @@ export function initMagneticButtons() {
       });
 
       gsap.to(btnContent, {
-        x: x * 0.05,
-        y: y * 0.05,
+        x: x * 0.35,
+        y: y * 0.35,
         duration: 0.3,
       });
     });
@@ -327,7 +326,7 @@ export function animateServices() {
         {
           scale: 0,
           rotation: 360,
-          duration: 0.8,
+          duration: 1.8,
           ease: "back.out(1.7)",
         },
         "-=0.6"
@@ -392,7 +391,7 @@ export function animateClients() {
       },
     });
 
-    tl.from(card, {
+    tl.fromTo(card, {
       y: 50,
       opacity: 0,
       scale: 0.8,
@@ -400,6 +399,13 @@ export function animateClients() {
       duration: 0.8,
       ease: "back.out(1.7)",
       delay: i * 0.1,
+    },{
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      rotation: 0,
+      duration: 1,
+      ease: "power3.out",
     });
 
     // Hover effect
@@ -563,7 +569,6 @@ export function animateCTA() {
     .from(
       ".cta-actions .btn",
       {
-        y: 30,
         opacity: 0,
         stagger: 0.2,
         duration: 0.8,
@@ -593,7 +598,7 @@ export function initScrollAnimations() {
   ScrollTrigger.create({
     start: "top -80",
     end: 99999,
-    toggleClass: { className: "scrolled", targets: ".nav" },
+    toggleClass: { className: "scrolled", targets: ".nav-links" },
   });
 }
 
