@@ -121,7 +121,7 @@
 }
 .mobile-nav-overlay {
     flex-flow: column nowrap;
-    position: absolute;
+    position: fixed;
     top: 100%;
     left: 0;
     width: 100%;
