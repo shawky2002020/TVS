@@ -42,7 +42,7 @@
       $color-black-base 0%,
       transparent 60%
     );
-    filter: blur(60px);
+    filter: blur(50px);
   }
   &.holo-layer-2 {
     background: radial-gradient(
@@ -108,16 +108,18 @@
 
 
 .hero {
-  margin-top: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   text-align: center;
   color: $color-white;
   position: relative;
   svg {
-    width: 60px;
+    width: 50px;
+    @include respond-to(xs) {
+      width: 30px;
+    }
   }
   .hero-badge {
     background: rgba($color-holo-primary, 0.25); // Increased from 0.15
@@ -166,41 +168,28 @@
       width: 100%;
       text-transform: uppercase;
       text-shadow: 0 0 15px rgba($color-holo-secondary, 0.7); // Added text shadow
+      @include respond-to(xs) {
+        font-size: $font-size-2xl ;
+        letter-spacing: 8px; // Decreased from 10px
+      }
     }
     .hero-special-word {
       @include flex-center;
       border: solid 2px #1bb3b3; // Changed from solid to specific width and color
-      padding: 0 50px; // Increased padding for better spacing
+      padding: 5px 50px; // Increased padding for better spacing
       border-radius: $border-radius-full; // Added border radius
-    }
-    .hero-special-1 {
-      border-radius: 100px;
-      border: 2px solid $color-holo-secondary; // Changed from solid to specific width and color
-      padding: 0 50px;
-      @include flex-center;
-      gap: 12px;
-      position: relative;
-      overflow: hidden;
-      
-      // Add a subtle animated gradient border effect
-      &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: $gradient-holo-primary;
-        z-index: -1;
-        border-radius: inherit;
-        opacity: 0.5;
-        animation: rotate 4s linear infinite;
+       @include respond-to(xs) {
+        padding: 10px 20px ; // Decreased padding for smaller screens
       }
     }
+ 
     .hero-special-row:nth-child(3) {
       svg {
         width: 100px;
         filter: drop-shadow(0 0 10px $color-holo-secondary); // Added drop shadow
+        @include respond-to(xs) {
+          width: 50px ; // Decreased size for smaller screens
+        }
       }
     }
     .title-line {
@@ -210,6 +199,9 @@
       position: relative;
       display: inline-block;
       margin-bottom: $spacing-4;
+      @include respond-to(xs) {
+        font-size: $font-size-2xl;
+      }
     }
   }
   .hero-actions {
@@ -246,6 +238,7 @@
       text-transform: uppercase; // Added text transform
     }
   }
+
 }
 
 // Add scroll pulse animation
@@ -605,6 +598,10 @@
         &:hover {
           box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
         }
+      }
+      @include respond-to(xs) {
+        flex-direction: column; // Stack buttons on smaller screens
+        gap: $spacing-4; // Adjust gap for smaller screens
       }
     }
     .contact-info {

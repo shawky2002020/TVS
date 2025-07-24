@@ -31,16 +31,17 @@ export function animateLoadingScreen() {
         duration: 1,
         ease: "power2.inOut",
       },
-      "1"
+      ">-1.5"
     )
     .to(
       ".loading-text",
       {
+        delay:1.5,
         text: "Welcome to Excellence",
         duration: 0.7,
         ease: "power1.inOut",
       },
-      "-=1.2"
+      ">"
     )
     .to(
       ".loading-content",
@@ -51,7 +52,7 @@ export function animateLoadingScreen() {
         duration: 0.6,
         ease: "power2.in",
       },
-      "+=1.5"
+      "+=.5"
     )
     .to(
       ".loading-screen",
@@ -64,7 +65,7 @@ export function animateLoadingScreen() {
           animateHero();
         },
       },
-      "-=0.3"
+      "-=0.8"
     );
 }
 
@@ -105,7 +106,6 @@ export function animateHero() {
       ".hero-actions .btn",
       {
         opacity: 0,
-        scale: 0.8,
         stagger: 0.2,
         duration: 1,
         ease: "back.out(1.7)",
@@ -325,8 +325,8 @@ export function animateServices() {
         block.querySelector(".service-icon"),
         {
           scale: 0,
-          rotation: 360,
-          duration: 1.8,
+          rotation: 260,
+          duration: 1.2,
           ease: "back.out(1.7)",
         },
         "-=0.6"
@@ -452,13 +452,19 @@ export function animateTestimonials() {
       },
     });
 
-    tl.from(card, {
+    tl.fromTo(card, {
       y: 60,
       opacity: 0,
       rotationY: 15,
       duration: 1,
       ease: "power3.out",
       delay: i * 0.15,
+    },{
+      y: 0,
+      opacity: 1,
+      rotationY: 0,
+      duration: 1.2,
+      ease: "power3.out",
     })
 
       .from(

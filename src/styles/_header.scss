@@ -1,7 +1,7 @@
 .nav {
   width: 100%;
 
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   z-index: $z-fixed;
@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    @include respond-to(xs) {
+      padding: 16px 15px;
+    }
   }
   .logo {
     font-size: $font-size-3xl;
@@ -25,12 +28,17 @@
     width: 150px;
     display: flex;
     align-items: center;
+    @include respond-to(xs) {
+      font-size: $font-size-2xl;
+      width: 120px;
+    }
     .logo-img {
       width: 100%;
     }
   }
   .nav-links {
     position: absolute;
+    @include flex-center;
     left: 50%;
     top: 30px;
     transform: translateX(-50%);
@@ -80,12 +88,86 @@
     flex-direction: column;
     gap: 4px;
     margin-left: $spacing-4;
+    cursor: pointer;
+    padding: 12px 10px;
+    border-radius: $border-radius-full;
+    backdrop-filter: blur(10px);
+    background: rgba($color-black-light, 0.5);
     span {
       width: 28px;
       height: 4px;
       background: $color-holo-secondary;
       border-radius: 2px;
       display: block;
+      transition: transform 0.3s, background 0.3s, opacity 0.3s;
+      position: relative;
+    }
+    &:hover span {
+      transform: scale(1.1);
+    }
+    &.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0.5);
+    }
+    &.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    
+   
+  }
+}
+.mobile-nav-overlay {
+    flex-flow: column nowrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba($color-white-20, 0.1);
+    backdrop-filter: blur(30px);
+    padding: 16px;
+    border-radius: 8px;
+    z-index: $z-fixed + 1;
+    transition: opacity 0.3s ease-in-out , transform 0.3s ease-in-out;
+    transform: translate(0px,-100px);
+    li {
+      margin: $spacing-3 0;
+      a {
+        font-size: $font-size-lg;
+        color: $color-white-90;
+      }
+    }
+    .mobile-nav-menu{
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-3;
+      width: 100%;
+      padding: 0 30px;
     }
   }
+@media  (max-width: $breakpoint-lg) {
+  .contact{
+    display: none;
+  }
+  .nav-links{
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+    
+  }
+  .mobile-nav-menu {
+    display: flex;
+  }
+  .mobile-nav-overlay.active {
+    display: flex !important;
+    opacity: 1 ;
+    transform: translate(0,0);
+    pointer-events: auto;
+  }
+  
 }

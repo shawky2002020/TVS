@@ -7,11 +7,39 @@
 html, body {
   height: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 li {
   list-style: none;
 }
+
 a{
   text-decoration: none !important;
   color: inherit;
 }
+
+// Custom Scrollbar Styling (Webkit)
+::-webkit-scrollbar {
+  width: 12px;
+  background: linear-gradient(135deg, #181c2b 0%, #1bb3b3 100%); // fallback if variables not available
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, $color-holo-primary 0%, $color-holo-secondary 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba($color-holo-secondary, 0.25);
+  border: 2px solid rgba($color-holo-primary, 0.7);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, $color-holo-secondary 0%, $color-holo-primary 100%);
+}
+::-webkit-scrollbar-corner {
+  background: $color-holo-primary;
+}
+
+// Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $color-holo-secondary $color-holo-primary;
+}
+

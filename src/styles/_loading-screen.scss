@@ -25,6 +25,10 @@
       min-width: 220px;
       padding: 2rem 1.2rem;
     }
+    @media (max-width: 400px) {
+      min-width: 180px;
+      padding: 1.5rem 1rem;
+    }
   }
   .loading-logo {
     margin-bottom: 0.5rem;
@@ -33,6 +37,9 @@
       filter: drop-shadow(0 0 24px #1bb3b3) drop-shadow(0 0 32px #fff2);
       border-radius: 1.2rem;
       background: rgba(255,255,255,0.03);
+      @include respond-to(xs) {
+        width: 200px;
+      }
     }
   }
   .loading-progress {
@@ -61,6 +68,9 @@
     margin-top: 0.5rem;
     text-align: center;
     animation: loadingTextPulse 1.8s infinite alternate;
+    @include respond-to(xs) {
+      font-size: 1rem;
+    }
   }
 }
 @keyframes loadingTextPulse {

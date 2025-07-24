@@ -11,6 +11,10 @@
   cursor: pointer;
   border: none;
   position: relative;
+  @include respond-to(xs) {
+    font-size: $font-size-lg;
+    padding: $spacing-2 ;
+  }
  
   transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
   // box-shadow: $shadow-holo-md;
