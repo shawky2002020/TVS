@@ -452,13 +452,19 @@ export function animateTestimonials() {
       },
     });
 
-    tl.from(card, {
-      y: 60,
+    tl.fromTo(card, {
+      y: 100,
       opacity: 0,
       rotationY: 15,
       duration: 1,
       ease: "power3.out",
       delay: i * 0.15,
+    },{
+      y: 0,
+      opacity: 1,
+      rotationY: 0,
+      duration: 1.2,
+      ease: "power3.out",
     })
 
       .from(
@@ -653,8 +659,8 @@ export function initParticleSystem() {
 // INITIALIZATION
 export function initGsapAnimations() {
   // Start with loading screen
-  // animateLoadingScreen();
-  animateHero();
+  animateLoadingScreen();
+  // animateHero();
 
   // Initialize other animations
   initMagneticButtons();
@@ -662,6 +668,7 @@ export function initGsapAnimations() {
   animateServices();
   animateClients();
   animateTestimonials();
+  animateAbout()
   animateWhy();
   animateCTA();
   initScrollAnimations();
@@ -673,3 +680,113 @@ export function initGsapAnimations() {
     ScrollTrigger.refresh();
   });
 }
+
+export function animateAbout() {
+  // Animate section header
+  // document.querySelectorAll(".about-section .section-header > *").forEach((el, i) => {
+  //   gsap.from(el, {
+  //     scrollTrigger: {
+  //       trigger: el,
+  //       start: "top 80%",
+  //     },
+  //     y: 50,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power3.out",
+  //     delay: i * 0.15,
+  //   });
+  // });
+
+  // Animate about blocks
+  document.querySelectorAll(".about-block").forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+      },
+      y: 100,
+      opacity: 0,
+      scale: 0.9,
+      duration: 1.2,
+      ease: "power3.out",
+      delay: i * 0.2,
+    });
+  });
+
+  // Animate timeline items
+  document.querySelectorAll(".timeline-item").forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+      },
+      x: -50,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      delay: i * 0.2,
+    });
+  });
+
+  // Animate service pills
+  document.querySelectorAll(".service-pill").forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+      },
+      y: 30,
+      opacity: 0,
+      scale: 0.8,
+      duration: 0.7,
+      ease: "back.out(1.7)",
+      delay: i * 0.1,
+    });
+  });
+
+  // Animate advantage items
+  document.querySelectorAll(".advantage-item").forEach((el, i) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 85%",
+      },
+      x: 50,
+      opacity: 0,
+      duration: 0.8,
+      ease: "power2.out",
+      delay: i * 0.2,
+    });
+  });
+
+  // Hover animations for about blocks
+  const aboutBlocks = document.querySelectorAll(".about-block");
+  aboutBlocks.forEach((block) => {
+    block.addEventListener("mouseenter", () => {
+      gsap.to(block.querySelector(".about-icon"), {
+        y: -10,
+        scale: 1.1,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+      gsap.to(block.querySelector(".icon-glow"), {
+        opacity: 1,
+        duration: 0.4,
+      });
+    });
+
+    block.addEventListener("mouseleave", () => {
+      gsap.to(block.querySelector(".about-icon"), {
+        y: 0,
+        scale: 1,
+        duration: 0.4,
+        ease: "power2.out",
+      });
+      gsap.to(block.querySelector(".icon-glow"), {
+        opacity: 0.6,
+        duration: 0.4,
+      });
+    });
+  });
+}
+
