@@ -15,11 +15,12 @@
   transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
   // box-shadow: $shadow-holo-md;
   &.btn-primary {
-    background: $color-white-80;
-    color: $color-holo-primary;
+    background: transparent;
+    color: $color-white-80;
+    backdrop-filter: blur(30px);
     &:hover {
-      background: $color-holo-primary;
-      color: $color-white-80;
+      background: $color-white-80;
+      color: $color-holo-secondary-dark;
     }
   }
   &.btn-secondary {

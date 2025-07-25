@@ -653,8 +653,8 @@ export function initParticleSystem() {
 // INITIALIZATION
 export function initGsapAnimations() {
   // Start with loading screen
-  animateLoadingScreen();
-  // animateHero();
+  // animateLoadingScreen();
+  animateHero();
 
   // Initialize other animations
   initMagneticButtons();

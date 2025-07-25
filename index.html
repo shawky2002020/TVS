@@ -22,8 +22,9 @@
 
   </head>
   <body>
+
     <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
+    <!-- <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
         <div class="loading-logo">
           <img class="logo-img" src="assets/logos/Televirgins-white.png" alt="Televirgins" />
@@ -33,17 +34,19 @@
         </div>
         <div class="loading-text">Initializing Excellence...</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Holographic Background -->
-    <div class="holographic-bg">
+    <!-- <div class="holographic-bg">
       <div class="holo-layer holo-layer-1"></div>
       <div class="holo-layer holo-layer-2"></div>
       <div class="holo-layer holo-layer-3"></div>
       <canvas id="particle-canvas"></canvas>
       <div class="grid-overlay"></div>
       <div class="dark-overlay"></div>
-    </div>
+    </div> -->
+
+    <div class="back"></div>
 
     <!-- Navigation -->
     <nav class="nav" id="navbar">
@@ -74,7 +77,7 @@
           <span></span>
         </button>
         <!-- Mobile Nav Overlay -->
-        <div class="mobile-nav-overlay" id="mobileNavOverlay" >
+        <!-- <div class="mobile-nav-overlay" id="mobileNavOverlay" >
           <nav class="mobile-nav-menu">
             <ul class="mobile-nav-links">
               <li><a href="#services">Services</a></li>
@@ -87,7 +90,7 @@
               <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
             </div>
           </nav>
-        </div>
+        </div> -->
       </div>
     </nav>
 
@@ -102,48 +105,48 @@
         </div>
 
         <div class="hero-content">
-       
-
           <div class="hero-description">
             <div class="hero-special">
               <div class="hero-special-row">
                 <span class="hero-special-word animate-word">
-                  Unlock
+                  Scaling
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 25"
+                    viewBox="0 0 24 24"
                     fill="none"
+                    class="scaling-icon"
                   >
                     <path
                       fill-rule="evenodd"
-                      d="M10.357 1.059a4.045 4.045 0 0 0-4.045 4.045V9.76h12.139c.813 0 1.472.659 1.472 1.472v12.294c0 .813-.659 1.472-1.472 1.472H2.094a1.472 1.472 0 0 1-1.472-1.472V11.233c0-.813.659-1.472 1.472-1.472h3.335V5.104A4.93 4.93 0 0 1 10.357.176a4.93 4.93 0 0 1 4.929 4.929v1.27h-.883v-1.27a4.045 4.045 0 0 0-4.045-4.045zm8.094 9.585H2.094a.59.59 0 0 0-.589.589v12.294a.59.59 0 0 0 .589.589h16.357a.59.59 0 0 0 .589-.589V11.233a.59.59 0 0 0-.589-.589zm-8.077 4.196a1.09 1.09 0 0 1 1.083 1.091c0 .383-.152.755-.423 1.026a.866.866 0 0 0-.254.613v2.18a.51.51 0 0 1-.508.508.51.51 0 0 1-.508-.508v-2.18a.864.864 0 0 0-.254-.613 1.453 1.453 0 0 1-.423-1.026 1.09 1.09 0 0 1 1.083-1.091h.204z"
-                      fill="#1bb3b3"
+                      d="M12 3l6 6h-4v7h-4v-7H6l6-6z"
+                      fill="#fff"
                     ></path>
                   </svg>
                 </span>
-                <span class="animate-word">your</span>
+                <span class="animate-word">Businesses</span>
               </div>
               <div class="hero-special-row">
-                <span class="animate-word">retail</span>
-                <span class="animate-word">media</span>
+                <span class="animate-word">Across</span>
+                <span class="animate-word">Continents</span>
               </div>
               <div class="hero-special-row">
-                <span class="animate-word">potential</span>
+                <span class="animate-word">with</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 26 26"
+                  viewBox="0 0 24 24"
                   fill="none"
+                  class="globe-icon"
                 >
                   <path
                     fill-rule="evenodd"
-                    d="M23.806.59c-.952-.018-2.624-.016-3.838.174-1.07.167-2.415.578-3.366.896a6.412 6.412 0 0 0-2.355 1.435l-3.606 3.4a1.29 1.29 0 0 1-.991.348l-2.1-.167c-.63-.05-1.25.178-1.697.625L2.914 10.24a1.01 1.01 0 0 0 .305 1.633l3.402 1.501a.72.72 0 0 1 .421.765l-.633 4.217c-.1.668.473 1.243 1.141 1.145l4.352-.637a.72.72 0 0 1 .766.431l1.355 3.194a1.01 1.01 0 0 0 1.663.293l2.8-3.008a2.155 2.155 0 0 0 .563-1.727l-.249-2.074a1.295 1.295 0 0 1 .332-1.03l3.569-3.883a6.38 6.38 0 0 0 1.383-2.314c.302-.92.689-2.217.839-3.25.169-1.169.146-2.77.113-3.695A1.25 1.25 0 0 0 23.806.59z"
-                    fill="#1bb3b3"
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM4 12C4 11.39 4.08 10.79 4.21 10.22L8 14V15C8 16.1 8.9 17 10 17V19.93C6.61 19.43 4 16.07 4 12ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.21 15.97 17.9 17.39Z"
+                    fill="#9000ff"
                   ></path>
                 </svg>
               </div>
             </div>
             <div class="title-line">
-              <span class="title-line-text">WITH TELEVIRGINS</span>
+              <span class="title-line-text">TELEVIRGINS</span>
               <div class="title-line-glow"></div>
             </div>
           </div>
@@ -500,7 +503,6 @@
           <div class="marquee-container">
             <div class="marquee">
               <div class="marquee-track">
-                <div class="marquee-item"><img src="assets/work/99 campus logo.png" alt="99 Campus" /></div>
                 <div class="marquee-item"><img src="assets/work/Artboard 2.png" alt="Artboard 2" /></div>
                 <div class="marquee-item"><img src="assets/work/Black re.png" alt="Black re" /></div>
                 <div class="marquee-item"><img src="assets/work/Black.png" alt="Black" /></div>
@@ -512,7 +514,6 @@
                 <div class="marquee-item"><img src="assets/work/naut_cal.png" alt="Naut Cal" /></div>
                 <div class="marquee-item"><img src="assets/work/shirt.png" alt="Shirt" /></div>
                 <!-- Duplicate for seamless loop -->
-                <div class="marquee-item" aria-hidden="true"><img src="assets/work/99 campus logo.png" alt="99 Campus" /></div>
                 <div class="marquee-item" aria-hidden="true"><img src="assets/work/Artboard 2.png" alt="Artboard 2" /></div>
                 <div class="marquee-item" aria-hidden="true"><img src="assets/work/Black re.png" alt="Black re" /></div>
                 <div class="marquee-item" aria-hidden="true"><img src="assets/work/Black.png" alt="Black" /></div>
@@ -552,7 +553,7 @@
                 <div class="btn-glow"></div>
                 <div class="btn-particles"></div>
               </a>
-              <a href="tel:+1234567890" class="btn btn-outline btn-magnetic">
+              <a href="tel:+1234567890" class="btn btn-secondary btn-magnetic">
                 <span class="btn-content">
                   <span>Call Us Today</span>
                 </span>

@@ -25,6 +25,30 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'american';
+  src: url('../../assets/fonts/AmericanCaptain-MdEY.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bold';
+  src: url('../../assets/fonts/Boldfinger.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'milky';
+  src: url('../../assets/fonts/Milker.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'great';
+  src: url('../../assets/fonts/GreaterTheory.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 *{
   margin: 0;
   padding: 0;

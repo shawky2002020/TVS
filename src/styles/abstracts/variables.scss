@@ -17,30 +17,30 @@ $color-white-20: rgba(255, 255, 255, 0.2);
 $color-white-10: rgba(255, 255, 255, 0.1);
 $color-white-05: rgba(255, 255, 255, 0.05);
 
-// Holographic Colors
-$color-holo-primary: #046262; // 196deg - Deep Cyan
-$color-holo-primary-light: #1bb3b3; // Lighter Cyan
-$color-holo-primary-dark: #023636; // Darker Cyan
+// Holographic Colors - Updated to match the new background image
+$color-holo-primary: #0062ff; // Deep Blue
+$color-holo-primary-light: #00a3ff; // Lighter Blue
+$color-holo-primary-dark: #003b99; // Darker Blue
 
-$color-holo-tertiary: #009900; // Dark Lime
-$color-holo-quaternary: #b3b300; // Deep Yellow
-$color-holo-blue:           #00cfff; // Cyan-Blue (start of gradient)
+$color-holo-tertiary: #7000ff; // Deep Purple
+$color-holo-quaternary: #b300ff; // Violet
+$color-holo-blue: #00cfff; // Cyan-Blue (start of gradient)
 
-$color-holo-secondary:      #0080ff; // Electric Blue
-$color-holo-secondary-light:#7a00ff; // Violet
-$color-holo-secondary-dark: #1a001a; // Darker Magenta
+$color-holo-secondary: #5000ff; // Electric Purple
+$color-holo-secondary-light: #9000ff; // Light Purple
+$color-holo-secondary-dark: #2a0080; // Dark Purple
 
-$color-holo-pink:           #ff00aa; // Hot Pink (end of gradient)
+$color-holo-pink: #ff00aa; // Hot Pink (end of gradient)
 
-// Gradients
+// Gradients - Enhanced for more vibrant look
 $gradient-holo-primary: linear-gradient(
   to right,
-  $color-holo-blue,
-  $color-holo-secondary,
-  $color-holo-secondary-light,
-  $color-holo-pink
+  $color-holo-blue 10%,
+  $color-holo-primary 20%,
+  $color-holo-secondary-dark 40%,
+  $color-holo-pink,
 );
-$gradient-holo-secondary: linear-gradient(to right, #00bcd4, #2196f3, #9c27b0, #e91e63);
+$gradient-holo-secondary: linear-gradient(to right, #00bcd4, #2196f3, #7b1fa2, #e91e63);
 
 $gradient-holo-animated: linear-gradient(
   45deg,
@@ -55,18 +55,18 @@ $gradient-glass: linear-gradient(
   rgba(255, 255, 255, 0.05)
 );
 
-// Background Gradients
+// Background Gradients - Updated to match new image
 $bg-gradient-main: radial-gradient(
     circle at 20% 50%,
-    rgba(0, 255, 255, 0.15) 0%,
+    rgba(0, 162, 255, 0.2) 0%,
     transparent 50%
   ),
   radial-gradient(
     circle at 80% 20%,
-    rgba(255, 0, 255, 0.15) 0%,
+    rgba(144, 0, 255, 0.2) 0%,
     transparent 50%
   ),
-  radial-gradient(circle at 40% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+  radial-gradient(circle at 40% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
   linear-gradient(
     135deg,
     $color-black-base 0%,

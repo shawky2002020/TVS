@@ -121,7 +121,7 @@
   }
   .hero-badge {
     background: rgba($color-holo-primary, 0.25); // Increased from 0.15
-    color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+    color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
     font-weight: $font-weight-extrabold; // Changed from bold to extrabold
     display: inline-block;
     padding: $spacing-2 $spacing-8; // Increased horizontal padding
@@ -148,6 +148,9 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
+    svg.scaling-icon{
+      transform: rotate(45deg) !important;
+    }
 
     .hero-special {
       width: 100%;
@@ -155,7 +158,7 @@
       gap: 12px;
     }
     .hero-special-row {
-      font-family: lazy;
+      font-family: great;
       font-weight: 700;
       font-size: $font-size-7xl;
       letter-spacing: 12px; // Increased from 10px
@@ -165,13 +168,17 @@
       align-items: center;
       width: 100%;
       text-transform: uppercase;
-      text-shadow: 0 0 15px rgba($color-holo-secondary, 0.7); // Added text shadow
+      // text-shadow: 0 0 15px rgba($color-holo-secondary, 0.7); // Added text shadow
     }
     .hero-special-word {
       @include flex-center;
-      border: solid 2px #1bb3b3; // Changed from solid to specific width and color
       padding: 0 50px; // Increased padding for better spacing
       border-radius: $border-radius-full; // Added border radius
+      background: linear-gradient(
+        135deg,
+        rgba($color-holo-primary, 0.2) 0%,
+        rgba($color-holo-secondary, 0.2) 100%
+      );
     }
     .hero-special-1 {
       border-radius: 100px;
@@ -203,14 +210,7 @@
         filter: drop-shadow(0 0 10px $color-holo-secondary); // Added drop shadow
       }
     }
-    .title-line {
-      font-size: $font-size-5xl;
-      font-weight: $font-weight-black;
-      text-shadow: 0 0 10px $color-holo-secondary, 0 0 30px $color-holo-primary; // Enhanced text shadow
-      position: relative;
-      display: inline-block;
-      margin-bottom: $spacing-4;
-    }
+    
   }
   .hero-actions {
     display: flex;
@@ -261,7 +261,7 @@
 }
 
 .marketing h3 {
-  color: $color-holo-primary-light;
+  color: $color-white;
   font-weight: $font-weight-extrabold; // Added font weight
   letter-spacing: 1px; // Added letter spacing
   position: relative;
@@ -275,13 +275,13 @@
     left: 0;
     width: 60%;
     height: 3px;
-    background: $color-holo-primary-light;
+    background: $color-white;
     border-radius: 3px;
   }
 }
 
 .call h3 {
-  color: $color-holo-secondary-light;
+  color: $color-holo-secondary-dark;
   font-weight: $font-weight-extrabold; // Added font weight
   letter-spacing: 1px; // Added letter spacing
   position: relative;
@@ -295,7 +295,7 @@
     left: 0;
     width: 60%;
     height: 3px;
-    background: $color-holo-secondary-light;
+    background: $color-holo-secondary-dark;
     border-radius: 3px;
   }
 }
@@ -328,7 +328,7 @@
     h3 {
       margin-bottom: $spacing-4;
       font-weight: $font-weight-extrabold; // Added font weight
-      color: $color-holo-primary-light; // Added color
+      color: $color-white; // Added color
       letter-spacing: 1px; // Added letter spacing
     }
     
@@ -383,12 +383,11 @@
     .client-logo {
       font-size: $font-size-3xl;
       font-weight: $font-weight-black;
-      color: $color-holo-secondary-light; // Changed to secondary-light
+      color: $color-holo-secondary-dark; // Changed to secondary-light
       margin-bottom: 12px; // Increased from 8px
-      text-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.5); // Enhanced glow
     }
     h4 {
-      color: $color-holo-primary-light; // Changed to primary-light
+      color: $color-white; // Changed to primary-light
       font-size: $font-size-xl;
       margin-bottom: 8px; // Increased from 4px
       font-weight: $font-weight-extrabold; // Added font weight
@@ -400,7 +399,7 @@
       margin-bottom: 8px; // Increased from 4px
     }
     .client-stats {
-      color: $color-holo-secondary-light; // Changed to secondary-light
+      color: $color-white-60; // Changed to secondary-light
       font-weight: $font-weight-extrabold; // Changed from bold to extrabold
       font-size: $font-size-lg; // Increased from base
       margin-top: 8px; // Increased from 4px
@@ -456,7 +455,7 @@
       .author-avatar {
         width: 50px; // Increased from 40px
         height: 50px; // Increased from 40px
-        background: $color-holo-secondary-light; // Changed from secondary to secondary-light
+        background: $color-holo-secondary-dark; // Changed from secondary to secondary-light
         color: $color-white;
         border-radius: 50%;
         display: flex;
@@ -468,7 +467,7 @@
       }
       .author-info {
         h5 {
-          color: $color-holo-primary-light; // Changed from primary to primary-light
+          color: $color-white; // Changed from primary to primary-light
           font-size: $font-size-lg; // Increased from base
           margin-bottom: 4px; // Increased from 2px
           font-weight: $font-weight-bold; // Added font weight
@@ -480,7 +479,7 @@
       }
     }
     .testimonial-rating {
-      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+      color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
       font-size: $font-size-xl;
       margin-top: $spacing-4;
     }
@@ -506,9 +505,8 @@
     
     .why-icon {
       font-size: $font-size-4xl; // Increased from 3xl
-      color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+      color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
       margin-bottom: 12px; // Increased from 8px
-      text-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.5); // Enhanced glow
       
       // Add icon hover effect
       transition: transform 0.3s ease;
@@ -517,7 +515,7 @@
       }
     }
     h4 {
-      color: $color-holo-primary-light; // Changed from primary to primary-light
+      color: $color-white; // Changed from primary to primary-light
       font-size: $font-size-xl; // Increased from lg
       margin-bottom: 8px; // Increased from 4px
       font-weight: $font-weight-extrabold; // Added font weight
@@ -618,7 +616,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        color: $color-holo-secondary-light; // Changed from secondary to secondary-light
+        color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
         font-weight: $font-weight-bold;
         padding: $spacing-2 $spacing-4; // Added padding
         background: rgba($color-holo-secondary, 0.1); // Added background
@@ -631,7 +629,7 @@
         }
         
         a {
-          color: $color-holo-primary-light; // Changed from primary to primary-light
+          color: $color-white; // Changed from primary to primary-light
           font-weight: $font-weight-extrabold; // Changed from bold to extrabold
           font-size: $font-size-base;
           text-decoration: none; // Added text decoration
@@ -642,5 +640,155 @@
         }
       }
     }
+  }
+}
+
+// Enhanced Hero Section Styling
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding: $spacing-12 0;
+  
+  .hero-description {
+    margin-bottom: $spacing-8;
+  }
+  
+  .hero-special {
+    margin-bottom: $spacing-6;
+    
+    .hero-special-row {
+      display: flex;
+      align-items: center;
+      gap: $spacing-4;
+      margin-bottom: $spacing-2;
+      
+      .hero-special-word, .animate-word {
+        font-size: $font-size-5xl;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: $spacing-2;
+        
+        @media (min-width: $breakpoint-md) {
+          font-size: $font-size-6xl;
+        }
+        
+        svg {
+          height: 1.2em;
+          width: auto;
+          filter: drop-shadow(0 0 8px currentColor);
+        }
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $gradient-holo-primary;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.6s $ease-out;
+        }
+        
+        &.animate-in:after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+ 
+  .title-line {
+    position: relative;
+          font-family: bold;
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      margin-bottom: $spacing-4;
+
+    
+    .title-line-text {
+      font-size: $font-size-7xl ;
+      font-weight: $font-weight-black;
+      letter-spacing: 2px;
+      color: $color-white;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 0 15px rgba(0, 162, 255, 0.7);
+      
+      @media (min-width: $breakpoint-md) {
+        font-size: $font-size-5xl;
+      }
+    }
+    
+    .title-line-glow {
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 5px;
+      width: 50%;
+      height: 29px;
+      background: $gradient-holo-primary;
+      box-shadow: 0 0 10px rgba(0, 162, 255, 0.7), 0 0 20px rgba(144, 0, 255, 0.5);
+    }
+  }
+  
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-4;
+    margin-top: $spacing-8;
+    
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      
+      .btn {
+        width: auto;
+        padding: $spacing-3 $spacing-6;
+      }
+    }
+    
+   
+  }
+}
+
+// Add these animations to enhance the flowing effect
+@keyframes flow {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(-5px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+
+.scaling-icon, .globe-icon {
+  animation: flow 3s ease-in-out infinite;
+}
+
+.scaling-icon {
+  animation-delay: 0.5s;
+}
+
+// Add a subtle floating animation to the words
+.animate-word {
+  animation: float 5s ease-in-out infinite;
+  animation-delay: calc(var(--word-index, 0) * 0.2s);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
