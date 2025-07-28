@@ -8,26 +8,26 @@
   overflow: hidden;
   // Enhanced background with more dramatic gradient
   background: radial-gradient(
-    circle at 20% 30%,
-    rgba(0, 128, 255, 0.15) 0%,
-    transparent 60%
-  ),
-  radial-gradient(
-    circle at 80% 20%,
-    rgba(255, 0, 170, 0.2) 0%,
-    transparent 60%
-  ),
-  radial-gradient(
-    circle at 10% 90%,
-    rgba(27, 179, 179, 0.15) 0%,
-    transparent 70%
-  ),
-  linear-gradient(
-    135deg,
-    $color-black-base 0%,
-    $color-black-light 40%,
-    $color-black-medium 100%
-  );
+      circle at 20% 30%,
+      rgba(0, 128, 255, 0.15) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 0, 170, 0.2) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(27, 179, 179, 0.15) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      $color-black-base 0%,
+      $color-black-light 40%,
+      $color-black-medium 100%
+    );
 }
 
 .holo-layer {
@@ -66,13 +66,21 @@
 
 // Add animations for the holographic layers
 @keyframes pulse {
-  0% { opacity: 0.3; }
-  100% { opacity: 0.6; }
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0.6;
+  }
 }
 
 @keyframes drift {
-  0% { transform: translateX(-5%) translateY(-2%); }
-  100% { transform: translateX(5%) translateY(2%); }
+  0% {
+    transform: translateX(-5%) translateY(-2%);
+  }
+  100% {
+    transform: translateX(5%) translateY(2%);
+  }
 }
 
 #particle-canvas {
@@ -91,21 +99,22 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.13) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: -1;
   pointer-events: none;
 }
 
-.dark-overlay{
+.dark-overlay {
   width: 100vw;
   height: 100%;
   position: fixed;
   background: #00000075;
 }
-
-
 
 .hero {
   margin-top: 50px;
@@ -119,26 +128,128 @@
   svg {
     width: 60px;
   }
-  .hero-badge {
-    background: rgba($color-holo-primary, 0.25); // Increased from 0.15
-    color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
-    font-weight: $font-weight-extrabold; // Changed from bold to extrabold
-    display: inline-block;
-    padding: $spacing-2 $spacing-8; // Increased horizontal padding
-    border-radius: $border-radius-full;
-    margin-bottom: $spacing-6;
-    box-shadow: 0 0 20px $color-holo-secondary, 0 0 40px rgba($color-holo-secondary, 0.4); // Enhanced glow
-    font-size: $font-size-lg;
-    letter-spacing: 2px; // Increased from 1px
-    text-transform: uppercase; // Added text transform
-  }
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    padding: $spacing-12 $spacing-6;
+    border-radius: 24px;
+    .hero-description {
+      margin-bottom: $spacing-8;
+    }
 
-  .hero-subtitle {
-    font-size: $font-size-5xl;
-    color: $color-white;
-    margin-bottom: $spacing-4;
-    font-weight: $font-weight-black; // Changed from bold to black
-    letter-spacing: 1px; // Added letter spacing
+    .hero-special {
+      margin-bottom: $spacing-6;
+
+      .hero-special-row {
+        display: flex;
+        align-items: center;
+        gap: $spacing-4;
+        margin-bottom: $spacing-2;
+
+        .hero-special-word,
+        .animate-word {
+          font-family: great;
+          font-size: $font-size-6xl;
+          font-weight: $font-weight-bold;
+          color: $color-white;
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: $spacing-2;
+
+          background: $holographic-pearl;
+          background-clip: text;
+          -webkit-background-clip: text;
+          color: transparent;
+
+          svg {
+            height: 1.2em;
+            width: auto;
+            filter: drop-shadow(0 0 8px currentColor);
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            bottom: 14px;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: $gradient-holo-primary;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s $ease-out;
+          }
+
+          &:hover:after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    @keyframes backgroundAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .title-line {
+      position: relative;
+      font-family: bold;
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      margin-bottom: $spacing-4;
+
+      .title-line-text {
+        font-family: great;
+        font-size: $font-size-7xl;
+        font-weight: $font-weight-black;
+        letter-spacing: 2px;
+        color: $color-white;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 15px rgba(0, 162, 255, 0.7);
+
+        @media (min-width: $breakpoint-md) {
+          font-size: $font-size-5xl;
+        }
+      }
+
+      .title-line-glow {
+        position: absolute;
+        bottom: -4px;
+        left: 150px;
+        border-radius: 5px;
+        width: 600px;
+        height: 29px;
+        background: $gradient-holo-primary;
+        box-shadow: 0 0 10px rgba(0, 162, 255, 0.7),
+          0 0 20px rgba(144, 0, 255, 0.5);
+      }
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: $spacing-4;
+      margin-top: $spacing-8;
+
+      @media (min-width: $breakpoint-md) {
+        flex-direction: row;
+
+        .btn {
+          width: auto;
+          padding: $spacing-3 $spacing-6;
+        }
+      }
+    }
   }
   .hero-description {
     color: $color-white-90; // Changed from white-80 to white-90
@@ -148,8 +259,10 @@
     height: 100%;
     display: flex;
     flex-flow: column nowrap;
-    svg.scaling-icon{
-      transform: rotate(45deg) !important;
+    svg.scaling-icon {
+      transform-origin: center;
+          animation: scrollPulse 2s ease-in-out infinite;
+
     }
 
     .hero-special {
@@ -158,10 +271,7 @@
       gap: 12px;
     }
     .hero-special-row {
-      font-family: great;
       font-weight: 700;
-      font-size: $font-size-7xl;
-      letter-spacing: 12px; // Increased from 10px
       display: flex;
       gap: 34px;
       justify-content: center;
@@ -180,48 +290,19 @@
         rgba($color-holo-secondary, 0.2) 100%
       );
     }
-    .hero-special-1 {
-      border-radius: 100px;
-      border: 2px solid $color-holo-secondary; // Changed from solid to specific width and color
-      padding: 0 50px;
-      @include flex-center;
-      gap: 12px;
-      position: relative;
-      overflow: hidden;
-      
-      // Add a subtle animated gradient border effect
-      &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        background: $gradient-holo-primary;
-        z-index: -1;
-        border-radius: inherit;
-        opacity: 0.5;
-        animation: rotate 4s linear infinite;
-      }
-    }
-    .hero-special-row:nth-child(3) {
-      svg {
-        width: 100px;
-        filter: drop-shadow(0 0 10px $color-holo-secondary); // Added drop shadow
-      }
-    }
     
+   
   }
   .hero-actions {
     display: flex;
     gap: $spacing-6;
     justify-content: center;
     margin-bottom: $spacing-6;
-    
+
     // Add a scale effect to buttons on hover
     .btn {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      
+
       &:hover {
         transform: scale(1.05);
         box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
@@ -237,8 +318,8 @@
       background: $color-holo-secondary;
       margin: 0 auto 8px auto;
       border-radius: 2px;
-      box-shadow: 0 0 12px $color-white-80, 0 0 20px rgba($color-holo-secondary, 0.6); // Enhanced glow
-      animation: scrollPulse 2s infinite; // Added animation
+      box-shadow: 0 0 12px $color-white-80,
+        0 0 20px rgba($color-holo-secondary, 0.6); // Enhanced glow
     }
     span {
       font-size: $font-size-base;
@@ -248,16 +329,39 @@
   }
 }
 
+@keyframes gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 50% 30%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
 // Add scroll pulse animation
 @keyframes scrollPulse {
-  0%, 100% { opacity: 0.6; height: 32px; }
-  50% { opacity: 1; height: 40px; }
+  0%,
+  100% {
+    opacity: 0.6;
+    transform:translateY(20px) ;
+  }
+  50% {
+    opacity: 1;
+    transform:scale(1.1)  ;
+  }
 }
 
 // Add rotation animation for gradient borders
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .marketing h3 {
@@ -266,10 +370,10 @@
   letter-spacing: 1px; // Added letter spacing
   position: relative;
   display: inline-block;
-  
+
   // Add underline effect
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -286,10 +390,10 @@
   letter-spacing: 1px; // Added letter spacing
   position: relative;
   display: inline-block;
-  
+
   // Add underline effect
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -318,12 +422,13 @@
       rgba($color-black-base, 0.9) 0%,
       rgba($color-black-light, 0.8) 100%
     ); // Enhanced background
-    
+
     .service-icon {
       font-size: $font-size-5xl;
       margin-bottom: $spacing-4;
       color: $color-white;
-      text-shadow: 0 0 15px $color-holo-secondary, 0 0 30px rgba($color-holo-secondary, 0.5); // Enhanced glow
+      text-shadow: 0 0 15px $color-holo-secondary,
+        0 0 30px rgba($color-holo-secondary, 0.5); // Enhanced glow
     }
     h3 {
       margin-bottom: $spacing-4;
@@ -331,7 +436,7 @@
       color: $color-white; // Added color
       letter-spacing: 1px; // Added letter spacing
     }
-    
+
     .service-items {
       margin-top: $spacing-4;
       .service-item {
@@ -339,15 +444,17 @@
         border-radius: $border-radius-lg;
         padding: $spacing-4; // Increased from spacing-3
         margin-bottom: $spacing-3;
-        box-shadow: 0 0 12px rgba($color-white-80, 0.3), 0 0 20px rgba($color-holo-secondary, 0.2); // Enhanced glow
+        box-shadow: 0 0 12px rgba($color-white-80, 0.3),
+          0 0 20px rgba($color-holo-secondary, 0.2); // Enhanced glow
         border-left: 3px solid $color-holo-secondary; // Added border accent
         transition: transform 0.3s ease, box-shadow 0.3s ease; // Added transition
-        
+
         &:hover {
           transform: translateX(5px);
-          box-shadow: 0 0 15px rgba($color-white-80, 0.4), 0 0 25px rgba($color-holo-secondary, 0.3);
+          box-shadow: 0 0 15px rgba($color-white-80, 0.4),
+            0 0 25px rgba($color-holo-secondary, 0.3);
         }
-        
+
         h4 {
           color: $color-white;
           font-size: $font-size-lg;
@@ -379,7 +486,7 @@
       rgba($color-black-base, 0.9) 0%,
       rgba($color-black-light, 0.8) 100%
     ); // Enhanced background
-    
+
     .client-logo {
       font-size: $font-size-3xl;
       font-weight: $font-weight-black;
@@ -427,7 +534,7 @@
       rgba($color-black-light, 0.8) 100%
     ); // Enhanced background
     position: relative;
-    
+
     // Add quote marks
     &::before {
       content: '"';
@@ -439,7 +546,7 @@
       font-family: serif;
       line-height: 1;
     }
-    
+
     .testimonial-quote {
       font-size: $font-size-xl; // Increased from lg
       color: $color-white;
@@ -463,7 +570,8 @@
         justify-content: center;
         font-weight: $font-weight-bold;
         font-size: $font-size-lg;
-        box-shadow: 0 0 12px $color-holo-secondary, 0 0 24px rgba($color-holo-secondary, 0.4); // Enhanced glow
+        box-shadow: 0 0 12px $color-holo-secondary,
+          0 0 24px rgba($color-holo-secondary, 0.4); // Enhanced glow
       }
       .author-info {
         h5 {
@@ -479,7 +587,7 @@
       }
     }
     .testimonial-rating {
-      color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
+      color: gold; // Changed from secondary to secondary-light
       font-size: $font-size-xl;
       margin-top: $spacing-4;
     }
@@ -502,12 +610,12 @@
       rgba($color-black-base, 0.9) 0%,
       rgba($color-black-light, 0.8) 100%
     ); // Enhanced background
-    
+
     .why-icon {
       font-size: $font-size-4xl; // Increased from 3xl
       color: $color-holo-secondary-dark; // Changed from secondary to secondary-light
       margin-bottom: 12px; // Increased from 8px
-      
+
       // Add icon hover effect
       transition: transform 0.3s ease;
       &:hover {
@@ -543,8 +651,6 @@
     overflow: hidden;
     z-index: 0;
 
-  
-
     // You must define this keyframes block
     @keyframes rotateGradient {
       0% {
@@ -557,7 +663,7 @@
         background-position: 0% 50%;
       }
     }
-    
+
     h2 {
       color: $color-white-80; // Changed from secondary to secondary-light
       font-size: $font-size-3xl; // Increased from 2xl
@@ -579,11 +685,11 @@
       gap: $spacing-12;
       justify-content: center;
       margin-bottom: 50px;
-      
+
       // Add a scale effect to buttons on hover
       .btn {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        
+
         &:hover {
           box-shadow: 0 0 25px rgba($color-holo-secondary, 0.7);
         }
@@ -595,7 +701,7 @@
       justify-content: center;
       margin-top: $spacing-6;
       flex-wrap: wrap; // Added flex wrap for responsiveness
-      
+
       .contact-item {
         display: flex;
         align-items: center;
@@ -606,18 +712,18 @@
         background: rgba($color-holo-secondary, 0.1); // Added background
         border-radius: $border-radius-full; // Added border radius
         transition: transform 0.3s ease, background 0.3s ease; // Added transition
-        
+
         &:hover {
           transform: translateY(-3px);
           background: rgba($color-holo-secondary, 0.2);
         }
-        
+
         a {
           color: $color-white; // Changed from primary to primary-light
           font-weight: $font-weight-extrabold; // Changed from bold to extrabold
           font-size: $font-size-base;
           text-decoration: none; // Added text decoration
-          
+
           &:hover {
             text-decoration: underline; // Added hover effect
           }
@@ -636,7 +742,7 @@
   display: flex;
   align-items: center;
   gap: 14px;
-    width: 100%;
+  width: 100%;
   font-size: 1.15rem;
   font-weight: 700;
   color: $color-holo-secondary;
@@ -647,7 +753,11 @@
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 .cta-section .contact-item:hover {
-  background: linear-gradient(90deg, $color-holo-primary 0%, $color-holo-secondary 100%);
+  background: linear-gradient(
+    90deg,
+    $color-holo-primary 0%,
+    $color-holo-secondary 100%
+  );
   color: #fff;
   box-shadow: 0 4px 24px rgba($color-holo-secondary, 0.18);
 }
@@ -673,9 +783,9 @@
   letter-spacing: 1px;
 }
 
-.location{
+.location {
   width: 100%;
-  @include flex-center
+  @include flex-center;
 }
 
 @keyframes contactFadeIn {
@@ -686,115 +796,6 @@
 }
 
 // Enhanced Hero Section Styling
-.hero-content {
-  position: relative;
-  z-index: 10;
-  padding: $spacing-12 0;
-  
-  .hero-description {
-    margin-bottom: $spacing-8;
-  }
-  
-  .hero-special {
-    margin-bottom: $spacing-6;
-    
-    .hero-special-row {
-      display: flex;
-      align-items: center;
-      gap: $spacing-4;
-      margin-bottom: $spacing-2;
-      
-      .hero-special-word, .animate-word {
-        font-size: $font-size-5xl;
-        font-weight: $font-weight-bold;
-        color: $color-white;
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        gap: $spacing-2;
-        
-       
-        svg {
-          height: 1.2em;
-          width: auto;
-          filter: drop-shadow(0 0 8px currentColor);
-        }
-        
-        &:after {
-          content: '';
-          position: absolute;
-          bottom: -4px;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: $gradient-holo-primary;
-          transform: scaleX(0);
-          transform-origin: left;
-          transition: transform 0.6s $ease-out;
-        }
-        
-        &.animate-in:after {
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
- 
-  .title-line {
-    position: relative;
-          font-family: bold;
-      position: relative;
-      display: flex;
-      flex-flow: column;
-      justify-content: center;
-      margin-bottom: $spacing-4;
-
-    
-    .title-line-text {
-      font-size: $font-size-7xl ;
-      font-weight: $font-weight-black;
-      letter-spacing: 2px;
-      color: $color-white;
-      position: relative;
-      z-index: 1;
-      text-shadow: 0 0 15px rgba(0, 162, 255, 0.7);
-      
-      @media (min-width: $breakpoint-md) {
-        font-size: $font-size-5xl;
-      }
-    }
-    
-    .title-line-glow {
-      position: absolute;
-      bottom: -4px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 5px;
-      width: 50%;
-      height: 29px;
-      background: $gradient-holo-primary;
-      box-shadow: 0 0 10px rgba(0, 162, 255, 0.7), 0 0 20px rgba(144, 0, 255, 0.5);
-    }
-  }
-  
-  .hero-actions {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-4;
-    margin-top: $spacing-8;
-    
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row;
-      
-      .btn {
-        width: auto;
-        padding: $spacing-3 $spacing-6;
-      }
-    }
-    
-   
-  }
-}
 
 // Add these animations to enhance the flowing effect
 @keyframes flow {
@@ -809,7 +810,8 @@
   }
 }
 
-.scaling-icon, .globe-icon {
+.scaling-icon,
+.globe-icon {
   animation: flow 3s ease-in-out infinite;
 }
 
@@ -824,7 +826,8 @@
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -832,17 +835,15 @@
   }
 }
 
-
-
 //// about
 // About Section Styling
 .about-section {
   position: relative;
   padding: $spacing-20 0;
   overflow: hidden;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -855,18 +856,18 @@
     );
     z-index: -1;
   }
-  
+
   .about-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: $spacing-8;
     margin-top: $spacing-12;
-    
+
     @media (min-width: $breakpoint-lg) {
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  
+
   .about-block {
     position: relative;
     background: rgba(0, 0, 0, 0.3);
@@ -879,28 +880,29 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    
+
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 162, 255, 0.2);
-      
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 162, 255, 0.2);
+
       .about-icon {
         transform: scale(1.1) translateY(-5px);
-        
+
         .icon-glow {
           opacity: 1;
         }
       }
-      
+
       .about-hover-effect {
         opacity: 1;
       }
-      
+
       h3::after {
         width: 100%;
       }
     }
-    
+
     .about-background {
       position: absolute;
       top: 0;
@@ -914,7 +916,7 @@
       filter: blur(2px);
       transition: opacity 0.4s ease;
     }
-    
+
     .about-icon {
       font-size: $font-size-4xl;
       color: $color-white;
@@ -932,7 +934,7 @@
       margin-bottom: $spacing-4;
       position: relative;
       transition: transform 0.4s $ease-out;
-      
+
       .icon-glow {
         position: absolute;
         top: 0;
@@ -940,12 +942,13 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        box-shadow: 0 0 30px rgba($color-holo-primary, 0.8), 0 0 60px rgba($color-holo-secondary, 0.4);
+        box-shadow: 0 0 30px rgba($color-holo-primary, 0.8),
+          0 0 60px rgba($color-holo-secondary, 0.4);
         opacity: 0.6;
         transition: opacity 0.4s ease;
       }
     }
-    
+
     h3 {
       font-size: $font-size-2xl;
       font-weight: $font-weight-bold;
@@ -953,9 +956,9 @@
       margin-bottom: $spacing-4;
       position: relative;
       display: inline-block;
-      
+
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: -8px;
         left: 0;
@@ -965,13 +968,13 @@
         transition: width 0.4s $ease-out;
       }
     }
-    
+
     .about-content {
       flex: 1;
       display: flex;
       flex-direction: column;
     }
-    
+
     .about-lead {
       font-size: $font-size-xl;
       font-weight: $font-weight-medium;
@@ -979,7 +982,7 @@
       margin-bottom: $spacing-6;
       line-height: 1.4;
     }
-    
+
     .about-hover-effect {
       position: absolute;
       top: 0;
@@ -991,15 +994,15 @@
       transition: opacity 0.4s ease;
     }
   }
-  
+
   // Experience Block Specific Styling
   .experience {
     .experience-timeline {
       position: relative;
       padding-left: $spacing-8;
-      
+
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 10px;
@@ -1011,15 +1014,15 @@
           $color-holo-secondary 100%
         );
       }
-      
+
       .timeline-item {
         position: relative;
         margin-bottom: $spacing-6;
-        
+
         &:last-child {
           margin-bottom: 0;
         }
-        
+
         .timeline-marker {
           position: absolute;
           top: 6px;
@@ -1031,7 +1034,7 @@
           border: 3px solid $color-black-base;
           box-shadow: 0 0 15px rgba($color-holo-primary, 0.8);
         }
-        
+
         .timeline-content {
           h4 {
             font-size: $font-size-lg;
@@ -1039,7 +1042,7 @@
             color: $color-white;
             margin-bottom: $spacing-2;
           }
-          
+
           p {
             color: $color-white-80;
             line-height: 1.6;
@@ -1048,14 +1051,14 @@
       }
     }
   }
-  
+
   // Services Block Specific Styling
   .services {
     .services-showcase {
       display: flex;
       flex-wrap: wrap;
       gap: $spacing-3;
-      
+
       .service-pill {
         background: linear-gradient(
           135deg,
@@ -1071,7 +1074,7 @@
         font-weight: $font-weight-medium;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
-        
+
         &:hover {
           transform: translateY(-3px);
           background: linear-gradient(
@@ -1079,32 +1082,33 @@
             rgba($color-holo-primary, 0.3) 0%,
             rgba($color-holo-secondary, 0.3) 100%
           );
-          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba($color-holo-primary, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2),
+            0 0 10px rgba($color-holo-primary, 0.3);
         }
-        
+
         i {
           color: $color-holo-primary-light;
         }
       }
     }
   }
-  
+
   // Story Block Specific Styling
   .story {
     .story-content {
       color: $color-white-80;
       line-height: 1.8;
-      
+
       p {
         margin-bottom: $spacing-4;
-        
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
   }
-  
+
   // Egypt Block Specific Styling
   .egypt {
     .egypt-advantages {
@@ -1112,11 +1116,11 @@
         display: flex;
         gap: $spacing-4;
         margin-bottom: $spacing-6;
-        
+
         &:last-child {
           margin-bottom: 0;
         }
-        
+
         .advantage-icon {
           flex-shrink: 0;
           width: 50px;
@@ -1134,7 +1138,7 @@
           font-size: $font-size-xl;
           box-shadow: 0 0 15px rgba($color-holo-primary, 0.3);
         }
-        
+
         .advantage-content {
           h4 {
             font-size: $font-size-lg;
@@ -1142,7 +1146,7 @@
             color: $color-white;
             margin-bottom: $spacing-2;
           }
-          
+
           p {
             color: $color-white-80;
             line-height: 1.6;

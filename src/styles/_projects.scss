@@ -1,0 +1,141 @@
+// Projects slider styles for dark holographic theme
+.projects-section {
+  margin-top: 4rem;
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+  .projects-slider-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0 1rem 0;
+    background: rgba(0, 0, 0, 0.221);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px 0 rgba(80,0,120,0.25);
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+  }
+  .projects-slider {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.77,0,0.18,1);
+    will-change: transform;
+  }
+  .project-slide {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.5s;
+    position: relative;
+  }
+  .project-slide.active {
+    opacity: 1;
+    z-index: 2;
+  }
+  .project-slide img {
+    width: 50%;
+    max-width: 600px;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px 0 rgba(144,0,255,0.25), 0 0 0 4px rgba(0,255,255,0.08);
+    object-fit: cover;
+    background: linear-gradient(135deg, #1a0033 0%, #9000ff 100%);
+    margin-bottom: 1.2rem;
+    transition: transform 0.7s cubic-bezier(0.77,0,0.18,1);
+  }
+  .project-slide.active img {
+    transform: scale(1.04) ;
+    box-shadow: 0 8px 48px 0 rgba(0,255,255,0.18), 0 0 0 6px #9000ff44;
+  }
+  .project-caption {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px #9000ff55;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    animation: fadeInUp 1s;
+  }
+  .slider-controls {
+    position: absolute;
+    top: 50%;
+    left: 0; right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .slider-btn {
+    background: rgba(30,0,60,0.7);
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: 0 1.2rem;
+    box-shadow: 0 2px 12px #9000ff33;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-btn:hover {
+    background: linear-gradient(135deg, #9000ff 0%, #00fff0 100%);
+    color: #1a0033;
+    transform: scale(1.1);
+  }
+  .slider-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.2rem;
+    gap: 0.7rem;
+  }
+  .slider-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 50%;
+    background: #9000ff55;
+    border: 2px solid #00fff0;
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
+  }
+  .slider-dot.active {
+    background: linear-gradient(135deg, #9000ff 0%, #00fff0 100%);
+    border: 2px solid #fff;
+    box-shadow: 0 0 8px #00fff0cc;
+  }
+}
+
+@media (max-width: 700px) {
+  .projects-section .projects-slider-wrapper {
+    padding: 1rem 0 2rem 0;
+    border-radius: 1.2rem;
+  }
+  .projects-section .project-slide img {
+    width: 98%;
+    max-width: 98vw;
+    border-radius: 1rem;
+  }
+  .projects-section .project-caption {
+    font-size: 1rem;
+  }
+  .projects-section .slider-btn {
+    font-size: 1.3rem;
+    width: 2.1rem;
+    height: 2.1rem;
+    margin: 0 0.5rem;
+  }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

@@ -325,7 +325,7 @@ export function animateServices() {
         block.querySelector(".service-icon"),
         {
           scale: 0,
-          rotation: 360,
+          rotation: 120,
           duration: 1.8,
           ease: "back.out(1.7)",
         },
