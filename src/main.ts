@@ -1,8 +1,14 @@
 
-import { initGsapAnimations } from './scripts/gsap-animations';
-
+import { initGsapAnimations } from './scripts/home/gsap-animations';
 document.addEventListener('DOMContentLoaded', () => {
   initGsapAnimations();
+  const navServices = document.querySelector('.nav-services') as HTMLElement | null;
+  if (navServices) {
+    navServices.addEventListener('click', (e) => {
+      navServices.classList.toggle('active');
+      e.stopPropagation();
+    });
+  }
 });
 
 // window.addEventListener('scroll', () => {
@@ -16,4 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
 //   }
 // });
 
-import './projects-slider';
+import './scripts/home/projects-slider';

@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
+    <!-- <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
         <div class="loading-logo">
           <img
@@ -38,7 +38,7 @@
         </div>
         <div class="loading-text">Initializing Excellence...</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Holographic Background -->
     <!-- <div class="holographic-bg">
@@ -50,22 +50,29 @@
       <div class="dark-overlay"></div>
     </div> -->
 
-    <div class="back">
-      <img src="assets/back/liquid-prism-wallpaper.jpg" alt="">
+    <div class="back light">
+      <img src="assets/back/liquid-prism-wallpaper.jpg" alt="" />
     </div>
 
     <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="nav-content">
-        <div class="logo">
-          <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
-          <div class="logo-glow"></div>
-        </div>
+        <a href="index.html">
+
+          <div class="logo">
+            <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
         <ul class="nav-links">
-          <li><a href="#services" data-text="Services">Services</a></li>
-          <li><a href="#clients" data-text="Clients">Clients</a>
-          
-          </li>
+            <li class="dropdown nav-services" >
+            <a  data-text="Services">Services <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
+              <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
+            </ul>
+            </li>
+          <li><a href="#clients" data-text="Clients">Clients</a></li>
           <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
           <li><a href="#contact" data-text="Contact">Contact</a></li>
         </ul>
