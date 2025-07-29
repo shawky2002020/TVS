@@ -391,26 +391,22 @@ export function animateClients() {
       },
     });
 
-    tl.fromTo(
-      card,
-      {
-        y: 50,
-        opacity: 0,
-        scale: 0.8,
-        rotation: Math.random() * 10 - 5,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-        delay: i * 0.1,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        rotation: 0,
-        duration: 1,
-        ease: "power3.out",
-      }
-    );
+    tl.fromTo(card, {
+      y: 50,
+      opacity: 0,
+      scale: 0.8,
+      rotation: Math.random() * 10 - 5,
+      duration: 0.8,
+      ease: "back.out(1.7)",
+      delay: i * 0.1,
+    },{
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      rotation: 0,
+      duration: 1,
+      ease: "power3.out",
+    });
 
     // Hover effect
     card.addEventListener("mouseenter", () => {
@@ -456,24 +452,20 @@ export function animateTestimonials() {
       },
     });
 
-    tl.fromTo(
-      card,
-      {
-        y: 100,
-        opacity: 0,
-        rotationY: 15,
-        duration: 1,
-        ease: "power3.out",
-        delay: i * 0.15,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        rotationY: 0,
-        duration: 1.2,
-        ease: "power3.out",
-      }
-    )
+    tl.fromTo(card, {
+      y: 100,
+      opacity: 0,
+      rotationY: 15,
+      duration: 1,
+      ease: "power3.out",
+      delay: i * 0.15,
+    },{
+      y: 0,
+      opacity: 1,
+      rotationY: 0,
+      duration: 1.2,
+      ease: "power3.out",
+    })
 
       .from(
         card.querySelector(".testimonial-quote"),
@@ -510,31 +502,26 @@ export function animateWhy() {
       },
     });
 
-    tl.fromTo(
-      item,
-      {
-        y: 50,
-        opacity: 0,
-        scale: 0.9,
-        duration: 0.9,
-        ease: "back.out(1.7)",
-        delay: i * 0.1,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        duration: 1.2,
-      }
-    ).fromTo(
+    tl.fromTo(item, {
+      y: 50,
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.9,
+      ease: "back.out(1.7)",
+      delay: i * 0.1,
+    },{
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      duration: 1.2,
+    }).fromTo(
       item.querySelector(".why-icon"),
       {
         opacity: 0,
         rotation: 180,
         duration: 0.6,
         ease: "back.out(1.7)",
-      },
-      {
+      },{
         opacity: 1,
         rotation: 0,
         duration: 0.6,
@@ -681,7 +668,7 @@ export function initGsapAnimations() {
   animateServices();
   animateClients();
   animateTestimonials();
-  animateAbout();
+  animateAbout()
   animateWhy();
   animateCTA();
   initScrollAnimations();
@@ -823,3 +810,4 @@ export function animateAbout() {
     });
   });
 }
+

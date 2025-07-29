@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
 //   const scrollY = window.scrollY;
 //   console.log(backImg);
   
-//   if (backImg) {
+//   if (backImg && window.innerWidth > 768) {
     
-//     backImg.style.objectPosition = `center -${scrollY * 0.2}px`; // Adjust multiplier for effect strength
+//     backImg.style.transform = `translateY(${scrollY * -0.1}px)`; // Try 0.1 to 0.3 for best effect
 //   }
 // });
 
