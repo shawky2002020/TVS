@@ -33,7 +33,7 @@ sections.forEach((section) => {
     });
     // Move track
     gsap.to(slider, {
-      x: `-${current * 50}%`,
+      x: `-${current * 400}px`,
       duration: 0.7,
       ease: 'expo.inOut',
     });
@@ -113,18 +113,18 @@ export function animateClientSections() {
     const sec = section as HTMLElement;
     
     // Section slide-in
-    gsap.from(sec, {
-      x: -80,
-      duration: 1.1,
-      ease: 'power3.out',
-      delay: i * 0.08,
-      scrollTrigger: {
-        trigger: sec,
-        start: 'top 85%',
-        toggleActions: 'play none none reverse',
-        once: false,
-      },
-    });
+    // gsap.from(sec, {
+    //   x: -80,
+    //   duration: 1.1,
+    //   ease: 'power3.out',
+    //   delay: i * 0.08,
+    //   scrollTrigger: {
+    //     trigger: sec,
+    //     start: 'top 85%',
+    //     toggleActions: 'play none none reverse',
+    //     once: false,
+    //   },
+    // });
 
     // Layered reveal for client-info
     const info = sec.querySelector('.client-info');
@@ -251,10 +251,12 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach((dot, i) => {
       dot.addEventListener('click', (e) => {
         e.preventDefault();
-        const target = sections[i];
+        
+        const target = sections[i+1] ?? sections[i];
+
         if (target) {
           window.scrollTo({
-            top: target.offsetTop - 24, // offset for nav if needed
+            top: target.offsetTop , // offset for nav if needed
             behavior: 'smooth',
           });
         }

@@ -13,6 +13,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         marketing: resolve(__dirname, 'marketing.html'),
         calling: resolve(__dirname, 'calling.html'),
+        clients: resolve(__dirname, 'clients.html'),
       }
     }
   }
