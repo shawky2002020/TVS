@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Clients | Televirgins</title>
+    <meta
+      name="description"
+      content="Meet our bold clients and see the standout work we've created together. Social, print, and more—Televirgins delivers results."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="src/styles/main.scss" />
+  </head>
+  <body class="light">
+    <div class="back light">
+      <img
+        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1920&h=1080&fit=crop"
+        alt=""
+      />
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+      <div class="nav-content">
+        <a href="index.html">
+          <div class="logo">
+            <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li class="dropdown nav-services">
+            <a data-text="Services"
+              >Services <i class="fas fa-caret-down"></i
+            ></a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="marketing.html" data-text="Digital Marketing"
+                  >Digital Marketing</a
+                >
+              </li>
+              <li>
+                <a href="calling.html" data-text="Call Center">Call Center</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="clients.html" data-text="Clients">Clients</a></li>
+          <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
+          <li><a href="#contact" data-text="Contact">Contact</a></li>
+        </ul>
+        <div class="contact">
+          <ul>
+            <li>
+              <a href="tel:+1234567890" class="contact-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>+1 234 567 890</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- Mobile Nav Overlay -->
+        <!-- <div class="mobile-nav-overlay" id="mobileNavOverlay" >
+          <nav class="mobile-nav-menu">
+            <ul class="mobile-nav-links">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#clients">Clients</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+              <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
+              <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
+            </div>
+          </nav>
+        </div> -->
+      </div>
+    </nav>
+
+    <main>
+      <section class="clients-hero light">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Our Clients</div>
+            <h1 class="section-title">Bold Brands. Real Results.</h1>
+            <p class="section-subtitle">
+              We partner with ambitious companies to create impact that lasts.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="clients-container">
+        <div class="scroll-indicator">
+          <div class="scroll-dot active" data-client="0"></div>
+          <div class="scroll-dot" data-client="1"></div>
+          <div class="scroll-dot" data-client="2"></div>
+          <div class="scroll-dot" data-client="3"></div>
+          <div class="scroll-dot" data-client="4"></div>
+        </div>
+
+        <!-- CLIENT 1 -->
+        <section class="client-section" data-client="0">
+          <div class="client-number">01</div>
+          <div class="client-content">
+            <div class="client-info ">
+              <div class="client-logo">
+                <img
+                  src="https://via.placeholder.com/80x80/ffffff/00b4d8?text=LC"
+                  alt="Life Cream Logo"
+                />
+              </div>
+              <h2 class="client-name">Life Cream</h2>
+              <div class="client-brief">
+                Premium ice cream brand redefining indulgence with natural
+                ingredients and bold flavors that create unforgettable moments.
+              </div>
+              <div class="client-stats">
+                <div class="stat">
+                  <span class="stat-number">2.5M</span>
+                  <span class="stat-label">Reach</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">150%</span>
+                  <span class="stat-label">Growth</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">12</span>
+                  <span class="stat-label">Campaigns</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-gallery">
+              <div class="gallery-track" style="transform: translateX(0)">
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=400&h=300&fit=crop"
+                    alt="Life Cream Social Campaign"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Summer Bliss Campaign</div>
+                    <div class="work-type">Social Media</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop"
+                    alt="Life Cream Print Ad"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Premium Print Series</div>
+                    <div class="work-type">Print Design</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1582716401301-b2407dc7563d?w=400&h=300&fit=crop"
+                    alt="Life Cream Package Design"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Package Redesign</div>
+                    <div class="work-type">Branding</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT 2 -->
+        <section class="client-section" data-client="1">
+          <div class="client-number">02</div>
+          <div class="client-content ">
+            <div class="client-info">
+              <div class="client-logo">
+                <img
+                  src="https://via.placeholder.com/80x80/ffffff/6f42c1?text=MP"
+                  alt="Maki Prime Logo"
+                />
+              </div>
+              <h2 class="client-name">Maki Prime</h2>
+              <div class="client-brief">
+                Modern sushi restaurant chain known for creative rolls, vibrant
+                branding, and digital-first marketing approach.
+              </div>
+              <div class="client-stats">
+                <div class="stat">
+                  <span class="stat-number">1.8M</span>
+                  <span class="stat-label">Followers</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">200%</span>
+                  <span class="stat-label">Engagement</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">25</span>
+                  <span class="stat-label">Locations</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-gallery">
+              <div class="gallery-track">
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop"
+                    alt="Maki Prime Social"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Digital Menu Experience</div>
+                    <div class="work-type">Digital Design</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=400&h=300&fit=crop"
+                    alt="Maki Prime Branding"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Brand Identity</div>
+                    <div class="work-type">Branding</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1553621042-f6e147245754?w=400&h=300&fit=crop"
+                    alt="Maki Prime Campaign"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Launch Campaign</div>
+                    <div class="work-type">Marketing</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT 3 -->
+        <section class="client-section" data-client="2">
+          <div class="client-number">03</div>
+          <div class="client-content">
+            <div class="client-info">
+              <div class="client-logo">
+                <img
+                  src="https://via.placeholder.com/80x80/ffffff/00b4d8?text=TS"
+                  alt="TechFlow Solutions Logo"
+                />
+              </div>
+              <h2 class="client-name">TechFlow Solutions</h2>
+              <div class="client-brief">
+                Enterprise software innovators delivering next-gen business
+                automation and digital transformation solutions.
+              </div>
+              <div class="client-stats">
+                <div class="stat">
+                  <span class="stat-number">500K</span>
+                  <span class="stat-label">Users</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">300%</span>
+                  <span class="stat-label">ROI</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">50</span>
+                  <span class="stat-label">Countries</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-gallery">
+              <div class="gallery-track">
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
+                    alt="TechFlow Dashboard"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Enterprise Dashboard</div>
+                    <div class="work-type">UI/UX Design</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+                    alt="TechFlow Analytics"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Analytics Platform</div>
+                    <div class="work-type">Product Design</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=300&fit=crop"
+                    alt="TechFlow Branding"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Corporate Identity</div>
+                    <div class="work-type">Branding</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT 4 -->
+        <section class="client-section" data-client="3">
+          <div class="client-number">04</div>
+          <div class="client-content">
+            <div class="client-info">
+              <div class="client-logo">
+                <img
+                  src="https://via.placeholder.com/80x80/ffffff/6f42c1?text=PS"
+                  alt="Phoenix Studios Logo"
+                />
+              </div>
+              <h2 class="client-name">Phoenix Studios</h2>
+              <div class="client-brief">
+                Creative agency specializing in branding, content, and immersive
+                digital experiences for global brands.
+              </div>
+              <div class="client-stats">
+                <div class="stat">
+                  <span class="stat-number">100+</span>
+                  <span class="stat-label">Projects</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">5M</span>
+                  <span class="stat-label">Impressions</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">15</span>
+                  <span class="stat-label">Awards</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-gallery">
+              <div class="gallery-track">
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop"
+                    alt="Phoenix Creative Campaign"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Creative Campaign</div>
+                    <div class="work-type">Advertising</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&h=300&fit=crop"
+                    alt="Phoenix Brand Identity"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Brand Evolution</div>
+                    <div class="work-type">Branding</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1558655146-364adaf1fcc9?w=400&h=300&fit=crop"
+                    alt="Phoenix Digital Experience"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Digital Experience</div>
+                    <div class="work-type">Web Design</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CLIENT 5 -->
+        <section class="client-section" data-client="4">
+          <div class="client-number">05</div>
+          <div class="client-content">
+            <div class="client-info">
+              <div class="client-logo">
+                <img
+                  src="https://via.placeholder.com/80x80/ffffff/00b4d8?text=QS"
+                  alt="Quantum Systems Logo"
+                />
+              </div>
+              <h2 class="client-name">Quantum Systems</h2>
+              <div class="client-brief">
+                AI technology pioneers empowering businesses with smart
+                automation and data-driven insights for the future.
+              </div>
+              <div class="client-stats">
+                <div class="stat">
+                  <span class="stat-number">1M+</span>
+                  <span class="stat-label">Data Points</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">99.9%</span>
+                  <span class="stat-label">Uptime</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">24/7</span>
+                  <span class="stat-label">Support</span>
+                </div>
+              </div>
+            </div>
+            <div class="work-gallery">
+              <div class="gallery-track">
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=300&fit=crop"
+                    alt="Quantum AI Interface"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">AI Interface Design</div>
+                    <div class="work-type">UI/UX</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop"
+                    alt="Quantum Data Visualization"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Data Visualization</div>
+                    <div class="work-type">Analytics</div>
+                  </div>
+                </div>
+                <div class="work-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop"
+                    alt="Quantum Brand System"
+                  />
+                  <div class="work-info">
+                    <div class="work-title">Tech Brand System</div>
+                    <div class="work-type">Branding</div>
+                  </div>
+                </div>
+              </div>
+              <div class="gallery-progress">
+                <div class="progress-dot active"></div>
+                <div class="progress-dot"></div>
+                <div class="progress-dot"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+     <script type="module">
+    import '/src/scripts/clients/gsap-animations.ts';
+    const navServices = document.querySelector('.nav-services') ;
+  if (navServices) {
+    navServices.addEventListener('click', (e) => {
+      navServices.classList.toggle('active');
+      e.stopPropagation();
+    });
+  }
+  </script>
+  </body>
+</html>

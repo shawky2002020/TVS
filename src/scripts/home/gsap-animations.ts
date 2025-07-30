@@ -811,3 +811,7 @@ export function animateAbout() {
   });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  initGsapAnimations();
+  
+});

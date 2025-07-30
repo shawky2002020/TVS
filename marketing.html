@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Televirgins</title>
-  <meta name="description" content="Learn more about Televirgins, our mission, vision, and the team behind digital marketing and call center excellence." />
+  <title>Digital Marketing Services | Televirgins</title>
+  <meta name="description" content="Explore Televirgins' bold, data-driven digital marketing services: social media, media buying, web development, branding, SEO, and more for ambitious brands." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -19,14 +19,15 @@
     <canvas id="particle-canvas"></canvas>
   </div> -->
   <div class="back light">
-    <img src="assets/TVS Logo/IMG_8439.JPG" alt="">
+    <img src="assets/TVS Logo/noah.jpg" alt="">
   </div>    
-  <nav class="nav" id="navbar">
+  <!-- Navigation -->
+    <nav class="nav" id="navbar">
       <div class="nav-content">
         <a href="index.html">
 
           <div class="logo">
-            <img src="assets/TVS Logo/Asset 7@4x-8.png" class="logo-img" />
+            <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
             <div class="logo-glow"></div>
           </div>
         </a>
@@ -35,7 +36,7 @@
             <a  data-text="Services">Services <i class="fas fa-caret-down"></i></a>
             <ul class="dropdown-menu">
               <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
-              <li><a href="#services" data-text="Call Center">Call Center</a></li>
+              <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
             </ul>
             </li>
           <li><a href="#clients" data-text="Clients">Clients</a></li>
@@ -74,6 +75,7 @@
         </div> -->
       </div>
     </nav>
+
   
   <main>
     <section class="section services-hero light">
@@ -196,6 +198,13 @@
   </main>
   <script type="module">
     import '/src/scripts/services/gsap-animations.ts';
+    const navServices = document.querySelector('.nav-services') ;
+  if (navServices) {
+    navServices.addEventListener('click', (e) => {
+      navServices.classList.toggle('active');
+      e.stopPropagation();
+    });
+  }
   </script>
 </body>
 </html>

@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Loading Screen -->
-    <!-- <div class="loading-screen" id="loadingScreen">
+    <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
         <div class="loading-logo">
           <img
@@ -38,7 +38,7 @@
         </div>
         <div class="loading-text">Initializing Excellence...</div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Holographic Background -->
     <!-- <div class="holographic-bg">
@@ -72,7 +72,7 @@
               <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
             </ul>
             </li>
-          <li><a href="#clients" data-text="Clients">Clients</a></li>
+          <!-- <li><a href="clients.html" data-text="Clients">Clients</a></li> -->
           <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
           <li><a href="#contact" data-text="Contact">Contact</a></li>
         </ul>
@@ -902,8 +902,16 @@
       </section>
     </main>
   </body>
-  <script type="module" src="./src/main.ts"></script>
+  <script type="module" src="./src/scripts/home/gsap-animations.ts"></script>
+  <script type="module" src="./src/scripts/home/projects-slider.ts"></script>
   <script>
+     const navServices = document.querySelector('.nav-services') ;
+  if (navServices) {
+    navServices.addEventListener('click', (e) => {
+      navServices.classList.toggle('active');
+      e.stopPropagation();
+    });
+  }
     // Mobile nav toggle logic
     const menuBtn = document.querySelector(".mobile-menu-btn");
     const overlay = document.getElementById("mobileNavOverlay");

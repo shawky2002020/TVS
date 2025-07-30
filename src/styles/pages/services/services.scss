@@ -1,4 +1,3 @@
-
 .services-hero.light {
   position: sticky;
   top: 0;
@@ -36,13 +35,22 @@
   }
 }
 
+.back-img {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .services.light {
   position: relative;
-  
-  background: linear-gradient(#f8fafcac 10%, #f8fafc7e,transparent 90%);
+  background: #e3e8f0;
+  z-index: 10;
+  // background: linear-gradient(#f8fafcac 10%, #f8fafc7e,transparent 90%);
   .container {
     max-width: 1100px;
-    margin:  auto ;
+    margin: auto;
     padding: 0 1.5rem;
   }
   .services-list {
@@ -54,8 +62,9 @@
     }
   }
   .service-block {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.214);
     border-radius: 1.5rem;
+    backdrop-filter: blur(10px);
     box-shadow: 0 4px 32px 0 #6f42c11a, 0 0 0 2px #00b4d81a;
     padding: 2.2rem 2rem 1.5rem 2rem;
     display: flex;
@@ -71,7 +80,7 @@
     }
   }
   .service-title {
-    font-family: 'Orbitron', 'Inter', sans-serif;
+    font-family: great;
     font-size: 1.35rem;
     font-weight: 800;
     color: #22223b;
@@ -81,7 +90,10 @@
     align-items: center;
     gap: 0.7em;
     i {
-      color: #00b4d8;
+      background:$gradient-holo-animated;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
       font-size: 1.3em;
       filter: drop-shadow(0 2px 8px #00b4d822);
     }
@@ -98,7 +110,7 @@
       padding-left: 1.2em;
       position: relative;
       &:before {
-        content: '\2022';
+        content: "\2022";
         color: #6f42c1;
         font-weight: bold;
         position: absolute;
@@ -107,7 +119,10 @@
         top: 0.1em;
       }
       .service-platforms {
-        color: #00b4d8;
+      background:$gradient-holo-animated;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
         font-weight: 700;
       }
     }

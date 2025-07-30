@@ -56,6 +56,9 @@
       position: relative;
       text-decoration: none;
     }
+    i{
+      transition: transform 0.3s ease;
+    }
 
     a::after {
       content: "";
@@ -71,6 +74,10 @@
     a:hover::after {
       width: 100%;
     }
+  }
+  .contact{
+    padding: 8px 16px;
+    border-radius: 30px;    
   }
   .contact > * {
     color: $color-white-90;
@@ -103,6 +110,20 @@
   }
   .nav-links a {
     color: $color-black-medium;
+  }
+  .contact{
+        background: rgba($color-white-60, 0.5);
+    border: 1px solid rgba($color-white-20, 0.5);
+    backdrop-filter: blur(50px);
+
+  }
+  .contact a{
+    color: $color-black-light ;
+  }
+  .dropdown-menu {
+    background: rgba($color-white-60, 0.5);
+    border: 5px solid rgba($color-white-20, 0.5);
+    backdrop-filter: blur(50px);
   }
 }
 

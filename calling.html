@@ -15,49 +15,67 @@
   <div class="back light">
     <img src="assets/TVS Logo/IMG_8439.JPG" alt="">
   </div>
-  <nav class="nav" id="navbar">
-    <div class="nav-content">
-      <a href="index.html">
-        <div class="logo">
-          <img src="assets/TVS Logo/Asset 7@4x-8.png" class="logo-img" />
-          <div class="logo-glow"></div>
-        </div>
-      </a>
-      <ul class="nav-links">
-        <li class="dropdown nav-services" >
-          <a data-text="Services">Services <i class="fas fa-caret-down"></i></a>
-          <ul class="dropdown-menu">
-            <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
-            <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
-          </ul>
-        </li>
-        <li><a href="#clients" data-text="Clients">Clients</a></li>
-        <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
-        <li><a href="#contact" data-text="Contact">Contact</a></li>
-      </ul>
-      <div class="contact">
-        <ul>
-          <li>
-            <a href="tel:+1234567890" class="contact-link">
-              <i class="fas fa-phone-alt"></i>
-              <span>+1 234 567 890</span>
-            </a>
-          </li>
+   <!-- Navigation -->
+    <nav class="nav" id="navbar">
+      <div class="nav-content">
+        <a href="index.html">
+
+          <div class="logo">
+            <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
+            <div class="logo-glow"></div>
+          </div>
+        </a>
+        <ul class="nav-links">
+            <li class="dropdown nav-services" >
+            <a  data-text="Services">Services <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
+              <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
+            </ul>
+            </li>
+          <li><a href="#clients" data-text="Clients">Clients</a></li>
+          <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
+          <li><a href="#contact" data-text="Contact">Contact</a></li>
         </ul>
+        <div class="contact">
+          <ul>
+            <li>
+              <a href="tel:+1234567890" class="contact-link">
+                <i class="fas fa-phone-alt"></i>
+                <span>+1 234 567 890</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <!-- Mobile Nav Overlay -->
+        <!-- <div class="mobile-nav-overlay" id="mobileNavOverlay" >
+          <nav class="mobile-nav-menu">
+            <ul class="mobile-nav-links">
+              <li><a href="#services">Services</a></li>
+              <li><a href="#clients">Clients</a></li>
+              <li><a href="#testimonials">Reviews</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-contact">
+              <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
+              <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
+            </div>
+          </nav>
+        </div> -->
       </div>
-      <button class="mobile-menu-btn" aria-label="Open navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
+    </nav>
+
   <main>
     <section class="section services-hero light">
       <div class="container">
         <div class="section-header">
           <div class="section-badge">Our Services</div>
-          <h1 class="section-title">Call Center & Outsourcing</h1>
+          <h1 class="section-title">Call Center - Outsourcing</h1>
           <p class="section-subtitle">Flexible, scalable, and expert support for modern businesses</p>
         </div>
       </div>
@@ -108,8 +126,14 @@
     </section>
   </main>
   <script type="module">
-    import '/src/scripts/services/gsap-animations.ts';
+import '/src/scripts/services/gsap-animations.ts';
+    const navServices = document.querySelector('.nav-services') ;
+  if (navServices) {
+    navServices.addEventListener('click', (e) => {
+      navServices.classList.toggle('active');
+      e.stopPropagation();
+    });
+  }    
   </script>
 </body>
 </html>
-\
