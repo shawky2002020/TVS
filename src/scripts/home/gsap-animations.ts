@@ -689,15 +689,19 @@ export function animateBackImageParallax() {
   ) as HTMLImageElement | null;
   const main = document.querySelector('main') as HTMLElement | null;
   if (!backImg || !main) return;
-  gsap.set(backImg, { scaleY: 1.5 }); // Initial position
   gsap.to(backImg, {
-    yPercent: -20,
     ease: "none",
     scrollTrigger: {
-      trigger:main ,
+      trigger: main,
       start: "top top",
       end: "bottom top",
       scrub: 1,
+      onUpdate: (self) => {
+        // Animate object-position from 'center 60%' to 'center 100%'
+        const progress = self.progress;
+        const y = 60 + (100 - 60) * progress;
+        backImg.style.objectPosition = `center ${y}%`;
+      },
     },
   });
 }
