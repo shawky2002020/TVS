@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".mobile-menu-btn") as HTMLElement;
   const mobileNav = document.getElementById("mobileNav") as HTMLElement;
   const navLinks = document.querySelectorAll(".mobile-nav-links a");
+  const mobileDropDown = document.querySelector(".mobile-drop-down") as HTMLElement;
   function openMobileNav() {
     setTimeout(() => {
       mobileNav.classList.add("active");
@@ -32,8 +33,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   navLinks.forEach((link) => {
+    
     link.addEventListener("click", () => {
+      if (!link.getAttribute("href")) {
+        console.log('okkk');
+        mobileDropDown.classList.toggle("active");
+        
+        return
+      };
+      
       closeMobileNav();
+      
     });
   });
 });

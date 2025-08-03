@@ -1,3 +1,60 @@
+// Mobile nav drop-down styling
+.drop-down {
+  display: none;
+  flex-direction: column;
+  background: rgba($color-white-60, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba($color-holo-secondary, 0.08);
+  margin-top: 8px;
+  padding: 0.5em 0;
+  z-index: 1000;
+  list-style: none;
+  min-width: 180px;
+  border: 1.5px solid rgba($color-holo-secondary, 0.12);
+  overflow: hidden;
+  li {
+    margin: 0;
+    a {
+      display: block;
+      padding: 12px 20px;
+      color: $color-black-medium;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bold;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+      &:hover {
+        background: rgba($color-holo-secondary, 0.08);
+        color: $color-holo-secondary-dark;
+      }
+    }
+  }
+}
+
+.mobile-nav-links > li {
+  position: relative;
+}
+.mobile-drop-down {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background: rgba($color-white-60, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba($color-holo-secondary, 0.08);
+  gap: 12px;
+  transition: height .6s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.active.mobile-drop-down {
+  height: 100px; /* adjust to fit your dropdown */
+  opacity: 1;
+  pointer-events: all;
+  
+}
+
 .nav {
   width: 100%;
   

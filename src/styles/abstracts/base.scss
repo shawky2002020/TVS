@@ -51,7 +51,7 @@ a {
     line-height: 32px;
   }
   @include respond-to(xs) {
-    font-size: $font-size-2xl !important;
+    font-size: $font-size-xl !important;
   }
 }
 .section-subtitle {
@@ -69,7 +69,7 @@ a {
     line-height: 24px;
   }
   @include respond-to(xs) {
-    font-size: $font-size-sm;
+    font-size: $font-size-xs;
   }
 }
 .back {

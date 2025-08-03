@@ -434,10 +434,20 @@
           font-size: $font-size-lg;
           margin-bottom: 4px;
           font-weight: $font-weight-bold; // Added font weight
+          @include respond-to(md) {
+            font-size: $font-size-base; // Adjusted for medium screens
+          }
+          
         }
         p {
           color: $color-white-60; // Changed from white-40 to white-60
           font-size: $font-size-base;
+          @include respond-to(sm) {
+            font-size: $font-size-sm; // Adjusted for small screens
+          }
+          @include respond-to(xs) {
+            font-size: $font-size-xs; // Adjusted for extra small screens
+          }
         }
       }
     }
