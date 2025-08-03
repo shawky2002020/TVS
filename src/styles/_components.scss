@@ -11,7 +11,11 @@
   cursor: pointer;
   border: none;
   position: relative;
- 
+  @include respond-to(md){
+    width: auto;
+    padding: $spacing-3 $spacing-6;
+    font-size: $font-size-lg;
+  }
   transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
   // box-shadow: $shadow-holo-md;
   &.btn-primary {

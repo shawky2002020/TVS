@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Loading Screen -->
-    <div class="loading-screen" id="loadingScreen">
+    <!-- <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
         <div class="loading-logo">
           <img
@@ -38,7 +38,7 @@
         </div>
         <div class="loading-text">Initializing Excellence...</div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Holographic Background -->
     <!-- <div class="holographic-bg">
@@ -92,20 +92,18 @@
           <span></span>
         </button>
         <!-- Mobile Nav Overlay -->
-        <!-- <div class="mobile-nav-overlay" id="mobileNavOverlay" >
-          <nav class="mobile-nav-menu">
-            <ul class="mobile-nav-links">
-              <li><a href="#services">Services</a></li>
-              <li><a href="#clients">Clients</a></li>
-              <li><a href="#testimonials">Reviews</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-contact">
-              <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
-              <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
-            </div>
-          </nav>
-        </div> -->
+      </div>
+      <div class="mobile-nav" id="mobileNav" >
+          <ul class="mobile-nav-links">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <div class="mobile-contact">
+            <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
+            <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
+          </div>
       </div>
     </nav>
 
@@ -156,9 +154,7 @@
                   ></path>
                 </svg>
               </div>
-              <!-- <div class="hero-special-row">
-                <span class="animate-word">with</span>
-              </div> -->
+              
             </div>
             <div class="title-line">
               <span class="title-line-text">TELEVIRGINS</span>
@@ -903,40 +899,9 @@
     </main>
   </body>
   <script type="module" src="./src/scripts/home/gsap-animations.ts"></script>
+  <script type="module" src="./src/main.ts"></script>
   <script type="module" src="./src/scripts/home/projects-slider.ts"></script>
   <script>
-     const navServices = document.querySelector('.nav-services') ;
-  if (navServices) {
-    navServices.addEventListener('click', (e) => {
-      navServices.classList.toggle('active');
-      e.stopPropagation();
-    });
-  }
-    // Mobile nav toggle logic
-    const menuBtn = document.querySelector(".mobile-menu-btn");
-    const overlay = document.getElementById("mobileNavOverlay");
-    function openMobileNav() {
-      overlay.style.display = "flex";
-      setTimeout(() => overlay.classList.add("active"), 10);
-      document.body.style.overflow = "hidden";
-    }
-    function closeMobileNav() {
-      overlay.classList.remove("active");
-      setTimeout(() => (overlay.style.display = "none"), 300);
-      document.body.style.overflow = "";
-    }
-    menuBtn.addEventListener("click", () => {
-      if (overlay.style.display === "flex") {
-        closeMobileNav();
-      } else {
-        openMobileNav();
-      }
-    });
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) closeMobileNav();
-    });
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 900) closeMobileNav();
-    });
+  
   </script>
 </html>
