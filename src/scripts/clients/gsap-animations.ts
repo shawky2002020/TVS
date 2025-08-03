@@ -2,7 +2,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-function animateLifeCreamSlider() {
+function animateGallerySlider() {
   // Find the first .client-section (Life Cream) and its gallery
   const sections = document.querySelectorAll('.client-section');
   if (!sections) return;
@@ -33,7 +33,7 @@ sections.forEach((section) => {
     });
     // Move track
     gsap.to(slider, {
-      x: `-${current * 400}px`,
+      x: `-${current * 300}px`,
       duration: 0.7,
       ease: 'expo.inOut',
     });
@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
     animateClientSections();
 
     // Animate Life Cream slider if present
-    animateLifeCreamSlider();
+    animateGallerySlider();
 
     // --- Scroll Indicator Logic ---
     const sections = Array.from(document.querySelectorAll<HTMLElement>(".client-section"));
