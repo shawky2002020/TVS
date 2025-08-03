@@ -1,5 +1,6 @@
 // Base styles and typography
 @import "variables";
+@import "mixins";
 body {
   font-family: $font-family-primary;
   color: $color-white-90;
@@ -43,6 +44,16 @@ a {
   margin-bottom: $spacing-2;
   text-align: center;
   color: $color-white-90;
+  @include respond-to(md) {
+    font-size: $font-size-4xl !important;
+  }
+  @include respond-to(sm) {
+    font-size: $font-size-3xl !important;
+    line-height: 32px;
+  }
+  @include respond-to(xs) {
+    font-size: $font-size-xl !important;
+  }
 }
 .section-subtitle {
   color: $color-white-60;
@@ -51,6 +62,13 @@ a {
   margin-bottom: $spacing-4;
   font-family: lazy;
   letter-spacing: 0.4px;
+  @include respond-to(md) {
+    font-size: $font-size-3xl;
+  }
+  @include respond-to(sm) {
+    font-size: $font-size-2xl;
+    line-height: 24px;
+  }
 }
 .back{
   position: fixed;

@@ -1,6 +1,6 @@
 .nav {
   width: 100%;
-
+  
   position: absolute;
   top: 0;
   left: 0;
@@ -15,13 +15,22 @@
     align-items: center;
     justify-content: space-between;
     overflow: hidden;
+    @include respond-to(md) {
+      padding: 12px 20px;
+    }
   }
   .logo {
-    font-size: $font-size-3xl;
-    font-weight: $font-weight-black;
-    color: $color-holo-secondary;
     position: relative;
     width: 150px;
+    @include respond-to(md) {
+      width: 120px;
+    }
+    @include respond-to(sm) {
+      width: 100px;
+    }
+    @include respond-to(xs) {
+      width: 90px;
+    }
     display: flex;
     align-items: center;
     .logo-img {
@@ -87,17 +96,18 @@
   }
   .mobile-menu-btn {
     display: none;
-    background: none;
+    background: transparent;
     border: none;
     flex-direction: column;
     gap: 6px;
     margin-left: $spacing-4;
     cursor: pointer;
+    padding:12px 0 12px 0;
     span {
       width: 38px;
       height: 6px;
-      background: $color-holo-secondary-light;
-      border-radius: 2px;
+      background: $color-white-80;
+      border-radius: 4px;
       display: block;
       transition: all 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
       position: relative;
@@ -183,7 +193,7 @@
 
 
 .mobile-nav{
-    background: #00000095;
+    background: #0000005f;
     backdrop-filter: blur(40px);
     display: flex;
     flex-flow: column nowrap;
@@ -201,7 +211,8 @@
     }
     .mobile-contact{
       display: flex;
-      gap: 24px;
+      flex-flow: column;
+      gap: 8px;
     }
   }
 @media screen and (max-width: 1218px) {

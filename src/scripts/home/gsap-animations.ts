@@ -325,7 +325,7 @@ export function animateServices() {
         {
           scale: 0,
           rotation: 120,
-          duration: 1.8,
+          duration: 1,
           ease: "back.out(1.7)",
         },
         "-=0.6"
@@ -335,18 +335,17 @@ export function animateServices() {
         {
           x: -30,
           opacity: 0,
-          duration: 0.6,
           ease: "power2.out",
         },
         {
           x: 0,
           opacity: 1,
-          stagger: { amount: 0.5, from: "start" },
+          stagger: { amount: 0.3, from: "start" },
 
           duration: 0.6,
           ease: "power2.out",
         },
-        "-=0.4"
+        "-=1"
       );
 
     // Hover animations
