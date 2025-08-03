@@ -28,9 +28,7 @@
       gap: $spacing-3;
     }
   }
-  .section-title {
-    font-size: $font-size-xl;
-  }
+ 
   .clients-grid, .testimonials-grid, .why-grid {
     grid-template-columns: 1fr;
   }

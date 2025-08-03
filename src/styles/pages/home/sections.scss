@@ -179,6 +179,7 @@
   text-align: center;
   color: $color-white;
   position: relative;
+  overflow-x: hidden;
   svg {
     width: 60px;
     @include respond-to(md) {
@@ -251,6 +252,13 @@
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
+      @include respond-to(md) {
+        font-size: $font-size-5xl;
+      }
+      @include respond-to(sm) {
+        font-size: $font-size-4xl;
+      }
+      
       
     }
     
@@ -311,11 +319,11 @@
   0%,
   100% {
     opacity: 0.6;
-    transform:translateY(20px) ;
+    transform: translateY(10px);
   }
   50% {
     opacity: 1;
-    transform:scale(1.1)  ;
+    transform: scale(1.1);
   }
 }
 
@@ -442,6 +450,9 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: $spacing-6;
     margin-top: $spacing-12;
+    @include respond-to(md) {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
   }
   .client-card {
     @extend .card;
@@ -490,6 +501,12 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: $spacing-6;
     margin-top: $spacing-12;
+    @include respond-to(md) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    @include respond-to(sm) {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
   }
   .testimonial-card {
     @extend .card;
@@ -520,6 +537,12 @@
       font-style: italic;
       padding-left: $spacing-4; // Added padding
       border-left: 3px solid rgba($color-holo-primary, 0.3); // Added border
+      @include respond-to(md) {
+        font-size: $font-size-lg; // Adjusted for medium screens
+      }
+      @include respond-to(sm) {
+        font-size: $font-size-base; // Adjusted for small screens
+      }
     }
     .testimonial-author {
       display: flex;
@@ -545,10 +568,19 @@
           font-size: $font-size-lg; // Increased from base
           margin-bottom: 4px; // Increased from 2px
           font-weight: $font-weight-bold; // Added font weight
+          @include respond-to(md) {
+            font-size: $font-size-base; // Adjusted for medium screens
+          }
+          @include respond-to(sm) {
+            font-size: $font-size-sm; // Adjusted for small screens
+          }
         }
         span {
           color: $color-white-90; // Changed from white-80 to white-90
           font-size: $font-size-sm;
+          @include respond-to(md) {
+            font-size: $font-size-xs; // Adjusted for medium screens
+          }
         }
       }
     }
@@ -603,16 +635,17 @@
 }
 
 .cta-section {
+   background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba($color-black-base, 0.5) 10%,
+      rgba($color-black-light, 0.8) 100%
+    );
   .cta-content {
-    width: 800px;
     @extend .card;
     text-align: center;
     border: 1px solid rgba($color-holo-primary, 0.3);
-    background: linear-gradient(
-      135deg,
-      rgba($color-black-base, 0.9) 0%,
-      rgba($color-black-light, 0.8) 100%
-    );
+   
     position: relative;
     overflow: hidden;
     z-index: 0;
@@ -651,7 +684,14 @@
       gap: $spacing-12;
       justify-content: center;
       margin-bottom: 50px;
-
+      @include respond-to(md) {
+        flex-direction: column;
+        gap: $spacing-6;
+      }
+      @include respond-to(sm) {
+        flex-direction: column;
+        gap: $spacing-4;
+      }
       // Add a scale effect to buttons on hover
       .btn {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -676,7 +716,7 @@
         font-weight: $font-weight-bold;
         padding: $spacing-2 $spacing-4; // Added padding
         background: rgba($color-holo-secondary, 0.1); // Added background
-        border-radius: $border-radius-full; // Added border radius
+        border-radius: $border-radius-sm; // Added border radius
         transition: transform 0.3s ease, background 0.3s ease; // Added transition
 
         &:hover {
@@ -689,7 +729,9 @@
           font-weight: $font-weight-extrabold; // Changed from bold to extrabold
           font-size: $font-size-base;
           text-decoration: none; // Added text decoration
-
+          @include respond-to(xs) {
+            font-size: $font-size-sm; // Adjusted for smaller screens
+          }
           &:hover {
             text-decoration: underline; // Added hover effect
           }
@@ -699,55 +741,6 @@
   }
 }
 // CTA Contact Info Styling
-.cta-section .contact-info {
-  margin-top: 32px;
-  display: grid;
-  gap: 18px;
-}
-.cta-section .contact-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  width: 100%;
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: $color-holo-secondary;
-  background: rgba($color-holo-primary, 0.7);
-  border-radius: 12px;
-  padding: 10px 18px;
-  box-shadow: 0 2px 16px rgba($color-holo-primary, 0.12);
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
-}
-.cta-section .contact-item:hover {
-  background: linear-gradient(
-    90deg,
-    $color-holo-primary 0%,
-    $color-holo-secondary 100%
-  );
-  color: #fff;
-  box-shadow: 0 4px 24px rgba($color-holo-secondary, 0.18);
-}
-.cta-section .contact-item i {
-  font-size: 1.3em;
-  color: $color-holo-primary;
-  transition: color 0.3s;
-}
-.cta-section .contact-item:hover i {
-  color: #fff;
-}
-.cta-section .contact-item a {
-  color: inherit;
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-.cta-section .contact-item a:hover {
-  text-decoration: underline;
-}
-.cta-section .contact-item strong {
-  font-weight: 900;
-  letter-spacing: 1px;
-}
 
 .location {
   width: 100%;
@@ -1032,6 +1025,9 @@
         );
         border-radius: $border-radius-full;
         padding: $spacing-2 $spacing-4;
+        @include respond-to(xs) {
+          padding: $spacing-1 $spacing-3;
+        }
         display: flex;
         align-items: center;
         gap: $spacing-2;
