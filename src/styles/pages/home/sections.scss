@@ -127,6 +127,15 @@
   position: relative;
   svg {
     width: 60px;
+    @include respond-to(md) {
+      width: 50px;
+    }
+    @include respond-to(sm) {
+      width: 40px;
+    }
+    @include respond-to(xs) {
+      width: 30px;
+    }
   }
   .hero-content {
     position: relative;
@@ -150,13 +159,21 @@
         .animate-word {
           font-family: great;
           font-size: $font-size-6xl;
+          @include respond-to(md) {
+            font-size: $font-size-4xl;
+          }
+          @include respond-to(sm) {
+            font-size: $font-size-3xl;
+          }
+          @include respond-to(xs) {
+            font-size: $font-size-lg;
+          }
           font-weight: $font-weight-bold;
           color: $color-white;
           position: relative;
           display: inline-flex;
           align-items: center;
           gap: $spacing-2;
-
           background: $holographic-pearl;
           background-clip: text;
           -webkit-background-clip: text;
@@ -210,6 +227,15 @@
       .title-line-text {
         font-family: great;
         font-size: $font-size-7xl;
+        @include respond-to(md) {
+          font-size: $font-size-5xl ;
+        }
+        @include respond-to(sm) {
+          font-size: $font-size-4xl ;
+        }
+        @include respond-to(xs) {
+          font-size: $font-size-3xl ;
+        }
         font-weight: $font-weight-black;
         letter-spacing: 2px;
         color: $color-white;
@@ -232,6 +258,17 @@
         background: $gradient-holo-primary;
         box-shadow: 0 0 10px rgba(0, 162, 255, 0.7),
           0 0 20px rgba(144, 0, 255, 0.5);
+          @include respond-to(md) {
+          left: 50%;
+          transform: translateX(-50%);
+          }
+          @include respond-to(sm) {
+            width: 400px;
+          }
+          @include respond-to(xs) {
+            height: 20px;
+            width: 300px;
+          }
       }
     }
 

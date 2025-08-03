@@ -7,7 +7,6 @@
   z-index: $z-fixed;
   display: flex;
   flex-flow: column nowrap;
-  height: 100px;
   .nav-content {
     width: 100%;
     padding: 24px 40px;
@@ -91,14 +90,27 @@
     background: none;
     border: none;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     margin-left: $spacing-4;
+    cursor: pointer;
     span {
-      width: 28px;
-      height: 4px;
-      background: $color-holo-secondary;
+      width: 38px;
+      height: 6px;
+      background: $color-holo-secondary-light;
       border-radius: 2px;
       display: block;
+      transition: all 0.35s cubic-bezier(0.77,0.2,0.05,1.0);
+      position: relative;
+    }
+    &.active span:nth-child(1) {
+      transform: translateY(12px) rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0.5);
+    }
+    &.active span:nth-child(3) {
+      transform: translateY(-12px) rotate(-45deg);
     }
   }
 }
@@ -166,5 +178,47 @@
   }
   i {
     transform: rotate(180deg);
+  }
+}
+
+
+.mobile-nav{
+    background: #00000095;
+    backdrop-filter: blur(40px);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+    .mobile-nav-links {
+      display: flex;
+      flex-flow: column nowrap;
+      gap: 16px;
+      list-style: none;
+      
+    }
+    .mobile-contact{
+      display: flex;
+      gap: 24px;
+    }
+  }
+@media screen and (max-width: 1218px) {
+  .nav-links{
+    display: none !important;
+  }
+  .contact {
+    display: none !important;
+  }
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+  .mobile-nav-overlay{
+    background: #000;
+  }
+  .mobile-nav.active{
+    opacity: 1;
+    pointer-events: all;
   }
 }

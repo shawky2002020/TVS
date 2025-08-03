@@ -132,8 +132,8 @@
 
 .work-item {
   flex-shrink: 0;
-  width: 400px;
-  height: 400px;
+  width: 450px;
+  height: fit-content;
   overflow: hidden;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) , border-radius 0.2s , box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
@@ -158,7 +158,7 @@
 }
 
 .work-item:hover img {
-  border-radius: 1.5rem;
+  // border-radius: 1.5rem;
   transform: scale(1.05);
 }
 
