@@ -33,7 +33,8 @@ sections.forEach((section) => {
     });
     // Move track
     gsap.to(slider, {
-      x: `-${current * 300}px`,
+      // x: `-${current * 300}px` ,
+      x: window.innerWidth > 580? `-${current * 300}px` : `-${current * 100}%`,
       duration: 0.7,
       ease: 'expo.inOut',
     });

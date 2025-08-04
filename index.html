@@ -161,22 +161,27 @@
         </button>
         <!-- Mobile Nav Overlay -->
       </div>
-      <div class="mobile-nav" id="mobileNav" >
-          <ul class="mobile-nav-links">
-            <li><a>Services <i class="fas fa-caret-down"></i></a>
+      <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+          <li>
+            <a>Services <i class="fas fa-caret-down"></i></a>
             <ul class="mobile-drop-down">
               <li><a href="marketing.html">Digital Marketing</a></li>
               <li><a href="calling.html">Call Center</a></li>
             </ul>
-            </li>
-            <li><a href="#clients">Clients</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="mobile-contact">
-            <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
-            <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
-          </div>
+          </li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+          <a href="mailto:hello@televirgins.com"
+            ><i class="fas fa-envelope"></i> hello@televirgins.com</a
+          >
+          <a href="tel:+1234567890"
+            ><i class="fas fa-phone"></i> +1 234 567 890</a
+          >
+        </div>
       </div>
     </nav>
 
@@ -609,59 +614,56 @@
       </section>
 
       <!-- Clients Section -->
-     <section class="section sec-grad clients-section" id="clients">
-      <div class="back light">
+      <section class="section sec-grad clients-section" id="clients">
+        <div class="back light">
           <img src="assets/back/try4.jpg" alt="" />
         </div>
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Our Clients</div>
-      <h2 class="section-title">Trusted By Industry Leaders</h2>
-      <p class="section-subtitle">
-        Join the companies revolutionizing their markets
-      </p>
-    </div>
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Our Clients</div>
+            <h2 class="section-title">Trusted By Industry Leaders</h2>
+            <p class="section-subtitle">
+              Join the companies revolutionizing their markets
+            </p>
+          </div>
 
-    <div class="clients-grid">
+          <div class="clients-grid">
+            <div class="client-card">
+              <h4>Nautical Bowls</h4>
+              <p>Superfood & smoothie bowl franchise</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Nautical Bowls</h4>
-        <p>Superfood & smoothie bowl franchise</p>
-      </div>
+            <div class="client-card">
+              <h4>California Tacos Australia</h4>
+              <p>SoCal‑inspired Mexican taqueria chain</p>
+            </div>
 
-      <div class="client-card">
-        <h4>California Tacos Australia</h4>
-        <p>SoCal‑inspired Mexican taqueria chain</p>
-      </div>
+            <div class="client-card">
+              <h4>Life Numbing Creams</h4>
+              <p>Pro‑grade tattoo & aesthetic numbing creams</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Life Numbing Creams</h4>
-        <p>Pro‑grade tattoo & aesthetic numbing creams</p>
-      </div>
+            <div class="client-card">
+              <h4>LuxNests</h4>
+              <p>Dream home rental platform</p>
+            </div>
 
-      <div class="client-card">
-        <h4>LuxNests</h4>
-        <p>Dream home rental platform</p>
-      </div>
+            <div class="client-card">
+              <h4>Maki Prime</h4>
+              <p>Immersive Spanish‑language academy</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Maki Prime</h4>
-        <p>Immersive Spanish‑language academy</p>
-      </div>
-
-      <div class="client-card">
-        <h4>Al Gamal Hospital</h4>
-        <p>24/7 private hospital in Ain Shams, Cairo</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+            <div class="client-card">
+              <h4>Al Gamal Hospital</h4>
+              <p>24/7 private hospital in Ain Shams, Cairo</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Testimonials Section -->
       <section class="section sec-grad testimonials-section" id="testimonials">
-         <div class="back light">
+        <div class="back light">
           <img src="assets/back/try.jpg" alt="" />
         </div>
         <div class="container">
@@ -730,7 +732,9 @@
 
       <!-- Why Section -->
       <section class="section sec-grad why-section">
-       
+        <!-- <div class="back light">
+          <img src="assets/back/try4.jpg" alt="" />
+        </div> -->
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Why Televirgins?</h2>
@@ -949,16 +953,14 @@
               </div>
             </div>
           </div>
+        </div>
       </section>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img
-              src="assets/TVS Logo/telewhite.png"
-              alt="Televirgins Logo"
-            />
+            <img src="assets/TVS Logo/telewhite.png" alt="Televirgins Logo" />
           </div>
           <div class="footer-links">
             <a href="/index.html">Home</a>
@@ -985,7 +987,6 @@
         </div>
       </div>
     </footer>
- 
   </body>
   <script type="module" src="./src/scripts/home/gsap-animations.ts"></script>
   <script type="module" src="./src/main.ts"></script>

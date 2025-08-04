@@ -17,6 +17,13 @@
   top: 0;
   background: $color-white;
   box-shadow: 0 8px 28px $color-black-base;
+  background: $holographic-pearl;
+  @include respond-to(md) {
+    height: 100% !important;
+    justify-content: flex-start;
+    align-items: start;
+    position: relative;
+  }
 }
 
 .client-content {
@@ -27,6 +34,11 @@
   gap: 4rem;
   align-items: start;
   height: 80vh;
+  @include respond-to(md) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    height: fit-content;
+  }
 }
 
 .client-info {
@@ -40,6 +52,13 @@
   // border: 1px solid $color-black-light;
   box-shadow: 0 4px 24px $color-black-light;
   transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  @include respond-to(md) {
+    padding: 1.5rem;
+  }
+  @include respond-to(sm) {
+    padding:1.3rem 1rem;
+  }
+  
 }
 
 .client-info.active {
@@ -59,6 +78,19 @@
   box-shadow: $shadow-holo-md;
   position: relative;
   overflow: hidden;
+  @include respond-to(md) {
+    width: 180px;
+    height: 180px;
+  }
+  @include respond-to(sm) {
+    width: 160px;
+    height: 160px;
+  }
+  @include respond-to(xs) {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 12px;
+  }
 }
 
 .client-logo::before {
@@ -79,8 +111,8 @@
 }
 
 .client-logo img {
-  width: 180px;
-  height: 180px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   border-radius: 50%;
   background: $color-black-base;
@@ -99,6 +131,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  @include respond-to(md) {
+    font-size: 1.3rem;
+  }
+  @include respond-to(xs) {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .client-brief {
@@ -106,49 +145,69 @@
   font-weight: 500;
   line-height: 1.6;
   font-size: $font-size-lg;
+  @include respond-to(md) {
+    font-size: $font-size-sm ;
+  }
 }
 
 
 
 
 .work-gallery {
+  flex: 1;
   position: relative;
-  height: 100%;
-  overflow: hidden;
+  height: fit-content;
+  overflow: hidden ;
   border-radius: 2rem;
   background: $glass-bg;
   backdrop-filter: blur(10px);
-}
+  
 
+}
+.tacos-gallery {
+   max-height: 450px;
+
+}
 
 .gallery-track {
   display: flex;
-  height: 70%;
+  height: 100%;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   gap: 2rem;
   padding: 2rem;
   align-items: start;
 }
 
-.work-item {
+.work-item {  
   flex-shrink: 0;
   width: 450px;
   height: fit-content;
+    max-height: 450px;
   overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) , border-radius 0.2s , box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) , border 0.2s , box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   position: relative;
+  @include respond-to(md) {
+    width: 300px;
+    height: 300px;
+  }
+  
+  @include respond-to(xs) {
+    width: 100%;
+    height: 100%;
+  }
 }
 
-.tacos-gallery .work-item {
-  width: 350px;
-  height: 450px;
-  max-height: 450px;
-}
+// .tacos-gallery .work-item {
+//   width: 350px;
+//   height: 450px;
+//   max-height: 450px;
+//   @include respond-to(md) {
+//     width: 100%;
+//     height: 100%;
+//   }
+// }
 
-.work-item:hover {
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 48px $color-black-light, 0 0 0 2px $color-holo-secondary-dark;
-}
+
 
 .work-item img {
   width: 100%;
@@ -157,10 +216,7 @@
   transition: transform 0.5s , border-radius 0.2s;
 }
 
-.work-item:hover img {
-  // border-radius: 1.5rem;
-  transform: scale(1.05);
-}
+
 
 .work-info {
   padding: 1.5rem;
@@ -193,11 +249,14 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.5rem;
+  background: $color-white-80;
+  padding: 10px 20px;
+  border-radius: 24px;
 }
 
 .progress-dot {
-  width: 8px;
-  height: 8px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
   background:  rgba($color-black-base,.3) ;
   transition: all 0.3s;
@@ -237,7 +296,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: $color-holo-primary-dark;
+  background: rgba($color-holo-primary-dark,.5);
   opacity: 0.4;
   transition: all 0.3s;
   cursor: pointer;
@@ -247,44 +306,4 @@
   background: $color-holo-primary-light;
   transform: scale(1.5);
   box-shadow: 0 0 20px $color-holo-primary-light;
-}
-
-@media (max-width: 900px) {
-  .client-content {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    height: auto;
-    padding: 2rem 1rem;
-  }
-
-  .client-section {
-    height: auto;
-    min-height: 100vh;
-    position: relative;
-  }
-
-  .work-gallery {
-    height: 400px;
-  }
-
-  .work-item {
-    width: 280px;
-    height: 350px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .client-name {
-    font-size: 1.8rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  .mobile-menu-btn {
-    display: flex;
-  }
 }
