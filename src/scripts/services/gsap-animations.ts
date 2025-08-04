@@ -1,3 +1,57 @@
+export function aniamateSubService() {
+  // Hero section entrance
+  gsap.from(".service-hero", {
+    y: -60,
+    opacity: 0,
+    duration: 1.1,
+    ease: "power4.out"
+  });
+  // Animated icon
+  gsap.from(".icon-animate i", {
+    scale: 0.2,
+    rotation: 60,
+    opacity: 0,
+    duration: 1.2,
+    delay: 0.1,
+    ease: "back.out(2)"
+  });
+  // Title and description
+  gsap.from(".service-title", {
+    y: 40,
+    opacity: 0,
+    duration: 1,
+    delay: 0.2,
+    ease: "power3.out"
+  });
+  gsap.from(".service-desc", {
+    y: 30,
+    opacity: 0,
+    duration: 0.9,
+    delay: 0.35,
+    ease: "power2.out"
+  });
+  // Details card
+  gsap.from(".service-details", {
+    y: 60,
+    opacity: 0,
+    duration: 1.1,
+    delay: 0.5,
+    ease: "power4.out"
+  });
+  // Features list
+  gsap.from(".service-features li", {
+    x: -30,
+    scrollTrigger: {
+      trigger: ".service-features",
+      start: "top 85%",
+      toggleActions: "play none none reverse",
+    },
+    opacity: 0,
+    stagger: 0.08,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+}
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
@@ -89,5 +143,8 @@ export function animateMarketingPage() {
 document.addEventListener("DOMContentLoaded", () => {
   if (document.querySelector(".services-hero")) {
     animateMarketingPage();
+  }
+  if (document.querySelector(".service-hero")) {
+    aniamateSubService();
   }
 });

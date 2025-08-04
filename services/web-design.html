@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design and Development | Televirgins</title>
+  <meta name="description" content="Modern, SEO-optimized web design and development: content, e-commerce, analytics, and scalable solutions for your brand." />
+  <link rel="stylesheet" href="../src/styles/main.scss" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body class="light">
+  <!-- Navigation (same as virtual.html) -->
+  <nav class="nav" id="navbar">
+    <div class="nav-content">
+      <a href="index.html">
+        <div class="logo">
+          <img src="../assets/TVS Logo/worddark.png" class="logo-img" />
+          <div class="logo-glow"></div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li class="dropdown nav-services" >
+          <a data-text="Services">Services <i class="fas fa-caret-down"></i></a>
+          <ul class="dropdown-menu">
+            <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
+            <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
+          </ul>
+        </li>
+        <li><a href="clients.html" data-text="Clients">Clients</a></li>
+        <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
+        <li><a href="#contact" data-text="Contact">Contact</a></li>
+      </ul>
+      <div class="contact">
+        <ul>
+          <li>
+            <a href="tel:+1234567890" class="contact-link">
+              <i class="fas fa-phone-alt"></i>
+              <span>+1 234 567 890</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobileNav" >
+      <ul class="mobile-nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#clients">Clients</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="mobile-contact">
+        <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
+        <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="service-hero">
+      <div class="icon-animate">
+        <i class="fas fa-globe"></i>
+      </div>
+      <h1 class="service-title">Web Design and Development</h1>
+      <p class="service-desc">
+        We design and develop modern, SEO-optimized websites tailored to your brand. From content writing to product catalog setup, analytics, and advanced e-commerce features, we deliver scalable solutions that drive engagement and sales.
+      </p>
+    </section>
+    <section class="service-details">
+      <h2 class="section-title">What We Do</h2>
+      <ul class="service-features">
+        <li>Up to 20 Pages</li>
+        <li>SEO Optimized</li>
+        <li>Google Tags Integration</li>
+        <li>1 Language</li>
+        <li>Royalty-Free Stock Images</li>
+        <li>Content Writing & Updates</li>
+        <li>Product Catalog Setup</li>
+        <li>Inventory Management</li>
+        <li>Order and Shipping Tracking (if required)</li>
+        <li>Coupon and Discount Code Management (if required)</li>
+        <li>Abandoned Cart Recovery (if required)</li>
+        <li>Product Reviews and Ratings</li>
+        <li>Advanced Product Filtering and Sorting</li>
+        <li>Automatic Email Notifications</li>
+        <li>Analytics for Sales and Customer Behavior</li>
+      </ul>
+    </section>
+  </main>
+  <script src="../src/main.ts"></script>
+  <script type="module">
+    import '../src/scripts/services/gsap-animations.ts';
+    // The animation will auto-run on DOMContentLoaded via the script logic
+  </script>
+</body>
+</html>

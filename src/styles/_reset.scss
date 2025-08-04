@@ -7,13 +7,13 @@
 html{
     scroll-behavior: smooth;
     width: 100vw;
-    overflow-x: hidden;
 
 }
 body {
   height: 100%;
   width: 100vw;
   overflow-x: hidden ;
+  background: $bg-gradient-main;
 }
 
 li {
@@ -22,4 +22,8 @@ li {
 a{
   text-decoration: none !important;
   color: inherit;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
