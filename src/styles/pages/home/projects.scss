@@ -4,6 +4,9 @@
   @include respond-to(md) {
     margin-top:0;
   }
+  @include respond-to(xs) {
+    min-height: auto;
+  }
   .section-header {
     text-align: center;
     margin-bottom: 2.5rem;

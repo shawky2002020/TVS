@@ -125,6 +125,8 @@
   text-align: center;
   color: $color-white;
   position: relative;
+  min-height: auto ;
+  overflow-x: hidden;
   svg {
     width: 60px;
     @include respond-to(md) {
@@ -272,21 +274,10 @@
       }
     }
 
-    .hero-actions {
-      display: flex;
-      flex-direction: column;
-      gap: $spacing-4;
-      margin-top: $spacing-8;
+    
 
-      @media (min-width: $breakpoint-md) {
-        flex-direction: row;
-
-        .btn {
-          width: auto;
-          padding: $spacing-3 $spacing-6;
-        }
-      }
-    }
+      
+    
   }
   .hero-description {
     color: $color-white-90; // Changed from white-80 to white-90
@@ -329,13 +320,24 @@
   }
   .hero-actions {
     display: flex;
+    flex-flow: row nowrap !important;
     gap: $spacing-6;
     justify-content: center;
     margin-bottom: $spacing-6;
-
+    @include respond-to(md) {
+      gap: 0;
+    }
     // Add a scale effect to buttons on hover
     .btn {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      @include respond-to(md) {
+        margin: 0 auto;
+      }
+      @include respond-to(xs) {
+        padding: 8px 14px; // Adjusted padding for smaller screens
+        font-size: 12px;
+        border-radius: 8px;
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -561,6 +563,9 @@
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: $spacing-6;
     margin-top: $spacing-12;
+    @include respond-to(md) {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
   }
   .testimonial-card {
     @extend .card;
@@ -589,6 +594,9 @@
       color: $color-white;
       margin-bottom: $spacing-4;
       font-style: italic;
+      @include respond-to(xs) {
+        font-size: $font-size-lg; // Adjusted for medium screens
+      }
       padding-left: $spacing-4; // Added padding
       border-left: 3px solid rgba($color-holo-primary, 0.3); // Added border
     }
@@ -614,12 +622,18 @@
         h5 {
           color: $color-white; // Changed from primary to primary-light
           font-size: $font-size-lg; // Increased from base
+          @include respond-to(xs) {
+            font-size: $font-size-sm; // Adjusted for medium screens
+          }
           margin-bottom: 4px; // Increased from 2px
           font-weight: $font-weight-bold; // Added font weight
         }
         span {
           color: $color-white-90; // Changed from white-80 to white-90
           font-size: $font-size-sm;
+          @include respond-to(xs) {
+            font-size: $font-size-xs; // Adjusted for medium screens
+          }
         }
       }
     }
@@ -839,6 +853,15 @@
   position: relative;
   padding: $spacing-20 0;
   overflow: hidden;
+  @include respond-to(md) {
+    padding: $spacing-16 0;
+  }
+  @include respond-to(sm) {
+    padding: $spacing-12 0;
+  }
+  @include respond-to(xs) {
+    padding: $spacing-2 0;
+  }
 
   &::before {
     content: "";
