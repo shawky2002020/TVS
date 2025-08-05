@@ -99,6 +99,8 @@
   }
 }
 
+
+
 @keyframes iconPulse {
   0%,
   100% {
@@ -114,6 +116,7 @@
     filter: drop-shadow(0 4px 24px $color-holo-secondary-light);
   }
 }
+
 .service-details {
   max-width: 700px;
   width: 90%;
@@ -181,19 +184,49 @@
   .explore {
     margin: 24px auto 0 auto;
   }
+ 
   .explore-link {
+        display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px;
     border-radius: 1.2rem;
-    background: $bg-gradient-main;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    // border: solid 2px $color-black-medium;
-    transition: all 0.3s ease-in-out;
+    width: 400px;
+    gap: 4px;
+        color: $color-black-medium; ;
+
+    white-space: nowrap;
+    @include respond-to(md) {
+      width: 350px;
+    }
+    @include respond-to(sm) {
+      width: 300px;
+    }
+    @include respond-to(xs) {
+      width: 250px;
+      font-size: 12px !important;
+    }
+    border: solid 2px $color-black-medium;
+    transition: width .3s ease-in-out;
   }
   .explore-link:hover {
-    -webkit-text-fill-color: $color-white;
-    color: $color-white;
-    background: $bg-gradient-main;
+    width: 450px;
+    @include respond-to(md) {
+      width: 400px;
+    }
+    @include respond-to(sm) {
+      width: 350px;
+    }
+    @include respond-to(xs) {
+      width: 300px;
+    }
+  }
+  i{
+    font-size: 1.2rem;
+        transition: transform 0.8s ease-in-out;
+
+  }
+  .explore-link:hover i{
+    transform: translateX(12px);
   }
 }
