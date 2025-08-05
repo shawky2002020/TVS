@@ -1,4 +1,3 @@
-
 .service-hero {
   text-align: center;
   padding: 0 5rem;
@@ -8,6 +7,15 @@
   overflow: hidden;
   display: flex;
   flex-flow: column;
+  @include respond-to(md) {
+    padding: 0 3rem;
+  }
+  @include respond-to(sm) {
+    padding: 0 2rem;
+  }
+  @include respond-to(xs) {
+    padding: 0 1rem;
+  }
   &::before {
     content: "";
     position: absolute;
@@ -22,6 +30,8 @@
     pointer-events: none;
   }
   .icon-animate {
+    margin-top: 100px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,43 +39,69 @@
     margin-right: 24px;
     z-index: 1;
     i {
-      font-size: 4.5rem;
+      font-size: $font-size-7xl;
       color: $color-holo-primary-light;
       filter: drop-shadow(0 4px 24px $color-holo-secondary-light);
       background: $bg-gradient-main;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
-      animation: iconPulse 2.2s infinite cubic-bezier(0.77,0.2,0.05,1.0);
+      animation: iconPulse 2.2s infinite cubic-bezier(0.77, 0.2, 0.05, 1);
+      @include respond-to(md) {
+        font-size:$font-size-6xl;
+      }
+      @include respond-to(sm) {
+        font-size: $font-size-5xl;
+      }
+      
     }
   }
   .service-title {
-    font-size: 2.7rem;
+    font-family: great;
+
+    font-size: $font-size-5xl;
     font-weight: $font-weight-black;
     color: $color-white;
     margin-bottom: 1.1rem;
     letter-spacing: 2px;
-      background: $bg-gradient-main;
+    background: $bg-gradient-main;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    @include respond-to(md) {
+      font-size: $font-size-5xl;
+    }
+    @include respond-to(sm) {
+      font-size: $font-size-4xl;
+    }
+    @include respond-to(xs) {
+      font-size: $font-size-2xl;
+    }
   }
   .service-desc {
     color: $color-white-90;
     font-size: 1.22rem;
     font-weight: $font-weight-medium;
     max-width: 700px;
+    width: 100%;
     margin: 0 auto 1.7rem auto;
     line-height: 1.8;
     background: $bg-gradient-main;
     border-radius: 1.2rem;
     padding: 1.2rem 1rem;
+    @include respond-to(sm) {
+      font-size: 1.1rem;
+    }
+    @include respond-to(xs) {
+      font-size: 1rem;
+    }
   }
 }
 
 @keyframes iconPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1) rotate(0deg);
     filter: drop-shadow(0 4px 24px $color-holo-secondary-light);
   }
@@ -80,8 +116,10 @@
 }
 .service-details {
   max-width: 700px;
+  width: 90%;
   margin: 2.5rem auto;
-        background: $holographic-pearl;
+  padding: 2rem;
+  background: $holographic-pearl;
   border-radius: 2rem;
   box-shadow: $shadow-holo-md;
   display: flex;
@@ -89,11 +127,21 @@
   justify-content: start;
   min-height: auto;
   h2 {
-      background: $bg-gradient-main;
+    font-size: $font-size-6xl;
+    background: $bg-gradient-main;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    @include respond-to(md) {
+      font-size: $font-size-5xl;
+    }
+    @include respond-to(sm) {
+      font-size: $font-size-4xl;
+    }
+    @include respond-to(xs) {
+      font-size: $font-size-2xl;
+    }
   }
   .service-features {
     list-style: none;
@@ -107,17 +155,45 @@
       padding-left: 1.2em;
       color: $color-black-light;
       position: relative;
+      @include respond-to(sm) {
+        font-size: $font-size-sm;
+      }
+      @include respond-to(xs) {
+        font-size: $font-size-xs;
+      }
       &:before {
         content: "";
-      background: $bg-gradient-main;
+        background: $bg-gradient-main;
         font-weight: bold;
         position: absolute;
         left: 0;
-        top: .4em;
-        width: 0.8em ;
+        top: 0.4em;
+        width: 0.8em;
         height: 0.8em;
         border-radius: 50%;
+        @include respond-to(xs) {
+          width: 0.6em;
+          height: 0.6em;
+        }
       }
     }
+  }
+  .explore {
+    margin: 24px auto 0 auto;
+  }
+  .explore-link {
+    padding: 12px;
+    border-radius: 1.2rem;
+    background: $bg-gradient-main;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    // border: solid 2px $color-black-medium;
+    transition: all 0.3s ease-in-out;
+  }
+  .explore-link:hover {
+    -webkit-text-fill-color: $color-white;
+    color: $color-white;
+    background: $bg-gradient-main;
   }
 }

@@ -2,10 +2,13 @@
   position: sticky;
   top: 0;
   background: linear-gradient(120deg, #f8fafc5a 0%, #e3e8f00d 100%);
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1.5rem;
   .section-header {
     background: $color-white;
     border-radius: 12px;
-    padding: 32px 50px;
+    padding: 24px 30px;
     text-align: center;
     .section-badge {
       display: inline-block;
@@ -33,6 +36,7 @@
       margin-bottom: 0.5rem;
     }
   }
+  
 }
 
 .back-img {
