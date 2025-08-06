@@ -45,41 +45,41 @@ a {
 }
 .section-subtitle {
   color: $color-white-60;
-  font-size: $font-size-4xl;
+  font-size: $font-size-xl;
   text-align: center;
   margin-bottom: $spacing-4;
-  font-family: lazy;
+  font-family: bold;
   letter-spacing: 0.4px;
 }
-.back{
-  position: fixed;
+.back {
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   height: 100%;
   width: 100vw;
 }
-.back::after {
-  content: "";
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)
-  );
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
+// .back::after {
+//   content: "";
+//   background: linear-gradient(
+//     to bottom,
+//     rgba(0, 0, 0, 0.5),
+//     rgba(0, 0, 0, 0.5)
+//   );
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+// }
 
 .light {
- 
-    .back::after {
-      background: rgba(255, 255, 255, 0.219);
-    }
+  .back::after {
+    background: rgba(255, 255, 255, 0.219);
+  }
   .back img {
-    filter: brightness(0.8);}
+    filter: brightness(0.8);
+  }
 }
 
 .back img {
@@ -91,8 +91,8 @@ a {
   will-change: transform;
   pointer-events: none; /* Optional: lets clicks pass through */
 }
-.back-top{
-  img{
-     object-position: top !important;
+.back-top {
+  img {
+    object-position: top !important;
   }
 }
