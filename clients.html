@@ -27,7 +27,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="nav" id="navbar">
+   <nav class="nav" id="navbar">
       <div class="nav-content">
         <a href="/index.html">
           <div class="logo">
@@ -43,9 +43,10 @@
             <ul class="dropdown-menu">
               <li>
                 <a href="/marketing.html" data-text="Digital Marketing">
-                  <i class="fas fa-bullhorn"></i>
                   Digital Marketing
+                  <i class="fas fa-caret-right"></i>
                 </a>
+
                 <ul class="sub-drop">
                   <li>
                     <a href="/services/seo.html">
@@ -87,7 +88,6 @@
               </li>
               <li>
                 <a href="/calling.html" data-text="Call Center">
-                  <i class="fas fa-headset"></i>
                   Call Center
                   <i class="fas fa-caret-right"></i>
                 </a>
@@ -98,7 +98,7 @@
                       Virtual Assistants
                     </a>
                   </li>
-                  <!-- <li>
+                  <li>
                     <a href="/services/cold-calling.html">
                       <i class="fas fa-phone-alt"></i>
                       Cold Calling
@@ -109,14 +109,16 @@
                       <i class="fas fa-user-friends"></i>
                       Customer Service
                     </a>
-                  </li> -->
+                  </li>
                 </ul>
               </li>
             </ul>
           </li>
           <li><a href="/clients.html" data-text="Clients">Clients</a></li>
           <!-- <li><a href="/index.html#testimonials" data-text="Reviews">Reviews</a></li> -->
-          <li><a mailto="Business@televirgins.com" data-text="Contact">Contact</a></li>
+          <li>
+            <a href="#contact" data-text="Contact">Contact</a>
+          </li>
         </ul>
         <div class="contact">
           <ul>
@@ -137,8 +139,14 @@
       </div>
       <div class="mobile-nav" id="mobileNav">
         <ul class="mobile-nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#clients">Clients</a></li>
+          <li>
+            <a>Services <i class="fas fa-caret-down"></i></a>
+            <ul class="mobile-drop-down">
+              <li><a href="marketing.html">Digital Marketing</a></li>
+              <li><a href="calling.html">Call Center</a></li>
+            </ul>
+          </li>
+          <li><a href="clients.html">Clients</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -362,14 +370,8 @@
     </main>
     <script type="module">
       import "/src/scripts/clients/gsap-animations.ts";
-      import "/src/scripts/home/gsap-animations.ts";
-      const navServices = document.querySelector(".nav-services");
-      if (navServices) {
-        navServices.addEventListener("click", (e) => {
-          navServices.classList.toggle("active");
-          e.stopPropagation();
-        });
-      }
+      import "/src/main.ts";
+      
     </script>
   </body>
 </html>

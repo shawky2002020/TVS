@@ -44,14 +44,14 @@ a {
   text-align: center;
   color: $color-white-90;
   @include respond-to(md) {
-    font-size: $font-size-4xl !important;
+    font-size: $font-size-4xl ;
   }
   @include respond-to(sm) {
-    font-size: $font-size-3xl !important;
+    font-size: $font-size-3xl ;
     line-height: 32px;
   }
   @include respond-to(xs) {
-    font-size: $font-size-xl !important;
+    font-size: $font-size-xl ;
   }
 }
 .section-subtitle {
@@ -74,6 +74,18 @@ a {
 }
 .section-badge{
   font-family: great;
+  font-size: $font-size-2xl;
+  color: $color-white-60;
+  text-transform: uppercase;
+  @include respond-to(md) {
+    font-size: $font-size-xl;
+  }
+  @include respond-to(sm) {
+    font-size: $font-size-base;
+  }
+  @include respond-to(xs) {
+    font-size: $font-size-xs;
+  }
 }
 .back {
   position: absolute;
