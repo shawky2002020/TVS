@@ -22,12 +22,11 @@
   </head>
   <body class="light">
     <div class="back light">
-      
       <img src="assets/back/light4.jpg" alt="" />
     </div>
 
     <!-- Navigation -->
-   <nav class="nav" id="navbar">
+    <nav class="nav" id="navbar">
       <div class="nav-content">
         <a href="/index.html">
           <div class="logo">
@@ -174,7 +173,7 @@
         </div>
       </section>
 
-      <div class="clients-container">
+      <div id="work" class="clients-container">
         <div class="scroll-indicator">
           <div class="scroll-dot active" data-client="0"></div>
           <div class="scroll-dot" data-client="1"></div>
@@ -197,7 +196,12 @@
               <h2 class="client-name">Nautical Bowls</h2>
               <div class="client-brief">
                 Superfood bowls for active, health-conscious lifestyles.<br />
-                <a href="https://nauticalbowls.com" target="_blank" rel="noopener">nauticalbowls.com</a>
+                <a
+                  href="https://nauticalbowls.com"
+                  target="_blank"
+                  rel="noopener"
+                  >nauticalbowls.com</a
+                >
               </div>
             </div>
             <div class="work-gallery">
@@ -225,7 +229,7 @@
         </section>
 
         <!-- CLIENT 2: California Tacos Australia -->
-        <section class="client-section" data-client="1">
+        <section id="cal" class="client-section" data-client="1">
           <div class="client-number">02</div>
           <div class="client-content">
             <div class="client-info">
@@ -237,8 +241,14 @@
               </div>
               <h2 class="client-name">California Tacos Australia</h2>
               <div class="client-brief">
-                Authentic California-style tacos and street food in Australia.<br />
-                <a href="https://instagram.com/californiatacosaustralia" target="_blank" rel="noopener">@californiatacosaustralia</a>
+                Authentic California-style tacos and street food in
+                Australia.<br />
+                <a
+                  href="https://instagram.com/californiatacosaustralia"
+                  target="_blank"
+                  rel="noopener"
+                  >@californiatacosaustralia</a
+                >
               </div>
             </div>
             <div class="work-gallery tacos-gallery">
@@ -278,11 +288,16 @@
               <h2 class="client-name">Life Numbing Cream</h2>
               <div class="client-brief">
                 Fast-acting numbing creams for tattoos and aesthetics.<br />
-                <a href="https://lifenumbingcreams.com" target="_blank" rel="noopener">lifenumbingcreams.com</a>
+                <a
+                  href="https://lifenumbingcreams.com"
+                  target="_blank"
+                  rel="noopener"
+                  >lifenumbingcreams.com</a
+                >
               </div>
             </div>
             <div class="work-gallery cream-gallery">
-              <div class="gallery-track ">
+              <div class="gallery-track">
                 <div class="work-item">
                   <img
                     src="assets/work/cream/1.jpg"
@@ -306,7 +321,7 @@
 
         <!-- CLIENT 4 -->
 
-        <section class="client-section" data-client="3">
+        <section id="lux" class="client-section" data-client="3">
           <div class="client-number">04</div>
           <div class="client-content">
             <div class="client-info">
@@ -316,7 +331,9 @@
               <h2 class="client-name">Luxnests</h2>
               <div class="client-brief">
                 Luxury calming beds for pets and modern homes.<br />
-                <a href="https://luxnests.net" target="_blank" rel="noopener">luxnests.net</a>
+                <a href="https://luxnests.net" target="_blank" rel="noopener"
+                  >luxnests.net</a
+                >
               </div>
             </div>
             <div class="work-gallery">
@@ -337,7 +354,7 @@
           </div>
         </section>
 
-        <section class="client-section" data-client="4">
+        <section id="maki" class="client-section" data-client="4">
           <div class="client-number">05</div>
           <div class="client-content">
             <div class="client-info">
@@ -347,7 +364,9 @@
               <h2 class="client-name">Maki Prime</h2>
               <div class="client-brief">
                 Immersive Spanish language courses with native speakers.<br />
-                <a href="https://makiprime.com" target="_blank" rel="noopener">makiprime.com</a>
+                <a href="https://makiprime.com" target="_blank" rel="noopener"
+                  >makiprime.com</a
+                >
               </div>
             </div>
             <div class="work-gallery">
@@ -371,7 +390,28 @@
     <script type="module">
       import "/src/scripts/clients/gsap-animations.ts";
       import "/src/main.ts";
-      
+      window.addEventListener("load", function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const section = urlParams.get("section");
+        if (section === "maki") {
+          const element = document.getElementById("maki");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+        else if(section == "cal"){
+          const element = document.getElementById("cal");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+        else if(section == "lux"){
+          const element = document.getElementById("lux");
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+      });
     </script>
   </body>
 </html>

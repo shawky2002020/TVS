@@ -40,9 +40,8 @@
     z-index: 1;
     i {
       font-size: $font-size-7xl;
-      color: $color-holo-primary-light;
       filter: drop-shadow(0 4px 24px $color-holo-secondary-light);
-      background: $bg-gradient-main;
+      background: $bg-sec;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
@@ -64,7 +63,7 @@
     color: $color-white;
     margin-bottom: 1.1rem;
     letter-spacing: 2px;
-    background: $bg-gradient-main;
+    background: $bg-sec;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -87,7 +86,7 @@
     width: 100%;
     margin: 0 auto 1.7rem auto;
     line-height: 1.8;
-    background: $bg-gradient-main;
+    background: $bg-sec;
     border-radius: 1.2rem;
     padding: 1.2rem 1rem;
     @include respond-to(sm) {
@@ -131,7 +130,7 @@
   min-height: auto;
   h2 {
     font-size: $font-size-6xl;
-    background: $bg-gradient-main;
+    background: $bg-sec;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -166,7 +165,7 @@
       }
       &:before {
         content: "";
-        background: $bg-gradient-main;
+        background: $bg-sec;
         font-weight: bold;
         position: absolute;
         left: 0;

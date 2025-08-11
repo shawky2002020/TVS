@@ -9,19 +9,17 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem 0 1rem 0;
-    background: rgba(0, 0, 0, 0.221);
     border-radius: 2rem;
-    box-shadow: 0 8px 32px 0 rgba(80,0,120,0.25);
     overflow: hidden;
-    backdrop-filter: blur(8px);
   }
   .projects-slider {
     display: flex;
-    transition: transform 0.8s cubic-bezier(0.77,0,0.18,1);
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.18, 1);
     will-change: transform;
   }
   .project-slide {
-    min-width: 100%;
+    position: relative;
+    width: 100%;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -30,34 +28,78 @@
     opacity: 0.7;
     transition: opacity 0.5s;
     position: relative;
+    .work-view {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      inset: 0;
+      width: 100%;
+      height: auto;
+      margin: auto;
+      border-radius: 1.5rem;
+      display: flex;
+      background:rgba($color-black-light,.8);
+      @include flex-center;
+      flex-flow: column nowrap;
+      gap: 24px;
+      transform: translateY(100%);
+      transition: opacity .8s ease-in-out , transform .4s ease-in-out;
+      a {
+        font-size: $font-size-xl;
+              background: $bg-hero;
+              border-radius: 12px;
+        color: $color-white;
+        padding: 0.5rem 1rem;
+        transition: transform .3s ease;
+        &:hover{
+          transform: translateY(-2px);
+        }
+
+      }
+      @include respond-to(md) {
+        max-width: 600px;
+      }
+      @include respond-to(sm) {
+        max-width: 500px;
+      }
+      @include respond-to(xs) {
+        max-width: 300px;
+      }
+    }
   }
   .project-slide.active {
     opacity: 1;
     z-index: 2;
+    &:hover .work-view{
+      opacity: 1;
+      pointer-events: all;
+      transform: translateY(0);
+    }
   }
   .project-slide img {
     width: 100%;
-    height: 100%;
-    max-width: 600px;
+    height: auto;
+    max-height: 100%;
+
+    max-width: 400px;
     @include respond-to(md) {
-      max-width: 500px;
+      max-width: 400px;
     }
     @include respond-to(sm) {
-      max-width: 400px;
+      max-width: 300px;
     }
     @include respond-to(xs) {
       max-width: 200px;
     }
     border-radius: 1.5rem;
-    box-shadow: 0 4px 32px 0 rgba(144,0,255,0.25), 0 0 0 4px rgba(0,255,255,0.08);
-    object-fit: cover;
-    background: linear-gradient(135deg, #1a0033 0%, #9000ff 100%);
+    // box-shadow: 0 4px 32px 0 rgba(144,0,255,0.25), 0 0 0 4px rgba(0,255,255,0.08);
+    object-fit: contain;
+    // background: linear-gradient(135deg, #1a0033 0%, #9000ff 100%);
     margin-bottom: 1.2rem;
-    transition: transform 0.7s cubic-bezier(0.77,0,0.18,1);
+    transition: transform 0.7s cubic-bezier(0.77, 0, 0.18, 1);
   }
   .project-slide.active img {
-    transform: scale(1.04) ;
-    box-shadow: 0 8px 48px 0 rgba(0,255,255,0.18), 0 0 0 6px #9000ff44;
+    // box-shadow: 0 8px 48px 0 rgba(0, 255, 255, 0.18), 0 0 0 6px #9000ff44;
   }
   .project-caption {
     color: #fff;
@@ -72,7 +114,8 @@
   .slider-controls {
     position: absolute;
     top: 50%;
-    left: 0; right: 0;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -80,7 +123,7 @@
     z-index: 3;
   }
   .slider-btn {
-    background: rgba(30,0,60,0.7);
+    background: rgba(30, 0, 60, 0.7);
     border: none;
     color: #fff;
     font-size: 2rem;
@@ -143,6 +186,13 @@
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+// Project Slider Logo and View Button

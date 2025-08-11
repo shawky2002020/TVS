@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const dotsContainer = document.getElementById('sliderDots') as HTMLElement | null;
   let current = 0;
   let autoSlideInterval: ReturnType<typeof setInterval> | undefined;
-  const SLIDE_TIME = 4000;
+  const SLIDE_TIME = 10000;
 
   if (!slider || slides.length === 0) return;
+
+    
 
   // Create dots
   function createDots() {
