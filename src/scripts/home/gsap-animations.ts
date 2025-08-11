@@ -70,108 +70,55 @@ export function animateLoadingScreen() {
 
 // ENHANCED HERO SECTION
 export function animateHero() {
-  const tl = gsap.timeline();
+  const tl = gsap.timeline(ScrollTrigger.create({
+    trigger: ".hero-section",
+  }));
+  
 
-  // Hero badge animation
-  tl
-
-    // Animate special words with stagger
-    .from(
-      ".animate-word",
-      {
-        y: 60,
-        opacity: 0,
-        rotationX: 90,
-        stagger: 0.1,
-        duration: 1,
-        ease: "back.out(1.7)",
-      },
-      "-=0.6"
-    )
-
-    .from(
-      ".title-line-text",
-      {
-        scale: 0.8,
-        opacity: 0,
-        duration: 1,
-        ease: "elastic.out(1, 0.5)",
-      },
-      "-=0.4"
-    )
-
-    // Buttons with magnetic effect setup
-    .from(
-      ".hero-actions .btn",
-      {
-        opacity: 0,
-        stagger: 0.2,
-        duration: 1,
-        ease: "back.out(1.7)",
-      },
-      "-=0.3"
-    )
-
-    // Stats counter animation
-    .from(
-      ".hero-stats .stat-item",
-      {
-        y: 30,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.8,
-        ease: "power2.out",
-      },
-      "-=0.2"
-    );
-
-  // Animate counters only when stats section enters viewport
-  gsap.utils.toArray(".stat-number").forEach((counter) => {
-    const el = counter as HTMLElement;
-    const target = parseInt(el.dataset.target || "0");
-    ScrollTrigger.create({
-      trigger: el,
-      start: "top 80%",
-      once: true,
-      onEnter: () => {
-        gsap.fromTo(
-          el,
-          {
-            innerText: 0,
-          },
-          {
-            innerText: target,
-            duration: 4,
-            ease: "power2.out",
-            snap: { innerText: 1 },
-            onUpdate: function () {
-              el.innerText = Math.floor(Number(el.innerText)).toLocaleString();
-            },
-          }
-        );
-      },
-    });
+  // Animate hero-content fade in
+  tl.from(".hero-content", {
+    opacity: 0,
+    y: 60,
+    duration: 1.2,
+    ease: "power3.out",
   });
 
-  // Floating elements continuous animation
-  gsap.to(".floating-element-1", {
-    y: -20,
-    rotation: 360,
-    duration: 4,
-    ease: "none",
-    repeat: -1,
-    yoyo: true,
-  });
+  // Animate hero-special (brand name)
+  tl.from(
+    ".hero-special",
+    {
+      y: 40,
+      opacity: 0,
+      duration: 1.1,
+      ease: "power3.out",
+    },
+    "-=0.7"
+  );
 
-  gsap.to(".floating-element-2", {
-    x: 15,
-    y: -15,
-    rotation: -360,
-    duration: 5,
-    ease: "none",
-    repeat: -1,
-    yoyo: true,
-  });
+  // Animate hero-tagline
+  tl.from(
+    ".hero-tagline",
+    {
+      y: 30,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+    },
+    "-=0.7"
+  );
+
+  // Animate hero-actions (buttons)
+  tl.from(
+    ".hero-actions .btn",
+    {
+      opacity: 0,
+      y: 20,
+      stagger: 0.18,
+      duration: 0.9,
+      ease: "back.out(1.7)",
+    },
+    "-=0.5"
+  );
 }
 
 // MAGNETIC BUTTON EFFECTS
