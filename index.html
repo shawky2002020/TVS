@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="refresh" content="0; url=access-restricted.html" /> -->
     <title>Televirgins - Digital Marketing & Call Center Excellence</title>
     <meta
       name="description"
@@ -22,9 +23,10 @@
     />
     <link rel="stylesheet" href="src/styles/main.scss" />
   </head>
+
   <body>
     <!-- Loading Screen -->
-    <!-- <div class="loading-screen" id="loadingScreen">
+    <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
         <div class="loading-logo">
           <img
@@ -38,7 +40,7 @@
         </div>
         <div class="loading-text">Initializing Excellence...</div>
       </div>
-    </div> -->
+    </div>
 
     <!-- Holographic Background -->
     <!-- <div class="holographic-bg">
@@ -50,39 +52,109 @@
       <div class="dark-overlay"></div>
     </div> -->
 
-    <div class="back light">
-      <img src="assets/back/liquid-prism-wallpaper.jpg" alt="" />
-    </div>
-
     <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="nav-content">
-        <a href="index.html">
-
+        <a href="/index.html">
           <div class="logo">
             <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
             <div class="logo-glow"></div>
           </div>
         </a>
         <ul class="nav-links">
-            <li class="dropdown nav-services" >
-            <a  data-text="Services">Services <i class="fas fa-caret-down"></i></a>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li class="dropdown nav-services">
+            <a data-text="Services"
+              >Services <i class="fas fa-caret-down"></i
+            ></a>
             <ul class="dropdown-menu">
-              <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
-              <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
+              <li>
+                <a href="/marketing.html" data-text="Digital Marketing">
+                  Digital Marketing
+                  <i class="fas fa-caret-right"></i>
+                </a>
+
+                <ul class="sub-drop">
+                  <li>
+                    <a href="/services/seo.html">
+                      <i class="fas fa-search-dollar"></i>
+                      SEO
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/ecommerce.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      Ecommerce
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="/services/media-buying.html">
+                      <i class="fas fa-bullseye"></i>
+                      Media Buying
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/branding.html">
+                      <i class="fas fa-paint-brush"></i>
+                      Branding
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/web-design.html">
+                      <i class="fas fa-code"></i>
+                      Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/social-media.html">
+                      <i class="fas fa-share-alt"></i>
+                      Social Media
+                    </a>
+                  </li> -->
+                </ul>
+              </li>
+              <li>
+                <a href="/calling.html" data-text="Call Center">
+                  Call Center
+                  <i class="fas fa-caret-right"></i>
+                </a>
+                <ul class="sub-drop">
+                  <li>
+                    <a href="/services/virtual.html">
+                      <i class="fas fa-robot"></i>
+                      Virtual Assistants
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/cold-calling.html">
+                      <i class="fas fa-phone-alt"></i>
+                      Cold Calling
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/customer-service.html">
+                      <i class="fas fa-user-friends"></i>
+                      Customer Service
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
-            </li>
-          <li><a href="clients.html" data-text="Clients">Clients</a></li>
-          <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
-          <li><a href="#contact" data-text="Contact">Contact</a></li>
+          </li>
+          <li><a href="/clients.html" data-text="Clients">Our Clients</a></li>
+          <!-- <li><a href="/index.html#testimonials" data-text="Reviews">Reviews</a></li> -->
+          <li>
+            <a href="/index.html?section=about"> About Us </a>
+          </li>
         </ul>
         <div class="contact">
           <ul>
             <li>
-              <a href="tel:+1234567890" class="contact-link">
-                <i class="fas fa-phone-alt"></i>
-                <span>+1 234 567 890</span>
-              </a>
+              <a href="/index.html?section=contact" data-text="Contact"
+                >Contact Us</a
+              >
             </li>
           </ul>
         </div>
@@ -93,82 +165,54 @@
         </button>
         <!-- Mobile Nav Overlay -->
       </div>
-      <div class="mobile-nav" id="mobileNav" >
-          <ul class="mobile-nav-links">
-            <li><a>Services <i class="fas fa-caret-down"></i></a>
+      <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+          <li>
+            <a>Services <i class="fas fa-caret-down"></i></a>
             <ul class="mobile-drop-down">
               <li><a href="marketing.html">Digital Marketing</a></li>
               <li><a href="calling.html">Call Center</a></li>
             </ul>
-            </li>
-            <li><a href="clients.html">Clients</a></li>
-            <li><a href="#testimonials">Reviews</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-          <div class="mobile-contact">
-            <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
-            <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
-          </div>
+          </li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="#testimonials">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+          <a href="mailto:hello@televirgins.com"
+            ><i class="fas fa-envelope"></i> hello@televirgins.com</a
+          >
+          <a href="tel:+1234567890"
+            ><i class="fas fa-phone"></i> +1 234 567 890</a
+          >
+        </div>
       </div>
     </nav>
 
     <main>
       <!-- Hero Section -->
-      <section class="hero" id="home">
+      <section class="hero sec-grad" id="home">
         <!-- <div class="floating-elements">
           <div class="floating-element floating-element-1"></div>
           <div class="floating-element floating-element-2"></div>
           <div class="floating-element floating-element-3"></div>
           <div class="floating-element floating-element-4"></div>
         </div> -->
-
+        <!-- <div class="back light">
+          <img src="assets/back/try9.jpg" alt="" />
+        </div> -->
         <div class="hero-content">
           <div class="hero-description">
-            <div class="hero-special">
-              <div class="hero-special-row">
-                <span class="animate-word">
-                  Scaling
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    class="scaling-icon"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M12 3l6 6h-4v7h-4v-7H6l6-6z"
-                      fill="#fff"
-                    ></path>
-                  </svg>
-                </span>
-                <span class="animate-word">Businesses</span>
-              </div>
-              <div class="hero-special-row">
-                <span class="animate-word">Across</span>
-                <span class="animate-word">Continents</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  class="globe-icon"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM4 12C4 11.39 4.08 10.79 4.21 10.22L8 14V15C8 16.1 8.9 17 10 17V19.93C6.61 19.43 4 16.07 4 12ZM17.9 17.39C17.64 16.58 16.9 16 16 16H15V13C15 12.45 14.55 12 14 12H8V10H10C10.55 10 11 9.55 11 9V7H13C14.1 7 15 6.1 15 5V4.59C17.93 5.78 20 8.65 20 12C20 14.08 19.21 15.97 17.9 17.39Z"
-                    fill="#fff"
-                  ></path>
-                </svg>
-              </div>
-              
-            </div>
-            <div class="title-line">
-              <span class="title-line-text">TELEVIRGINS</span>
-              <div class="title-line-glow"></div>
+            <div class="hero-special">Televirgins</div>
+            <!-- <div class="hero-moto">Scaling Businesses Across Continents</div> -->
+            <div class="hero-tagline">
+              <span class="tagline-sub"
+                >Scaling Businesses Across Continents</span
+              >
             </div>
           </div>
-
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary btn-magnetic">
+            <a href="/marketing.html" class="btn btn-primary btn-magnetic">
               <span class="btn-content">
                 <i class="fas fa-bullhorn"></i>
                 <span>Digital Marketing</span>
@@ -176,8 +220,7 @@
               <div class="btn-glow"></div>
               <div class="btn-particles"></div>
             </a>
-
-            <a href="#services" class="btn btn-secondary btn-magnetic">
+            <a href="/calling.html" class="btn btn-secondary btn-magnetic">
               <span class="btn-content">
                 <i class="fas fa-headset"></i>
                 <span>Call Services</span>
@@ -190,7 +233,7 @@
       </section>
 
       <!-- Company Projects Section -->
-      <section class="section projects-section" id="projects">
+      <section class="section sec-grad projects-section" id="projects">
         <div class="container">
           <div class="section-header">
             <div class="section-badge">Our Work</div>
@@ -202,17 +245,40 @@
           <div class="projects-slider-wrapper">
             <div class="projects-slider" id="projectsSlider">
               <div class="project-slide">
-                <img src="assets/projects/1.png" alt="Project 1" />
+                <img src="assets/logos/maki.png" alt="Project 1" />
                 <div class="project-caption">Maki Prime</div>
+                <div class="work-view">
+                  <a href="https://www.makiprime.com" target="_blank"
+                    >View Company</a
+                  >
+                  <a href="/clients.html?section=maki"> View Our Work </a>
+                </div>
               </div>
 
               <div class="project-slide">
-                <img src="assets/work/luxnest/1.png" alt="Project 2" />
-                <div class="project-caption">LuxNest</div>
+                <img
+                  src="assets/logos/California_Logo-removebg-preview.png"
+                  alt="Project 2"
+                />
+                <div class="project-caption">California Tacos</div>
+                <div class="work-view">
+                  <a
+                    href="https://www.instagram.com/californiatacosaustralia/?hl=en"
+                    target="_blank"
+                    >View Company</a
+                  >
+                  <a href="/clients.html?section=cal"> View Our Work </a>
+                </div>
               </div>
               <div class="project-slide">
-                <img src="assets/projects/3.png" alt="Project 3" />
-                <div class="project-caption">NautCal Bowls</div>
+                <img src="assets/logos/luxnests.png" alt="Project 3" />
+                <div class="project-caption">Lux Nest</div>
+                <div class="work-view">
+                  <a href="https://luxnests.net/" target="_blank"
+                    >View Company</a
+                  >
+                  <a href="/clients.html?section=lux"> View Our Work </a>
+                </div>
               </div>
             </div>
             <div class="slider-controls">
@@ -228,7 +294,10 @@
         </div>
       </section>
 
-      <section class="section about-section" id="about">
+      <section class="section about-section sec-grad" id="about">
+        <div class="back light">
+          <img src="assets/back/try8.jpg" alt="" />
+        </div>
         <div class="container">
           <div class="section-header">
             <div class="section-badge">Who We Are</div>
@@ -436,7 +505,7 @@
         </div>
       </section>
 
-      <section class="stats">
+      <!-- <section class="stats">
         <div class="hero-stats">
           <div class="stat-item">
             <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
@@ -454,10 +523,10 @@
             <div class="stat-label">Success Rate</div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Services Section -->
-      <section class="section services-section" id="services">
+      <section class="section services-section sec-grad" id="services">
         <div class="container">
           <div class="section-header">
             <div class="section-badge">What We Do</div>
@@ -569,55 +638,56 @@
       </section>
 
       <!-- Clients Section -->
-     <section class="section clients-section" id="clients">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-badge">Our Clients</div>
-      <h2 class="section-title">Trusted By Industry Leaders</h2>
-      <p class="section-subtitle">
-        Join the companies revolutionizing their markets
-      </p>
-    </div>
+      <!-- <section class="section sec-grad clients-section" id="clients">
+        
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Our Clients</div>
+            <h2 class="section-title">Trusted By Industry Leaders</h2>
+            <p class="section-subtitle">
+              Join the companies revolutionizing their markets
+            </p>
+          </div>
 
-    <div class="clients-grid">
+          <div class="clients-grid">
+            <div class="client-card">
+              <h4>Nautical Bowls</h4>
+              <p>Superfood & smoothie bowl franchise</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Nautical Bowls</h4>
-        <p>Superfood & smoothie bowl franchise</p>
-      </div>
+            <div class="client-card">
+              <h4>California Tacos Australia</h4>
+              <p>SoCal‑inspired Mexican taqueria chain</p>
+            </div>
 
-      <div class="client-card">
-        <h4>California Tacos Australia</h4>
-        <p>SoCal‑inspired Mexican taqueria chain</p>
-      </div>
+            <div class="client-card">
+              <h4>Life Numbing Creams</h4>
+              <p>Pro‑grade tattoo & aesthetic numbing creams</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Life Numbing Creams</h4>
-        <p>Pro‑grade tattoo & aesthetic numbing creams</p>
-      </div>
+            <div class="client-card">
+              <h4>LuxNests</h4>
+              <p>Dream home rental platform</p>
+            </div>
 
-      <div class="client-card">
-        <h4>LuxNests</h4>
-        <p>Dream home rental platform</p>
-      </div>
+            <div class="client-card">
+              <h4>Maki Prime</h4>
+              <p>Immersive Spanish‑language academy</p>
+            </div>
 
-      <div class="client-card">
-        <h4>Maki Prime</h4>
-        <p>Immersive Spanish‑language academy</p>
-      </div>
-
-      <div class="client-card">
-        <h4>Al Gamal Hospital</h4>
-        <p>24/7 private hospital in Ain Shams, Cairo</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+            <div class="client-card">
+              <h4>Al Gamal Hospital</h4>
+              <p>24/7 private hospital in Ain Shams, Cairo</p>
+            </div>
+          </div>
+        </div>
+      </section> -->
 
       <!-- Testimonials Section -->
-      <section class="section testimonials-section" id="testimonials">
+      <section class="section sec-grad testimonials-section" id="testimonials">
+        <div class="back light">
+          <img src="assets/back/try.jpg" alt="" />
+        </div>
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">What Leaders Say</h2>
@@ -683,7 +753,10 @@
       </section>
 
       <!-- Why Section -->
-      <section class="section why-section">
+      <section class="section sec-grad why-section">
+        <!-- <div class="back light">
+          <img src="assets/back/try4.jpg" alt="" />
+        </div> -->
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Why Televirgins?</h2>
@@ -840,6 +913,10 @@
 
       <!-- CTA Section -->
       <section class="section cta-section" id="contact">
+        <!-- <div class="back light">
+          <img src="assets/back/try7.jpg" alt="" />
+        </div> -->
+        <div class="container">
           <div class="cta-content">
             <div class="cta-background"></div>
             <h2 class="cta-title">
@@ -898,13 +975,60 @@
               </div>
             </div>
           </div>
+        </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="assets/TVS Logo/telewhite.png" alt="Televirgins Logo" />
+          </div>
+          <div class="footer-links">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/services.html">Services</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          &copy; 2023 Televirgins. All rights reserved.
+        </div>
+      </div>
+    </footer>
   </body>
   <script type="module" src="./src/scripts/home/gsap-animations.ts"></script>
   <script type="module" src="./src/main.ts"></script>
   <script type="module" src="./src/scripts/home/projects-slider.ts"></script>
-  <script>
-  
+  <script type="module">
+    window.addEventListener("load", function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const section = urlParams.get("section");
+      if (section === "about" || section === "contact") {
+        setTimeout(() => {
+          const element = document.getElementById(section);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+            console.log(`Scrolled to ${section} section`);
+          } else {
+            console.warn(`Section #${section} not found`);
+          }
+        }, 350); // Delay to ensure DOM and animations are ready
+      }
+    });
   </script>
 </html>

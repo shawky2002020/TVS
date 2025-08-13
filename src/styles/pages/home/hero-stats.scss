@@ -22,7 +22,7 @@
   width: 100%;
   background: $glass-bg;
   border-radius: $border-radius-2xl;
-  box-shadow: $shadow-holo-lg;
+  box-shadow: $shadow-holo-md;
   padding: $spacing-6 $spacing-8;
   @include respond-to(xs) {
     padding: $spacing-2 $spacing-4;
@@ -42,9 +42,7 @@
 }
 .stat-icon {
   font-size: $font-size-3xl;
-  color: $color-holo-secondary;
   margin-bottom: $spacing-2;
-  text-shadow: 0 0 12px $color-holo-secondary;
   @include respond-to(xs) {
     font-size: $font-size-2xl;
   }
@@ -54,7 +52,6 @@
   font-size: $font-size-5xl;
   font-weight: $font-weight-black;
   color: $color-white-80;
-  text-shadow: 0 0 16px $color-holo-primary, 0 0 32px $color-holo-secondary;
   margin-bottom: $spacing-2;
   transition: color $transition-fast;
   @include respond-to(xs) {

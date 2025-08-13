@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build && javascript-obfuscator dist --output dist --config obfuscator-config.json",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^24.1.0",
+    "javascript-obfuscator": "^4.1.1",
     "sass": "^1.89.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4"

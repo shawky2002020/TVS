@@ -71,6 +71,32 @@
 .btn > * {
   transition: transform $transition-slow;
 }
-// .btn:hover > * {
-//   transform: translateY(-2px);
-// }
+.scroll-down-indicator{
+  font-family: great;
+  font-size: $font-size-lg;
+  display: flex;
+  flex-flow: column-reverse nowrap;
+  align-items: center;
+  border-radius: 12px;
+  padding: 1rem;
+  gap: 8px;
+  color: $color-white;
+  i{
+    font-size: 2rem;
+    animation: scrollDown 2s infinite;
+  }
+}
+.scroll-down-indicator.dark {
+  color: $color-black-base;
+}
+@keyframes scrollDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

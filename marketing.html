@@ -1,54 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Digital Marketing Services | Televirgins</title>
-  <meta name="description" content="Explore Televirgins' bold, data-driven digital marketing services: social media, media buying, web development, branding, SEO, and more for ambitious brands." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="src/styles/main.scss" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-</head>
-<body class="light">
-  <!-- <div class="holographic-bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Marketing Services | Televirgins</title>
+    <meta
+      name="description"
+      content="Explore Televirgins' bold, data-driven digital marketing services: social media, media buying, web development, branding, SEO, and more for ambitious brands."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles/main.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="light">
+    <!-- <div class="holographic-bg">
     <div class="holo-layer holo-layer-1"></div>
     <div class="holo-layer holo-layer-2"></div>
     <div class="holo-layer holo-layer-3"></div>
     <canvas id="particle-canvas"></canvas>
   </div> -->
-  <div class="back light">
-    <img src="assets/TVS Logo/noah.jpg" alt="">
-  </div>    
-  <!-- Navigation -->
+    <div class="back light">
+      <img src="assets/TVS Logo/noah.jpg" alt="" />
+    </div>
+    <!-- Navigation -->
     <nav class="nav" id="navbar">
       <div class="nav-content">
-        <a href="index.html">
-
+        <a href="/index.html">
           <div class="logo">
             <img src="assets/TVS Logo/telewhite.png" class="logo-img" />
             <div class="logo-glow"></div>
           </div>
         </a>
         <ul class="nav-links">
-            <li class="dropdown nav-services" >
-            <a  data-text="Services">Services <i class="fas fa-caret-down"></i></a>
+          <li class="dropdown nav-services">
+            <a data-text="Services"
+              >Services <i class="fas fa-caret-down"></i
+            ></a>
             <ul class="dropdown-menu">
-              <li><a href="marketing.html" data-text="Digital Marketing">Digital Marketing</a></li>
-              <li><a href="calling.html" data-text="Call Center">Call Center</a></li>
+              <li>
+                <a href="/marketing.html" data-text="Digital Marketing">
+                  <i class="fas fa-bullhorn"></i>
+                  Digital Marketing
+                </a>
+                <ul class="sub-drop">
+                  <li>
+                    <a href="/services/seo.html">
+                      <i class="fas fa-search-dollar"></i>
+                      SEO
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="/services/ecommerce.html">
+                      <i class="fas fa-shopping-cart"></i>
+                      Ecommerce
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/media-buying.html">
+                      <i class="fas fa-bullseye"></i>
+                      Media Buying
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/branding.html">
+                      <i class="fas fa-paint-brush"></i>
+                      Branding
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/web-design.html">
+                      <i class="fas fa-code"></i>
+                      Web Development
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/social-media.html">
+                      <i class="fas fa-share-alt"></i>
+                      Social Media
+                    </a>
+                  </li> -->
+                </ul>
+              </li>
+              <li>
+                <a href="/calling.html" data-text="Call Center">
+                  <i class="fas fa-headset"></i>
+                  Call Center
+                  <i class="fas fa-caret-right"></i>
+                </a>
+                <ul class="sub-drop">
+                  <li>
+                    <a href="/services/virtual.html">
+                      <i class="fas fa-robot"></i>
+                      Virtual Assistants
+                    </a>
+                  </li>
+                  <!-- <li>
+                    <a href="/services/cold-calling.html">
+                      <i class="fas fa-phone-alt"></i>
+                      Cold Calling
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/services/customer-service.html">
+                      <i class="fas fa-user-friends"></i>
+                      Customer Service
+                    </a>
+                  </li> -->
+                </ul>
+              </li>
             </ul>
-            </li>
-          <li><a href="#clients" data-text="Clients">Clients</a></li>
-          <li><a href="#testimonials" data-text="Reviews">Reviews</a></li>
-          <li><a href="#contact" data-text="Contact">Contact</a></li>
+          </li>
+          <li><a href="/clients.html" data-text="Clients">Clients</a></li>
+          <!-- <li><a href="/index.html#testimonials" data-text="Reviews">Reviews</a></li> -->
+          <li><a mailto="Business@televirgins.com" data-text="Contact">Contact</a></li>
         </ul>
         <div class="contact">
           <ul>
             <li>
-              <a href="tel:+1234567890" class="contact-link">
+              <a href="tel:+201140017622" class="contact-link">
                 <i class="fas fa-phone-alt"></i>
-                <span>+1 234 567 890</span>
+                <span>+20 114 001 7622</span>
               </a>
             </li>
           </ul>
@@ -59,170 +138,117 @@
           <span></span>
         </button>
         <!-- Mobile Nav Overlay -->
-        <!-- <div class="mobile-nav-overlay" id="mobileNavOverlay" >
-          <nav class="mobile-nav-menu">
-            <ul class="mobile-nav-links">
-              <li><a href="#services">Services</a></li>
-              <li><a href="#clients">Clients</a></li>
-              <li><a href="#testimonials">Reviews</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="mobile-contact">
-              <a href="mailto:hello@televirgins.com"><i class="fas fa-envelope"></i> hello@televirgins.com</a>
-              <a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 234 567 890</a>
-            </div>
-          </nav>
-        </div> -->
+      </div>
+      <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#clients">Clients</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-contact">
+          <a href="mailto:hello@televirgins.com"
+            ><i class="fas fa-envelope"></i> hello@televirgins.com</a
+          >
+          <a href="tel:+1234567890"
+            ><i class="fas fa-phone"></i> +1 234 567 890</a
+          >
+        </div>
       </div>
     </nav>
 
-  
-  <main>
-    <section class="section services-hero light">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-badge">Our Services</div>
-          <h1 class="section-title">Digital Marketing Services</h1>
-          <p class="section-subtitle">Comprehensive, data-driven solutions for bold brands</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section services light">
-      <div class="container">
-        <div class="services-list">
-          <!-- 1. Social Media Management -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-share-alt"></i> Social Media Management</h2>
-            <p class="service-desc">
-              We manage your brand's presence across all major social platforms, creating engaging posts, reels, and videos tailored to your audience. Our team handles content, moderation, and reporting, ensuring your brand voice is consistent and impactful in up to two languages.
+    <main>
+      <section class="section services-hero light">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-badge">Our Services</div>
+            <h1 class="section-title">Digital Marketing Services</h1>
+            <p class="section-subtitle">
+              Comprehensive, data-driven solutions for bold brands
             </p>
-            <ul class="service-features">
-              <li>Posts</li>
-              <li>Reels/Videos</li>
-              <li>Dynamic Reports</li>
-              <li>Platforms: <span class="service-platforms">Facebook, Instagram, TikTok, LinkedIn, YouTube, SnapChat</span></li>
-              <li>Up to 2 languages</li>
-              <li>Moderation (Replies DMs/Comments)</li>
-            </ul>
-          </div>
-
-          <!-- 2. Media Buying -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-bullhorn"></i> Media Buying</h2>
-            <p class="service-desc">
-              We plan, launch, and optimize paid ad campaigns on Meta, TikTok, LinkedIn, and YouTube. Our experts set up your ad accounts, manage budgets, and deliver results-driven campaigns in up to two languages for maximum reach and ROI.
-            </p>
-            <ul class="service-features">
-              <li>AD Account Setup</li>
-              <li>Platforms: <span class="service-platforms">Meta, TikTok, LinkedIn, YouTube</span></li>
-              <li>Up to 2 languages</li>
-            </ul>
-          </div>
-
-          <!-- 3. Web Design and Development -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-globe"></i> Web Design and Development</h2>
-            <p class="service-desc">
-              We design and develop modern, SEO-optimized websites tailored to your brand. From content writing to product catalog setup, analytics, and advanced e-commerce features, we deliver scalable solutions that drive engagement and sales.
-            </p>
-            <ul class="service-features">
-              <li>Up to 20 Pages</li>
-              <li>SEO Optimized</li>
-              <li>Google Tags Integration</li>
-              <li>1 Language</li>
-              <li>Royalty-Free Stock Images</li>
-              <li>Content Writing & Updates</li>
-              <li>Product Catalog Setup</li>
-              <li>Inventory Management</li>
-              <li>Order and Shipping Tracking (if required)</li>
-              <li>Coupon and Discount Code Management (if required)</li>
-              <li>Abandoned Cart Recovery (if required)</li>
-              <li>Product Reviews and Ratings</li>
-              <li>Advanced Product Filtering and Sorting</li>
-              <li>Automatic Email Notifications</li>
-              <li>Analytics for Sales and Customer Behavior</li>
-            </ul>
-          </div>
-
-          <!-- 4. E-Commerce Platform Management -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-shopping-cart"></i> E-Commerce Platform Management</h2>
-            <p class="service-desc">
-              We set up and manage your e-commerce store on Shopify, Wix, or WooCommerce. Our team handles SEO, product uploads, payment gateways, inventory, and monthly reporting—ensuring a seamless shopping experience for your customers.
-            </p>
-            <ul class="service-features">
-              <li>Shopify, Wix, WooCommerce platform setup</li>
-              <li>SEO optimization</li>
-              <li>50 products added to the catalog</li>
-              <li>Payment gateway integration</li>
-              <li>Email support for inquiries</li>
-              <li>Inventory and order management setup</li>
-              <li>Advanced SEO optimization to improve visibility</li>
-              <li>Customized cart page features</li>
-              <li>Shipping and tax configuration</li>
-              <li>Monthly performance reporting</li>
-            </ul>
-          </div>
-
-          <!-- 5. Branding and Visual Identity -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-paint-brush"></i> Branding and Visual Identity</h2>
-            <p class="service-desc">
-              We craft unique brand identities, from logo design to full branding manuals. Our visual identity services cover everything from color and typography to business cards, presentations, and social media—ensuring your brand stands out everywhere.
-            </p>
-            <ul class="service-features">
-              <li>Logo Design</li>
-              <li>Logo Vertical and Horizontal Version</li>
-              <li>Logo Usage Guidelines</li>
-              <li>Branding Manual / Guidelines</li>
-              <li>Primary and Secondary Colors</li>
-              <li>Typography Guidelines</li>
-              <li>Brand Fonts</li>
-              <li>Layout Guidelines</li>
-              <li>Social Media Guidelines</li>
-              <li>Social Media Posts</li>
-              <li>Background Colors</li>
-              <li>Business Cards</li>
-              <li>Letterhead</li>
-              <li>Envelope</li>
-              <li>Id Card</li>
-              <li>Roll UPs</li>
-              <li>Email Signature</li>
-              <li>Presentation Design</li>
-            </ul>
-          </div>
-
-          <!-- 6. Search Engine Optimization -->
-          <div class="service-block">
-            <h2 class="service-title"><i class="fas fa-search"></i> Search Engine Optimization</h2>
-            <p class="service-desc">
-              Our SEO services cover unlimited keywords, technical audits, on-page and off-page execution, and content creation. We help your site rank higher, attract more visitors, and provide monthly reports to track your organic growth.
-            </p>
-            <ul class="service-features">
-              <li>Unlimited Keywords Optimization</li>
-              <li>Technical SEO Audit</li>
-              <li>On-Page and Off-Page Execution</li>
-              <li>Keyword Research</li>
-              <li>Content Creation (Service and Blog)</li>
-              <li>Pages and Blog Content</li>
-              <li>Links and Indexing (Backlinks)</li>
-              <li>Monthly Organic Performance Report</li>
-            </ul>
           </div>
         </div>
+          <div class="scroll-down-indicator dark">
+        <i class="fas fa-angle-double-down"></i>
+        <span>Scroll Down</span>
       </div>
-    </section>
-  </main>
-  <script type="module">
-    import '/src/scripts/services/gsap-animations.ts';
-    const navServices = document.querySelector('.nav-services') ;
-  if (navServices) {
-    navServices.addEventListener('click', (e) => {
-      navServices.classList.toggle('active');
-      e.stopPropagation();
-    });
-  }
-  </script>
-</body>
+      </section>
+
+      <section class="section services light">
+        <div class="container">
+          <div class="services-list">
+            <!-- 1. Search Engine Optimization -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-search-dollar"></i>
+                <a href="services/seo.html">
+                   SEO
+                </a>
+              </h2>
+            </div>
+
+            <!-- 2. E-Commerce Platform Management -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-shopping-cart"></i>
+                <a href="services/ecommerce.html">
+                   Ecommerce
+                </a>
+              </h2>
+            </div>
+
+            <!-- 3. Media Buying -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-bullseye"></i>
+                <a >
+                   Media Buying
+                </a>
+              </h2>
+            </div>
+
+            <!-- 4. Branding and Visual Identity -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-paint-brush"></i>
+                <a >
+                   Branding
+                </a>
+              </h2>
+            </div>
+
+            <!-- 5. Web Design and Development -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-code"></i>
+                <a >
+                   Web Development
+                </a>
+              </h2>
+            </div>
+
+            <!-- 6. Social Media Management -->
+            <div class="service-block">
+              <h2 class="service-title">
+                <i class="fas fa-share-alt"></i>
+                <a >
+                   Social Media
+                </a>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module">
+      import "/src/scripts/services/gsap-animations.ts";
+      const navServices = document.querySelector(".nav-services");
+      if (navServices) {
+        navServices.addEventListener("click", (e) => {
+          navServices.classList.toggle("active");
+          e.stopPropagation();
+        });
+      }
+    </script>
+  </body>
 </html>

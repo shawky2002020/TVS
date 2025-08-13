@@ -1,4 +1,3 @@
-
 // Colors - Black & Holographic Theme
 $color-black-base: #000000;
 $color-black-light: #0a0a0a;
@@ -29,29 +28,298 @@ $color-holo-secondary-dark: #2a0080; // Dark Purple
 
 $color-holo-pink: #ff00aa; // Hot Pink (end of gradient)
 
-// Gradients - Enhanced for more vibrant look
+// ENHANCED MAIN BACKGROUNDS - Bold & Professional
+$bg-gradient-main: 
+  radial-gradient(
+    circle at 15% 40%,
+    rgba($color-holo-secondary-dark, 0.8) 0%,
+    rgba($color-holo-secondary-dark, 0.3) 30%,
+    transparent 60%
+  ),
+  radial-gradient(
+    circle at 85% 25%,
+    rgba($color-holo-primary, 0.9) 0%,
+    rgba($color-holo-primary, 0.4) 35%,
+    transparent 65%
+  ),
+  radial-gradient(
+    circle at 60% 80%,
+    rgba($color-holo-blue, 0.6) 0%,
+    rgba($color-holo-blue, 0.2) 40%,
+    transparent 70%
+  ),
+  linear-gradient(
+    135deg,
+    $color-black-base 0%,
+    rgba($color-black-light, 0.95) 25%,
+    rgba($color-black-medium, 0.9) 75%,
+    $color-black-soft 100%
+  );
+
+$bg-sec: 
+  radial-gradient(
+    circle at 25% 20%,
+    rgba($color-holo-primary-light, 0.75) 0%,
+    rgba($color-holo-primary-light, 0.25) 40%,
+    transparent 70%
+  ),
+  radial-gradient(
+    circle at 75% 75%,
+    rgba($color-holo-secondary-light, 0.8) 0%,
+    rgba($color-holo-secondary-light, 0.3) 35%,
+    transparent 65%
+  ),
+  radial-gradient(
+    circle at 50% 50%,
+    rgba($color-holo-tertiary, 0.4) 0%,
+    transparent 50%
+  ),
+  linear-gradient(
+    to bottom right,
+    $color-black-base 0%,
+    rgba($color-black-light, 0.9) 35%,
+    rgba($color-black-medium, 0.85) 75%,
+    $color-black-soft 100%
+  );
+
+// SECTION-SPECIFIC GRADIENTS
+
+// Hero Section - Maximum Impact
+$bg-hero: 
+  radial-gradient(
+    ellipse 600px 800px at 100% 0%,
+    rgba($color-holo-primary-light, 0.4) 0%,
+    rgba($color-holo-primary-light, 0.3) 20%,
+    rgba($color-holo-primary-light, 0.1) 60%,
+    transparent 90%
+  ),
+  radial-gradient(
+    ellipse 600px 800px at 0% 100%,
+    rgba($color-holo-secondary-light, 0.4) 0%,
+    rgba($color-holo-secondary-light, 0.3) 20%,
+    transparent 70%
+  ),
+  linear-gradient(
+    135deg,
+    $color-black-base 0%,
+  );
+
+// Header/Navigation - Subtle Professional
+$bg-header: 
+  linear-gradient(
+    180deg,
+    rgba($color-black-base, 0.98) 0%,
+    rgba($color-black-light, 0.95) 50%,
+    rgba($color-black-medium, 0.9) 100%
+  ),
+  radial-gradient(
+    circle at 50% 0%,
+    rgba($color-holo-primary, 0.3) 0%,
+    transparent 60%
+  );
+
+// Card/Panel Backgrounds
+$bg-card-primary: 
+  linear-gradient(
+    135deg,
+    rgba($color-white, 0.08) 0%,
+    rgba($color-white, 0.02) 100%
+  ),
+  radial-gradient(
+    circle at 70% 20%,
+    rgba($color-holo-primary, 0.15) 0%,
+    transparent 60%
+  ),
+  linear-gradient(
+    to bottom,
+    rgba($color-black-light, 0.9) 0%,
+    rgba($color-black-medium, 0.95) 100%
+  );
+
+$bg-card-secondary: 
+  linear-gradient(
+    125deg,
+    rgba($color-white, 0.06) 0%,
+    rgba($color-white, 0.01) 100%
+  ),
+  radial-gradient(
+    circle at 30% 80%,
+    rgba($color-holo-secondary, 0.2) 0%,
+    transparent 65%
+  ),
+  linear-gradient(
+    to bottom,
+    rgba($color-black-medium, 0.92) 0%,
+    rgba($color-black-soft, 0.88) 100%
+  );
+
+// Footer - Grounded Professional
+$bg-footer: 
+  linear-gradient(
+    0deg,
+    $color-black-base 0%,
+    rgba($color-black-light, 0.98) 30%,
+    rgba($color-black-medium, 0.95) 100%
+  ),
+  radial-gradient(
+    circle at 50% 100%,
+    rgba($color-holo-secondary-dark, 0.4) 0%,
+    transparent 70%
+  );
+
+// CTA/Accent Sections
+$bg-accent: 
+  radial-gradient(
+    circle at 40% 60%,
+    rgba($color-holo-quaternary, 0.6) 0%,
+    rgba($color-holo-quaternary, 0.2) 50%,
+    transparent 80%
+  ),
+  radial-gradient(
+    circle at 80% 40%,
+    rgba($color-holo-blue, 0.5) 0%,
+    transparent 60%
+  ),
+  linear-gradient(
+    45deg,
+    rgba($color-black-medium, 0.9) 0%,
+    rgba($color-black-soft, 0.8) 100%
+  );
+
+// Sidebar/Menu
+$bg-sidebar: 
+  linear-gradient(
+    90deg,
+    rgba($color-black-base, 0.98) 0%,
+    rgba($color-black-light, 0.94) 100%
+  ),
+  radial-gradient(
+    circle at 0% 50%,
+    rgba($color-holo-primary-dark, 0.3) 0%,
+    transparent 70%
+  );
+
+// UTILITY GRADIENTS
+
+// Glass Effect
+$gradient-glass-strong: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.15),
+  rgba(255, 255, 255, 0.05),
+  rgba(255, 255, 255, 0.08)
+);
+
+$gradient-glass-subtle: linear-gradient(
+  135deg,
+  rgba(255, 255, 255, 0.08),
+  rgba(255, 255, 255, 0.02)
+);
+
+// Border Gradients
+$border-holo-primary: linear-gradient(
+  90deg,
+  $color-holo-blue,
+  $color-holo-primary,
+  $color-holo-secondary,
+  $color-holo-pink
+);
+
+$border-holo-subtle: linear-gradient(
+  90deg,
+  rgba($color-holo-primary, 0.5),
+  rgba($color-holo-secondary, 0.3),
+  rgba($color-holo-tertiary, 0.5)
+);
+
+// Text Gradients
+$text-holo-primary: linear-gradient(
+  45deg,
+  $color-holo-primary,
+  $color-holo-blue,
+  $color-holo-secondary-light
+);
+
+$text-holo-accent: linear-gradient(
+  90deg,
+  $color-holo-pink,
+  $color-holo-quaternary,
+  $color-holo-tertiary
+);
+
+// Button Gradients
+$btn-primary: linear-gradient(
+  135deg,
+  $color-holo-primary,
+  $color-holo-primary-dark
+);
+
+$btn-secondary: linear-gradient(
+  135deg,
+  $color-holo-secondary,
+  $color-holo-secondary-dark
+);
+
+$btn-accent: linear-gradient(
+  45deg,
+  $color-holo-quaternary,
+  $color-holo-pink
+);
+
+// Hover Effects
+$btn-primary-hover: linear-gradient(
+  135deg,
+  $color-holo-primary-light,
+  $color-holo-primary
+);
+
+$btn-secondary-hover: linear-gradient(
+  135deg,
+  $color-holo-secondary-light,
+  $color-holo-secondary
+);
+
+// ANIMATED GRADIENTS
+
+// Shimmer Animation Background
+$shimmer-base: linear-gradient(
+  90deg,
+  transparent 0%,
+  rgba(255, 255, 255, 0.4) 50%,
+  transparent 100%
+);
+
+// Existing Gradients (Enhanced)
 $gradient-holo-primary: linear-gradient(
   to right,
   $color-holo-blue 10%,
   $color-holo-primary 20%,
   $color-holo-secondary-dark 40%,
-  $color-holo-pink,
+  $color-holo-pink
 );
- $holographic-shimmer: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  $holographic-pearl: linear-gradient(
-    135deg,
-    #ffffff,
-    #ffe1e1,
-    #e1ffe1,
-    #e1e1ff,
-    #ffffff
-  );
-$gradient-holo-secondary: linear-gradient(to right, #00bcd4, #2196f3, #7b1fa2, #e91e63);
+
+$holographic-shimmer: linear-gradient(
+  90deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(255, 255, 255, 0.8) 50%,
+  rgba(255, 255, 255, 0) 100%
+);
+
+$holographic-pearl: linear-gradient(
+  135deg,
+  #ffffff,
+  #ffe1e1,
+  #e1ffe1,
+  #e1e1ff,
+  #ffffff
+);
+
+$gradient-holo-secondary: linear-gradient(
+  to right, 
+  #00bcd4, 
+  #2196f3, 
+  #7b1fa2, 
+  #e91e63
+);
 
 $gradient-holo-animated: linear-gradient(
   45deg,
@@ -60,31 +328,6 @@ $gradient-holo-animated: linear-gradient(
   $color-holo-tertiary,
   $color-holo-quaternary
 );
-$gradient-glass: linear-gradient(
-  135deg,
-  rgba(255, 255, 255, 0.1),
-  rgba(255, 255, 255, 0.05)
-);
-
-// Background Gradients - Updated to match new image
-$bg-gradient-main: radial-gradient(
-    circle at 20% 50%,
-    rgba(0, 162, 255, 0.2) 0%,
-    transparent 50%
-  ),
-  radial-gradient(
-    circle at 80% 20%,
-    rgba(144, 0, 255, 0.2) 0%,
-    transparent 50%
-  ),
-  radial-gradient(circle at 40% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-  linear-gradient(
-    135deg,
-    $color-black-base 0%,
-    $color-black-light 50%,
-    $color-black-medium 100%
-  );
-
 // Typography
 $font-family-primary: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
   Roboto, sans-serif;

@@ -21,14 +21,25 @@
     position: relative;
     min-width: 320px;
     min-height: 340px;
-    @media (max-width: 500px) {
-      min-width: 220px;
-      padding: 2rem 1.2rem;
+    @include respond-to(sm) {
+      min-width: 280px;
+      min-height: 300px;
+    }
+    @include respond-to(xs) {
+      min-width: 240px;
+      min-height: 260px;
+      width: 80%;
     }
   }
   .loading-logo {
     margin-bottom: 0.5rem;
     width: 300px;
+    @include respond-to(sm) {
+      width: 200px;
+    }
+    @include respond-to(xs) {
+      width: 150px;
+    }
     .logo-img {
       width: 100%;
       border-radius: 1.2rem;

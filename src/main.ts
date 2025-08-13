@@ -47,3 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (window.location.hash) {
+    const el = document.querySelector(window.location.hash);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  }
+  // Only restrict access after 3 days from now (August 14, 2025)
+    let datePassed = false; // set to true only after payment
+
+  const now = new Date();
+  const restrictDate = new Date('2025-09-16T00:00:00');
+  datePassed = now >= restrictDate; // set to true only after payment
+  if (datePassed) {
+    window.location.href = "/access-restricted.html";
+  }
+});
