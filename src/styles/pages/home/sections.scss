@@ -393,7 +393,7 @@
 }
 
 .services-section {
-  background: $bg-sec; ;
+  background: $bg-hero; ;
   .services-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -731,12 +731,23 @@
 }
 
 .cta-section {
-   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgba($color-black-base, 0.5) 10%,
-      rgba($color-black-light, 0.8) 100%
-    );
+
+  background:radial-gradient(
+    ellipse 400px 400px at 50% 100%,
+    $color-holo-secondary 0%,
+    rgba($color-holo-secondary, 0.5) 20%,
+    transparent 100%
+  ),
+  radial-gradient(
+    ellipse 400px 400px at 70% 100%,
+    $color-white-20 0%,
+    transparent 100%
+  ),
+  radial-gradient(
+    ellipse 400px 400px at 30% 100%,
+    rgba($color-holo-primary-light,.5) 0%,
+    transparent 100%
+  ),;
   .cta-content {
     @extend .card;
     text-align: center;

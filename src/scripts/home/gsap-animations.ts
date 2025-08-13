@@ -112,7 +112,6 @@ export function animateHero() {
     ".hero-actions .btn",
     {
       opacity: 0,
-      y: 20,
       stagger: 0.18,
       duration: 0.9,
       ease: "back.out(1.7)",

@@ -65,12 +65,12 @@
   flex-flow: column nowrap;
   .nav-content {
     width: 100%;
-    padding: 24px 40px;
+    padding: 12px 40px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
+    // overflow: hidden;
     @include respond-to(md) {
       padding: 12px 20px;
     }
@@ -94,10 +94,7 @@
     }
   }
   .nav-links {
-    position: absolute;
-    left: 50%;
-    top: 30px;
-    transform: translateX(-50%);
+    margin-top: 4px;
     display: flex;
     flex-flow: row nowrap;
     gap: 24px;
