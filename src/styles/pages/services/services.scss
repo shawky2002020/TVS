@@ -15,12 +15,22 @@
       background: $gradient-holo-animated;
       color: #fff;
       font-weight: 800;
-      font-size: 1.1rem;
+      font-size: $font-size-2xl;
       padding: 0.4em 1.5em;
       border-radius: 2em;
       margin-bottom: 1.2rem;
       letter-spacing: 1.5px;
       box-shadow: 0 2px 12px #00b4d822;
+      @include respond-to(md){
+        font-size: $font-size-lg;
+      }
+      @include respond-to(sm){
+        font-size: $font-size-base;
+      }
+      @include respond-to(xs){
+        font-size: $font-size-sm;
+      }
+     
     }
     .section-title {
       font-size: 2.5rem;
@@ -29,6 +39,13 @@
       margin-bottom: 0.5rem;
       letter-spacing: 1.5px;
       text-shadow: 0 2px 12px #6f42c122;
+       @include respond-to(md){
+        font-size: $font-size-4xl;
+      }
+      @include respond-to(sm){
+        font-size: $font-size-3xl;
+      }
+      
     }
     .section-subtitle {
       color: #495057;
@@ -81,6 +98,7 @@
     transition: box-shadow 0.3s, transform 0.3s;
     border: 1.5px solid #e3e8f0;
     position: relative;
+     
     &:hover {
       box-shadow: 0 8px 48px 0 #00b4d822, 0 0 0 4px #6f42c144;
       transform: translateY(-6px) scale(1.02);
@@ -88,7 +106,7 @@
     }
   }
   .service-title {
-    font-size: 1.55rem;
+    font-size: $font-size-2xl;
     font-weight: 900;
     color: #1a1a2e;
     margin-bottom: 0.7rem;
@@ -98,6 +116,10 @@
     gap: 0.7em;
     text-transform: uppercase;
     line-height: 1.2;
+    @include respond-to(md){
+      font-size: $font-size-xl;
+    }
+   
     i {
       background: $gradient-holo-animated;
       background-clip: text;
@@ -109,47 +131,5 @@
     }
   }
 
-  .service-desc {
-    font-size: 1.18rem;
-    color: #3a3a4a;
-    font-weight: 500;
-    margin-bottom: 1.1rem;
-    line-height: 1.7;
-    letter-spacing: 0.1px;
-    padding-left: 0.1em;
-    padding-right: 0.1em;
-    text-align: left;
-    @media (max-width: 600px) {
-      font-size: 1rem;
-    }
-  }
-  .service-features {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: #495057;
-    font-size: 1.05rem;
-    font-weight: 500;
-    li {
-      margin-bottom: 0.5em;
-      padding-left: 1.2em;
-      position: relative;
-      &:before {
-        content: "\2022";
-        color: #6f42c1;
-        font-weight: bold;
-        position: absolute;
-        left: 0;
-        font-size: 1.2em;
-        top: 0.1em;
-      }
-      .service-platforms {
-      background:$gradient-holo-animated;
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-        font-weight: 700;
-      }
-    }
-  }
+  
 }

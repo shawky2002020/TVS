@@ -18,13 +18,13 @@ export default defineConfig({
         virtual: resolve(__dirname, 'services/virtual.html'),
         coldcalling: resolve(__dirname, 'services/cold-calling.html'),
         customerservice: resolve(__dirname, 'services/customer-service.html'),
-        restricted: resolve(__dirname, 'access-restricted.html')
-        // socialmedia: resolve(__dirname, 'services/social-media.html'),
-        // mediabuying: resolve(__dirname, 'services/media-buying.html'),
-        // webdesign: resolve(__dirname, 'services/web-design.html'),
-        // ecommerce: resolve(__dirname, 'services/ecommerce.html'),
-        // branding: resolve(__dirname, 'services/branding.html'),
-        // seo: resolve(__dirname, 'services/seo.html'),
+        restricted: resolve(__dirname, 'access-restricted.html'),
+        socialmedia: resolve(__dirname, 'services/social-media.html'),
+        mediabuying: resolve(__dirname, 'services/media-buying.html'),
+        webdesign: resolve(__dirname, 'services/web-design.html'),
+        ecommerce: resolve(__dirname, 'services/ecommerce.html'),
+        branding: resolve(__dirname, 'services/branding.html'),
+        seo: resolve(__dirname, 'services/seo.html'),
       }
     }
   }
