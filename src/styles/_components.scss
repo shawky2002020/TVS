@@ -16,6 +16,17 @@
     padding: $spacing-3 $spacing-6;
     font-size: $font-size-lg;
   }
+  @include respond-to(sm){
+    font-size: $font-size-base;
+  }
+  
+  @include respond-to(xs){
+    padding: $spacing-1 $spacing-2;
+    font-size: $font-size-xs;
+    border-radius: $border-radius-sm;
+  }
+
+
   transition: background $transition-fast, color $transition-fast, box-shadow $transition-fast;
   // box-shadow: $shadow-holo-md;
   &.btn-primary {

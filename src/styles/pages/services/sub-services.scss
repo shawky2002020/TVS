@@ -41,18 +41,17 @@
     i {
       font-size: $font-size-7xl;
       filter: drop-shadow(0 4px 24px $color-holo-secondary-light);
-      background: $bg-sec;
+      background: $bg-hero;
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       animation: iconPulse 2.2s infinite cubic-bezier(0.77, 0.2, 0.05, 1);
       @include respond-to(md) {
-        font-size:$font-size-6xl;
+        font-size: $font-size-6xl;
       }
       @include respond-to(sm) {
         font-size: $font-size-5xl;
       }
-      
     }
   }
   .service-title {
@@ -63,7 +62,7 @@
     color: $color-white;
     margin-bottom: 1.1rem;
     letter-spacing: 2px;
-    background: $bg-sec;
+    background: $bg-hero;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,7 +85,7 @@
     width: 100%;
     margin: 0 auto 1.7rem auto;
     line-height: 1.8;
-    background: $bg-sec;
+    background: $bg-hero;
     border-radius: 1.2rem;
     padding: 1.2rem 1rem;
     @include respond-to(sm) {
@@ -97,8 +96,6 @@
     }
   }
 }
-
-
 
 @keyframes iconPulse {
   0%,
@@ -130,7 +127,7 @@
   min-height: auto;
   h2 {
     font-size: $font-size-6xl;
-    background: $bg-sec;
+    background: $bg-hero;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -165,7 +162,7 @@
       }
       &:before {
         content: "";
-        background: $bg-sec;
+        background: $bg-hero;
         font-weight: bold;
         position: absolute;
         left: 0;
@@ -183,16 +180,16 @@
   .explore {
     margin: 24px auto 0 auto;
   }
- 
+
   .explore-link {
-        display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 12px;
     border-radius: 1.2rem;
     width: 400px;
     gap: 4px;
-        color: $color-black-medium; ;
+    background: $bg-gradient-main;
 
     white-space: nowrap;
     @include respond-to(md) {
@@ -206,10 +203,11 @@
       font-size: 12px !important;
     }
     border: solid 2px $color-black-medium;
-    transition: width .3s ease-in-out;
+    transition: width 0.3s ease-in-out;
   }
   .explore-link:hover {
     width: 450px;
+    color: whitesmoke;
     @include respond-to(md) {
       width: 400px;
     }
@@ -220,12 +218,11 @@
       width: 300px;
     }
   }
-  i{
+  i {
     font-size: 1.2rem;
-        transition: transform 0.8s ease-in-out;
-
+    transition: transform 0.8s ease-in-out;
   }
-  .explore-link:hover i{
+  .explore-link:hover i {
     transform: translateX(12px);
   }
 }

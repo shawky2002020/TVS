@@ -56,6 +56,10 @@
   .footer-socials {
     display: flex;
     gap: $spacing-3;
+     @media (max-width: 700px) {
+      align-items: center;
+      justify-content: center;
+    }
     a {
       background: rgba($color-white, 0.06);
       border-radius: 50%;
@@ -75,12 +79,15 @@
     }
   }
   .footer-bottom {
-    margin-top: $spacing-4;
+    margin: $spacing-4 0 0 $spacing-4;
     font-size: $font-size-sm;
     color: $color-white-40;
     letter-spacing: 0.02em;
     @media (max-width: 700px) {
-      margin-top: $spacing-2;
+      align-items: center;
+      justify-content: center;
+      background: $bg-hero;
+      text-align: center;
     }
   }
 }
