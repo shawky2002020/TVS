@@ -6,78 +6,78 @@ import TextPlugin from "gsap/TextPlugin";
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 // LOADING SCREEN
-export function animateLoadingScreen() {
-  const tl = gsap.timeline();
+// export function animateLoadingScreen() {
+//   const tl = gsap.timeline();
   
-  tl.set(".loading-screen", { autoAlpha: 1 });
+//   tl.set(".loading-screen", { autoAlpha: 1 });
   
-  // Initial content entrance - faster and more responsive
-  tl.fromTo(
-    ".loading-content",
-    {
-      y: 40,
-      opacity: 0,
-      scale: 0.98,
-    },
-    {
-      y: 0,
-      opacity: 1,
-      scale: 1,
-      duration: 1.2,
-      ease: "power3.out",
-    }
-  )
+//   // Initial content entrance - faster and more responsive
+//   tl.fromTo(
+//     ".loading-content",
+//     {
+//       y: 40,
+//       opacity: 0,
+//       scale: 0.98,
+//     },
+//     {
+//       y: 0,
+//       opacity: 1,
+//       scale: 1,
+//       duration: 1.2,
+//       ease: "power3.out",
+//     }
+//   )
   
-  // Progress bar animation - starts earlier for better perceived performance
-  .to(
-    ".loading-progress .progress-bar",
-    {
-      width: "100%",
-      duration: 2.2,
-      ease: "power2.out", // Smoother easing
-    },
-    "0.3" // Start shortly after content begins
-  )
+//   // Progress bar animation - starts earlier for better perceived performance
+//   .to(
+//     ".loading-progress .progress-bar",
+//     {
+//       width: "100%",
+//       duration: 2.2,
+//       ease: "power2.out", // Smoother easing
+//     },
+//     "0.3" // Start shortly after content begins
+//   )
   
-  // Text change happens mid-progress for better flow
-  .to(
-    ".loading-text",
-    {
-      text: "Welcome to Excellence",
-      duration: 0.5,
-      ease: "power1.inOut",
-    },
-    "1.8" // Coordinated with progress completion
-  )
+//   // Text change happens mid-progress for better flow
+//   .to(
+//     ".loading-text",
+//     {
+//       text: "Welcome to Excellence",
+//       duration: 0.5,
+//       ease: "power1.inOut",
+//     },
+//     "1.8" // Coordinated with progress completion
+//   )
   
-  // Content exit - quicker transition
-  .to(
-    ".loading-content",
-    {
-      y: -30,
-      opacity: 0,
-      scale: 0.98,
-      duration: 0.4,
-      ease: "power2.in",
-    },
-    "+=0.8" // Shorter pause after text change
-  )
+//   // Content exit - quicker transition
+//   .to(
+//     ".loading-content",
+//     {
+//       y: -30,
+//       opacity: 0,
+//       scale: 0.98,
+//       duration: 0.4,
+//       ease: "power2.in",
+//     },
+//     "+=0.8" // Shorter pause after text change
+//   )
   
-  // Screen fade out - seamless transition
-  .to(
-    ".loading-screen",
-    {
-      opacity: 0,
-      duration: 0.6,
-      ease: "power2.inOut",
-      onComplete: () => {
-        document.getElementById("loadingScreen")?.remove();
-        animateHero();
-      },
-    },
-    "-=0.2" // Start fading before content fully exits
-  );
-}
+//   // Screen fade out - seamless transition
+//   .to(
+//     ".loading-screen",
+//     {
+//       opacity: 0,
+//       duration: 0.6,
+//       ease: "power2.inOut",
+//       onComplete: () => {
+//         document.getElementById("loadingScreen")?.remove();
+//         // animateHero();
+//       },
+//     },
+//     "-=0.2" // Start fading before content fully exits
+//   );
+// }
 
 // ENHANCED HERO SECTION
 export function animateHero() {
@@ -613,11 +613,7 @@ export function initParticleSystem() {
 
 // INITIALIZATION
 export function initGsapAnimations() {
-  // Start with loading screen
-  animateLoadingScreen();
-  // animateHero();
-
-  // Initialize other animations
+  animateHero();
   initMagneticButtons();
   animateSectionHeaders();
   animateServices();
