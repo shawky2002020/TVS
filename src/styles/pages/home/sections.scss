@@ -8,14 +8,13 @@
   gap: 10px;
   width: 100%;
   .tagline-bold {
-    font-family: great;
+    // font-family: great;
     font-size: $font-size-5xl;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 0 12px;
     border-radius: 8px;
-    animation: taglinePulse 2.5s infinite alternate;
     @media (max-width: $breakpoint-md) {
       font-size: 2rem;
     }
@@ -43,16 +42,6 @@
   }
 }
 
-@keyframes taglinePulse {
-  0% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.04);
-  }
-}
 .holographic-bg {
   position: fixed;
   top: 0;
@@ -943,11 +932,12 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: $spacing-8;
     margin-top: $spacing-12;
     @include respond-to(md) {
       gap: $spacing-6;
+      grid-template-columns: 1fr;
     }
     @include respond-to(sm) {
       gap: $spacing-4;

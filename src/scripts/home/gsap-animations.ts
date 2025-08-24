@@ -613,13 +613,13 @@ export function initParticleSystem() {
 
 // INITIALIZATION
 export function initGsapAnimations() {
-  animateHero();
+  // animateHero();
   initMagneticButtons();
   animateSectionHeaders();
-  animateServices();
+  // animateServices();
   animateClients();
   animateTestimonials();
-  animateAbout()
+  // animateAbout()
   animateWhy();
   animateCTA();
   initScrollAnimations();

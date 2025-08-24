@@ -15,6 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      as="font"
+      href="./assets/fonts/GreaterTheory.otf"
+      type="font/woff2"
+      crossorigin
+    />
 
     <!-- Font Awesome (local build) -->
     <link
@@ -23,8 +30,39 @@
     />
     <link rel="stylesheet" href="src/styles/main.scss" />
   </head>
-
   <body>
+  <style>
+    
+.hero-tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 32px 0 0 0;
+  gap: 10px;
+  width: 100%;
+  .tagline-bold {
+    font-family: great;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0 12px;
+    border-radius: 8px;
+   
+  }
+  .tagline-sub {
+    font-family: great;
+    font-size: 1.15rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+    margin-top: 4px;
+  
+   
+  }
+}
+  </style>
     <!-- Loading Screen -->
     <!-- <div class="loading-screen" id="loadingScreen">
       <div class="loading-content">
@@ -245,7 +283,11 @@
           <div class="projects-slider-wrapper">
             <div class="projects-slider" id="projectsSlider">
               <div class="project-slide">
-                <img src="assets/logos/maki.png" alt="Project 1" />
+                <img
+                  loading="lazy"
+                  src="assets/logos/maki.png"
+                  alt="Project 1"
+                />
                 <div class="project-caption">Maki Prime</div>
                 <div class="work-view">
                   <a href="https://www.makiprime.com" target="_blank"
@@ -257,6 +299,7 @@
 
               <div class="project-slide">
                 <img
+                  loading="lazy"
                   src="assets/logos/California_Logo-removebg-preview.png"
                   alt="Project 2"
                 />
@@ -271,7 +314,11 @@
                 </div>
               </div>
               <div class="project-slide">
-                <img src="assets/logos/luxnests.png" alt="Project 3" />
+                <img
+                  loading="lazy"
+                  src="assets/logos/luxnests.png"
+                  alt="Project 3"
+                />
                 <div class="project-caption">Lux Nest</div>
                 <div class="work-view">
                   <a href="https://luxnests.net/" target="_blank"
@@ -295,9 +342,9 @@
       </section>
 
       <section class="section about-section sec-grad" id="about">
-        <div class="back light">
-          <img src="assets/back/try8.jpg" alt="" />
-        </div>
+        <!-- <div class="back light">
+          <img loading="lazy" src="assets/back/try8.jpg" alt="" />
+        </div> -->
         <div class="container">
           <div class="section-header">
             <div class="section-badge">Who We Are</div>
@@ -312,102 +359,6 @@
           </div>
 
           <div class="about-grid">
-            <!-- Experience Block -->
-            <div class="about-block experience" data-about="experience">
-              <div class="about-background"></div>
-              <div class="about-icon">
-                <i class="fas fa-chart-line"></i>
-                <div class="icon-glow"></div>
-              </div>
-              <h3>Unrivaled Experience</h3>
-              <div class="about-content">
-                <p class="about-lead">
-                  Decade-defining expertise that propels businesses beyond
-                  boundaries.
-                </p>
-                <div class="experience-timeline">
-                  <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                      <h4>Industry Pioneers</h4>
-                      <p>
-                        Revolutionizing digital marketing with data-driven
-                        strategies that consistently outperform industry
-                        benchmarks by 300%.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                      <h4>Global Portfolio</h4>
-                      <p>
-                        Executed 500+ campaigns across 20+ countries, generating
-                        over $100M in trackable revenue for our clients.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                      <h4>Elite Team</h4>
-                      <p>
-                        Our strategists have led campaigns for Fortune 500
-                        companies and disruptive startups alike, bringing
-                        world-class expertise to every project.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="about-hover-effect"></div>
-            </div>
-
-            <!-- Services Block -->
-            <div class="about-block services" data-about="services">
-              <div class="about-background"></div>
-              <div class="about-icon">
-                <i class="fas fa-rocket"></i>
-                <div class="icon-glow"></div>
-              </div>
-              <h3>Transformative Services</h3>
-              <div class="about-content">
-                <p class="about-lead">
-                  Comprehensive solutions engineered for maximum market impact.
-                </p>
-                <div class="services-showcase">
-                  <div class="service-pill">
-                    <i class="fas fa-bullhorn"></i>
-                    <span>Digital Marketing</span>
-                  </div>
-                  <div class="service-pill">
-                    <i class="fas fa-headset"></i>
-                    <span>Call Center Excellence</span>
-                  </div>
-                
-                  <div class="service-pill">
-                    <i class="fas fa-globe"></i>
-                    <span>Web Development</span>
-                  </div>
-                  <div class="service-pill">
-                    <i class="fas fa-paint-brush"></i>
-                    <span>Brand Development</span>
-                  </div>
-                  <div class="service-pill">
-                    <i class="fas fa-chart-pie"></i>
-                    <span>Analytics & Optimization</span>
-                  </div>
-
-                  <div class="service-pill">
-                    <i class="fas fa-users"></i>
-                    <span>Lead Generation</span>
-                  </div>
-                </div>
-              </div>
-              <div class="about-hover-effect"></div>
-            </div>
-
-            <!-- Story Block -->
             <div class="about-block story" data-about="story">
               <div class="about-background"></div>
               <div class="about-icon">
@@ -417,35 +368,32 @@
               <h3>Our Bold Journey</h3>
               <div class="about-content">
                 <p class="about-lead">
-                  From ambitious vision to global powerhouse – our relentless
-                  pursuit of excellence.
+                  Founded in 2020 to merge cutting-edge digital strategies with
+                  measurable impact, we’ve grown from a daring startup into a
+                  global powerhouse. Guided by innovation and fearless
+                  execution, we don’t just adapt to industry shifts — we
+                  anticipate them.
                 </p>
-                <div class="story-content">
-                  <p>
-                    Founded with a revolutionary vision: to bridge the gap
-                    between cutting-edge digital strategies and measurable
-                    business results. What began as a daring startup has evolved
-                    into an international force that consistently shatters
-                    expectations.
-                  </p>
-                  <p>
-                    Our journey is defined by constant innovation, fearless
-                    execution, and an unwavering commitment to our clients'
-                    success. We don't just adapt to industry changes – we
-                    anticipate them, creating opportunities where others see
-                    obstacles.
-                  </p>
-                  <p>
-                    Today, we stand as the premier choice for businesses seeking
-                    transformative growth across continents, leveraging our
-                    unique position at the crossroads of global markets.
-                  </p>
-                </div>
               </div>
               <div class="about-hover-effect"></div>
             </div>
-
-            <!-- Egypt Block -->
+            <div class="about-block experience" data-about="experience">
+              <div class="about-background"></div>
+              <div class="about-icon">
+                <i class="fas fa-chart-line"></i>
+                <div class="icon-glow"></div>
+              </div>
+              <h3>Unrivaled Experience</h3>
+              <div class="about-content">
+                <p class="about-lead">
+                  In just a few years, we’ve delivered 500+ campaigns across 20+
+                  countries, generating $100M+ in revenue. Our data-driven
+                  strategies outperform industry benchmarks by up to 300%,
+                  trusted by both Fortune 500s and disruptive startups.
+                </p>
+              </div>
+              <div class="about-hover-effect"></div>
+            </div>
             <div class="about-block egypt" data-about="egypt">
               <div class="about-background"></div>
               <div class="about-icon">
@@ -455,50 +403,11 @@
               <h3>Strategic Egyptian Hub</h3>
               <div class="about-content">
                 <p class="about-lead">
-                  Leveraging our prime location at the crossroads of three
-                  continents.
+                  From our base in Egypt — at the crossroads of three continents
+                  — we serve European, Asian, and African markets in real time.
+                  Backed by elite multilingual talent, we act as a cultural
+                  bridge, creating strategies that resonate globally.
                 </p>
-                <div class="egypt-advantages">
-                  <div class="advantage-item">
-                    <div class="advantage-icon">
-                      <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="advantage-content">
-                      <h4>Time Zone Advantage</h4>
-                      <p>
-                        Our strategic position allows us to operate seamlessly
-                        across European, Asian, and African markets within the
-                        same business day.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="advantage-item">
-                    <div class="advantage-icon">
-                      <i class="fas fa-users"></i>
-                    </div>
-                    <div class="advantage-content">
-                      <h4>Talent Powerhouse</h4>
-                      <p>
-                        Access to Egypt's elite pool of multilingual,
-                        technically-skilled professionals trained at world-class
-                        institutions.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="advantage-item">
-                    <div class="advantage-icon">
-                      <i class="fas fa-handshake"></i>
-                    </div>
-                    <div class="advantage-content">
-                      <h4>Cultural Bridge</h4>
-                      <p>
-                        Our unique cultural position enables us to craft
-                        messaging that resonates authentically across Western
-                        and Eastern markets.
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
               <div class="about-hover-effect"></div>
             </div>
@@ -587,7 +496,10 @@
                   </p>
                 </div>
                 <div class="service-action">
-                  <a href="/marketing.html" class="btn btn-primary btn-magnetic">
+                  <a
+                    href="/marketing.html"
+                    class="btn btn-primary btn-magnetic"
+                  >
                     <span class="btn-content">
                       <i class="fas fa-bullhorn"></i>
                       <span>Explore Marketing Services</span>
@@ -596,7 +508,6 @@
                     <div class="btn-particles"></div>
                   </a>
                 </div>
-               
               </div>
               <div class="service-hover-effect"></div>
             </div>
@@ -617,7 +528,8 @@
                     Virtual Assistants
                   </h4>
                   <p>
-                    24/7 administrative, scheduling, and support tasks handled by real people—so you can focus on growth.
+                    24/7 administrative, scheduling, and support tasks handled
+                    by real people—so you can focus on growth.
                   </p>
                 </div>
                 <div class="service-item">
@@ -628,7 +540,8 @@
                     Cold Calling Agents
                   </h4>
                   <p>
-                    Expert agents who turn cold leads into warm opportunities with persuasive, brand-aligned conversations.
+                    Expert agents who turn cold leads into warm opportunities
+                    with persuasive, brand-aligned conversations.
                   </p>
                 </div>
                 <div class="service-item">
@@ -639,11 +552,15 @@
                     Customer Service Solutions
                   </h4>
                   <p>
-                    Multichannel support that delights your customers and builds loyalty—phone, chat, and email, all covered.
+                    Multichannel support that delights your customers and builds
+                    loyalty—phone, chat, and email, all covered.
                   </p>
                 </div>
-                 <div class="service-action">
-                  <a href="/calling.html" class="btn btn-secondary btn-magnetic">
+                <div class="service-action">
+                  <a
+                    href="/calling.html"
+                    class="btn btn-secondary btn-magnetic"
+                  >
                     <span class="btn-content">
                       <i class="fas fa-headset"></i>
                       <span>Explore Call Services</span>
@@ -659,56 +576,10 @@
         </div>
       </section>
 
-      <!-- Clients Section -->
-      <!-- <section class="section sec-grad clients-section" id="clients">
-        
-        <div class="container">
-          <div class="section-header">
-            <div class="section-badge">Our Clients</div>
-            <h2 class="section-title">Trusted By Industry Leaders</h2>
-            <p class="section-subtitle">
-              Join the companies revolutionizing their markets
-            </p>
-          </div>
-
-          <div class="clients-grid">
-            <div class="client-card">
-              <h4>Nautical Bowls</h4>
-              <p>Superfood & smoothie bowl franchise</p>
-            </div>
-
-            <div class="client-card">
-              <h4>California Tacos Australia</h4>
-              <p>SoCal‑inspired Mexican taqueria chain</p>
-            </div>
-
-            <div class="client-card">
-              <h4>Life Numbing Creams</h4>
-              <p>Pro‑grade tattoo & aesthetic numbing creams</p>
-            </div>
-
-            <div class="client-card">
-              <h4>LuxNests</h4>
-              <p>Dream home rental platform</p>
-            </div>
-
-            <div class="client-card">
-              <h4>Maki Prime</h4>
-              <p>Immersive Spanish‑language academy</p>
-            </div>
-
-            <div class="client-card">
-              <h4>Al Gamal Hospital</h4>
-              <p>24/7 private hospital in Ain Shams, Cairo</p>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <!-- Testimonials Section -->
       <section class="section sec-grad testimonials-section" id="testimonials">
         <div class="back light">
-          <img src="assets/back/try.jpg" alt="" />
+          <img loading="lazy" src="assets/back/try.jpg" alt="" />
         </div>
         <div class="container">
           <div class="section-header">
@@ -720,7 +591,13 @@
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <p>
-                  <em>“Televirgins became an extension of our team, not just an agency. Their creative, data-driven strategies elevated Luxnests’ online presence and brought a real boost in engagement and qualified leads. We’re grateful for their dedication and look forward to more success together.”</em>
+                  <em
+                    >“Televirgins became an extension of our team, not just an
+                    agency. Their creative, data-driven strategies elevated
+                    Luxnests’ online presence and brought a real boost in
+                    engagement and qualified leads. We’re grateful for their
+                    dedication and look forward to more success together.”</em
+                  >
                 </p>
               </div>
               <div class="testimonial-author">
@@ -736,7 +613,13 @@
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <p>
-                  <em>“Televirgins built and executed a full marketing plan for Maki Prime. Their creative strategies, clear guidance, and ongoing support helped us strengthen our brand and attract more students. We truly appreciate their professionalism and look forward to more growth.”</em>
+                  <em
+                    >“Televirgins built and executed a full marketing plan for
+                    Maki Prime. Their creative strategies, clear guidance, and
+                    ongoing support helped us strengthen our brand and attract
+                    more students. We truly appreciate their professionalism and
+                    look forward to more growth.”</em
+                  >
                 </p>
               </div>
               <div class="testimonial-author">
@@ -752,7 +635,13 @@
             <div class="testimonial-card">
               <div class="testimonial-quote">
                 <p>
-                  <em>“Televirgins gave us clarity, structure, and direction with a full marketing plan. Their creativity and professionalism led to a real boost in brand awareness and engagement. We highly recommend them to any brand looking for serious marketing support.”</em>
+                  <em
+                    >“Televirgins gave us clarity, structure, and direction with
+                    a full marketing plan. Their creativity and professionalism
+                    led to a real boost in brand awareness and engagement. We
+                    highly recommend them to any brand looking for serious
+                    marketing support.”</em
+                  >
                 </p>
               </div>
               <div class="testimonial-author">
@@ -768,95 +657,47 @@
         </div>
       </section>
 
-      <!-- Why Section -->
-      <!-- <section class="section sec-grad why-section">
-        
-        <div class="container">
-          <div class="section-header">
-            <h2 class="section-title">Why Televirgins?</h2>
-            <p class="section-subtitle">
-              The competitive advantages that matter
-            </p>
-          </div>
-
-          <div class="why-grid">
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-bolt"></i></div>
-              <h4>Lightning Fast Results</h4>
-              <p>
-                Every strategy is designed for immediate impact and sustained
-                growth. No waiting around.
-              </p>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-bullseye"></i></div>
-              <h4>Precision Targeting</h4>
-              <p>
-                Reach exactly who you need, when they're ready to buy. Zero
-                wasted impressions.
-              </p>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-trophy"></i></div>
-              <h4>Proven Track Record</h4>
-              <p>
-                500+ successful campaigns, $100M+ in client revenue generated.
-                Results speak louder.
-              </p>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-fire"></i></div>
-              <h4>Industry Disruptors</h4>
-              <p>
-                We don't follow trends - we create them. Be the brand everyone
-                else copies.
-              </p>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-gem"></i></div>
-              <h4>Premium Quality</h4>
-              <p>
-                Every deliverable exceeds expectations. Perfectionist execution,
-                every single time.
-              </p>
-            </div>
-            <div class="why-item">
-              <div class="why-icon"><i class="fas fa-rocket"></i></div>
-              <h4>Future-Ready</h4>
-              <p>
-                Tomorrow's technology, today's results. Stay ahead while
-                competitors catch up.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section> -->
       <!-- Expanding Across Continents Marquee Section -->
       <section class="marquee-section">
         <div class="container">
           <div class="section-header">
             <h2 class="section-title">Expanding across continents</h2>
           </div>
+
           <div class="marquee-container">
             <div class="marquee">
               <div class="marquee-track">
                 <div class="marquee-item">
-                  <img src="assets/logos/Artboard 2.png" alt="Artboard 2" />
-                </div>
-                <div class="marquee-item">
-                  <img src="assets/logos/Black re.png" alt="Black re" />
-                </div>
-                <div class="marquee-item">
-                  <img src="assets/logos/Black.png" alt="Black" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/Artboard 2.png"
+                    alt="Artboard 2"
+                  />
                 </div>
                 <div class="marquee-item">
                   <img
+                    loading="lazy"
+                    src="assets/logos/Black re.png"
+                    alt="Black re"
+                  />
+                </div>
+                <div class="marquee-item">
+                  <img
+                    loading="lazy"
+                    src="assets/logos/Black.png"
+                    alt="Black"
+                  />
+                </div>
+                <div class="marquee-item">
+                  <img
+                    loading="lazy"
                     src="assets/logos/California_Logo-removebg-preview.png"
                     alt="California Logo"
                   />
                 </div>
                 <div class="marquee-item">
                   <img
+                    loading="lazy"
                     src="assets/logos/Freedom Ray Solar.png"
                     alt="Freedom Ray Solar"
                   />
@@ -871,23 +712,47 @@
                   />
                 </div>
                 <div class="marquee-item">
-                  <img src="assets/logos/luxnests.png" alt="Luxnests" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/luxnests.png"
+                    alt="Luxnests"
+                  />
                 </div>
                 <div class="marquee-item">
-                  <img src="assets/logos/naut_cal.png" alt="Naut Cal" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/naut_cal.png"
+                    alt="Naut Cal"
+                  />
                 </div>
                 <div class="marquee-item">
-                  <img src="assets/logos/shirt.png" alt="Shirt" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/shirt.png"
+                    alt="Shirt"
+                  />
                 </div>
                 <!-- Duplicate for seamless loop -->
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/Artboard 2.png" alt="Artboard 2" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/Artboard 2.png"
+                    alt="Artboard 2"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/Black re.png" alt="Black re" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/Black re.png"
+                    alt="Black re"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/Black.png" alt="Black" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/Black.png"
+                    alt="Black"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
                   <img
@@ -902,7 +767,11 @@
                   />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/gamal.png" alt="Gamal" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/gamal.png"
+                    alt="Gamal"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
                   <img
@@ -911,13 +780,25 @@
                   />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/luxnests.png" alt="Luxnests" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/luxnests.png"
+                    alt="Luxnests"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/naut_cal.png" alt="Naut Cal" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/naut_cal.png"
+                    alt="Naut Cal"
+                  />
                 </div>
                 <div class="marquee-item" aria-hidden="true">
-                  <img src="assets/logos/shirt.png" alt="Shirt" />
+                  <img
+                    loading="lazy"
+                    src="assets/logos/shirt.png"
+                    alt="Shirt"
+                  />
                 </div>
               </div>
             </div>
@@ -927,9 +808,6 @@
 
       <!-- CTA Section -->
       <section class="section cta-section" id="contact">
-        <!-- <div class="back light">
-          <img src="assets/back/try7.jpg" alt="" />
-        </div> -->
         <div class="container">
           <div class="cta-content">
             <div class="cta-background"></div>
@@ -952,7 +830,10 @@
                 <div class="btn-glow"></div>
                 <div class="btn-particles"></div>
               </a>
-              <a href="tel:+201140017622" class="btn btn-secondary btn-magnetic">
+              <a
+                href="tel:+201140017622"
+                class="btn btn-secondary btn-magnetic"
+              >
                 <span class="btn-content">
                   <span>Call Us Today</span>
                 </span>
@@ -999,34 +880,31 @@
           <div class="footer-logo">
             <img src="assets/TVS Logo/telewhite.png" alt="Televirgins Logo" />
           </div>
-            <div class="footer-links">
-              <a href="/index.html">Home</a>
-              <a href="/marketing.html">Marketing Services</a>
-              <a href="/calling.html">Calling Services</a>
-              <a href="/clients.html">Our Clients</a>
-            </div>
-          </div>
-          <div class="footer-socials">
-            <a
-              href="https://www.facebook.com/televirgins/"
-              aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/televirgins/?hl=en"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/company/televirgins"
-              aria-label="LinkedIn"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
+          <div class="footer-links">
+            <a href="/index.html">Home</a>
+            <a href="/marketing.html">Marketing Services</a>
+            <a href="/calling.html">Calling Services</a>
+            <a href="/clients.html">Our Clients</a>
           </div>
         </div>
-        <div class="footer-bottom">
-          &copy; 2023 Televirgins. All rights reserved.
+        <div class="footer-socials">
+          <a href="https://www.facebook.com/televirgins/" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/televirgins/?hl=en"
+            aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/company/televirgins"
+            aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2023 Televirgins. All rights reserved.
       </div>
     </footer>
   </body>
