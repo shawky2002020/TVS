@@ -932,11 +932,11 @@
 
   .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: $spacing-8;
+    grid-template-columns: 1fr ;
+    // gap: $spacing-8;
     margin-top: $spacing-12;
     @include respond-to(md) {
-      gap: $spacing-6;
+      // gap: $spacing-6;
       grid-template-columns: 1fr;
     }
     @include respond-to(sm) {
@@ -950,11 +950,11 @@
 
   .about-block {
     position: relative;
-    background: rgba(0, 0, 0, 0.3);
+    // background: rgba(0, 0, 0, 0.3);
     border-radius: $border-radius-xl;
-    padding: $spacing-8;
+    padding:$spacing-4 $spacing-2;
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    // border: 1px solid rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     transition: transform 0.4s $ease-out, box-shadow 0.4s $ease-out;
     height: 100%;
@@ -998,10 +998,9 @@
     }
 
     .about-icon {
-      font-size: $font-size-4xl;
       color: $color-white;
-      width: 80px;
-      height: 80px;
+      width: 30px;
+      height: 30px;
       background: linear-gradient(
         135deg,
         rgba($color-holo-primary, 0.3) 0%,
@@ -1015,8 +1014,6 @@
       position: relative;
       transition: transform 0.4s $ease-out;
       @include respond-to(md) {
-        width: 60px;
-        height: 60px;
         font-size: $font-size-3xl;
       }
 

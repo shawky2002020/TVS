@@ -1,11 +1,11 @@
 export function aniamateSubService() {
   // Hero section entrance
-  gsap.from(".service-hero", {
-    y: -60,
-    opacity: 0,
-    duration: 1.1,
-    ease: "power4.out"
-  });
+  // gsap.from(".service-hero", {
+  //   y: -60,
+  //   opacity: 0,
+  //   duration: 1.1,
+  //   ease: "power4.out"
+  // });
   // Animated icon
   gsap.from(".icon-animate i", {
     scale: 0.2,
@@ -58,38 +58,38 @@ gsap.registerPlugin(ScrollTrigger);
 
 export function animateMarketingPage() {
   // Hero section animation
-  gsap.to(".services-hero", {
-  opacity: 0,
-  scrollTrigger: {
-    trigger: ".services",
-    start: "top bottom",
-    end: "top center",
-    scrub: true,
-  }
-});
+//   gsap.to(".services-hero", {
+//   opacity: 0,
+//   scrollTrigger: {
+//     trigger: ".services",
+//     start: "top bottom",
+//     end: "top center",
+//     scrub: true,
+//   }
+// });
 
-  gsap.from(".services-hero .section-badge", {
-    y: -40,
-    opacity: 0,
-    scale: 0.7,
-    duration: 1,
-    ease: "back.out(1.7)",
-  });
-  gsap.from(".services-hero .section-title", {
-    y: 60,
-    opacity: 0,
-    scale: 0.9,
-    duration: 1.1,
-    delay: 0.2,
-    ease: "power3.out",
-  });
-  gsap.from(".services-hero .section-subtitle", {
-    y: 30,
-    opacity: 0,
-    duration: 0.9,
-    delay: 0.4,
-    ease: "power2.out",
-  });
+//   gsap.from(".services-hero .section-badge", {
+//     y: -40,
+//     opacity: 0,
+//     scale: 0.7,
+//     duration: 1,
+//     ease: "back.out(1.7)",
+//   });
+//   gsap.from(".services-hero .section-title", {
+//     y: 60,
+//     opacity: 0,
+//     scale: 0.9,
+//     duration: 1.1,
+//     delay: 0.2,
+//     ease: "power3.out",
+//   });
+//   gsap.from(".services-hero .section-subtitle", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.9,
+//     delay: 0.4,
+//     ease: "power2.out",
+//   });
 
   // Service blocks animation
   gsap.utils.toArray(".service-block").forEach((block, i) => {
