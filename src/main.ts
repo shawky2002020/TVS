@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', () => {
     let datePassed = false; // set to true only after payment
 
   const now = new Date();
-  const restrictDate = new Date('2025-09-16T00:00:00');
+  const restrictDate = new Date('2025-10-16T00:00:00');
   datePassed = now >= restrictDate; // set to true only after payment
   if (datePassed) {
     window.location.href = "/access-restricted.html";
