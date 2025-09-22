@@ -1,3 +1,17 @@
+import { checkLicense } from './check';
+
+// Run license check before starting app
+(async () => {
+  const allowed = await checkLicense();
+  if (!allowed) {
+        window.location.href = "/access-restricted.html";
+  }
+  else{
+      // License valid → show app
+  document.getElementById('loading')!.style.display = "none";
+  }
+})();
+
 document.addEventListener("DOMContentLoaded", () => {
   const navServices = document.querySelector(".nav-services");
   if (navServices) {
@@ -20,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function closeMobileNav() {
     mobileNav.classList.remove("active");
           menuBtn.classList.remove("active");
-
   }
   menuBtn.addEventListener("click", () => {
     mobileNav.classList.contains("active") ? closeMobileNav() : openMobileNav();
@@ -41,9 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         return
       };
-      
       closeMobileNav();
-      
     });
   });
 });
@@ -53,13 +64,14 @@ window.addEventListener('DOMContentLoaded', () => {
     const el = document.querySelector(window.location.hash);
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   }
-  // Only restrict access after 3 days from now (August 14, 2025)
-    let datePassed = false; // set to true only after payment
+  //   let datePassed = false; // set to true only after payment
 
-  const now = new Date();
-  const restrictDate = new Date('2025-10-16T00:00:00');
-  datePassed = now >= restrictDate; // set to true only after payment
-  if (datePassed) {
-    window.location.href = "/access-restricted.html";
-  }
+  // const now = new Date();
+  // const restrictDate = new Date('2025-10-16T00:00:00');
+  // datePassed = now >= restrictDate; // set to true only after payment
+  // if (datePassed) {
+  //   window.location.href = "/access-restricted.html";
+  // }
 });
+
+
